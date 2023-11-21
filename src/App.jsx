@@ -1,7 +1,8 @@
 import Navbar from "./components/navbar/navbar.jsx";
+import ManagerPanel from "./components/ManagerPanel/ManagerPanel.jsx";
 function App() {
     const elem = [];
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < 10; i++) {
         elem.push(<br/>);
     }
 
@@ -9,6 +10,7 @@ function App() {
     <>
         <Navbar isLogin={false} />
         {elem}
+        <ManagerPanel/>
     </>
   )
 }
