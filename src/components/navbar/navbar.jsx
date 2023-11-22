@@ -1,7 +1,7 @@
 import React from "react";
 import Profile from "./profile/profile.jsx";
 import Login from "./login&signup/login.jsx";
-import logo from "../../assets/images/logo.png";
+import logo from "../../assets/images/Logo.png";
 
 const NavbarComponent = ({ isLogin }) => {
   const submitHandler = (e) => {
@@ -10,7 +10,7 @@ const NavbarComponent = ({ isLogin }) => {
   };
   return (
     <nav
-      className="bg-gray-900 text-gray text-lg py-2 fixed top-0 w-full h-fit"
+      className="bg-gray-900 text-gray text-lg py-2 fixed top-0 w-full h-fit z-10"
       id="navbar"
     >
       <ul className="grid grid-cols-12 md:text-md">

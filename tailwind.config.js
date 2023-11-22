@@ -12,8 +12,12 @@ export default {
 
   ],
   theme: {
-    extend: {},
-  },
+    extend: {
+      height: {
+        700: "50rem"
+      },
+    }
+    },
   darkMode: "class",
   plugins: [nextui()],
 }

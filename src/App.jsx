@@ -1,14 +1,9 @@
-import Navbar from "./components/navbar/navbar.jsx";
+import Home from "./pages/Home/Home.jsx";
 function App() {
-  const elem = [];
-  for (let i = 0; i < 100; i++) {
-    elem.push(<br />);
-  }
 
   return (
     <>
-      <Navbar isLogin={false} />
-      {elem}
+      <Home />
     </>
   );
 }
