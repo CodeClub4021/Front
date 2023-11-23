@@ -1,5 +1,7 @@
 import Navbar from "./components/navbar/navbar.jsx";
-import ManagerPanel from "./components/ManagerPanel/ManagerPanel.jsx";
+import React from "react";
+import { Routes, Route, Navigate } from "react-router-dom";
+import Admin from "./layouts/admin/index.jsx";
 function App() {
     const elem = [];
     for (let i = 0; i < 10; i++) {
@@ -8,9 +10,12 @@ function App() {
 
   return (
     <>
-        <Navbar isLogin={false} />
-        {elem}
-        <ManagerPanel/>
+        {/* <Navbar isLogin={false} />
+        {elem} */}
+        <Routes >
+          <Route path="admin/*" element={<Admin />} />
+          <Route path="/" element={<Navigate to="/admin" replace />} />
+        </Routes>
     </>
   )
 }
