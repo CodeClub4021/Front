@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import  './ManagerPanel.css'
 
 const ShowStars = (props) => {
 
