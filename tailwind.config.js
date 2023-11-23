@@ -1,5 +1,5 @@
-import {nextui} from "@nextui-org/react";
-// import daisyui from "daisyui";   // when someone need this add to plugins
+// import {nextui} from "@nextui-org/react";
+// import daisyui from "daisyui";
 
 /** @type {import('tailwindcss').Config} */
 
@@ -19,5 +19,5 @@ export default {
     }
     },
   darkMode: "class",
-  plugins: [nextui()],
+  plugins: []
 }
