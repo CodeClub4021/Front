@@ -1,8 +1,8 @@
 import {useEffect, useState} from "react";
 import Slider from "../../components/slider/slider.jsx";
 import {SLIDERS, CARD_LOGO} from "../../Constants.js";
-import Button from "../../components/button/button.jsx";
-import Card from "../../components/card/card.jsx";
+import Navbar from "../../components/navbar/navbar.jsx";
+import HomeCardsGroup from "../../components/homeCardsQroup/homeCardsGroup.jsx";
 
 const coaches = [
     {
@@ -24,6 +24,16 @@ const coaches = [
         imageAddress:  CARD_LOGO[0],
         name: "coach4",
         rateNumber: 3
+    },
+    {
+        imageAddress:  CARD_LOGO[0],
+        name: "coach5",
+        rateNumber: 3.9
+    },
+    {
+        imageAddress:  CARD_LOGO[0],
+        name: "coach6",
+        rateNumber: 3.9
     },
 ]
 
@@ -48,6 +58,16 @@ const gyms = [
         name: "gym4",
         rateNumber: 3
     },
+    {
+        imageAddress:  CARD_LOGO[1],
+        name: "gym5",
+        rateNumber: 3.9
+    },
+    {
+        imageAddress:  CARD_LOGO[1],
+        name: "gym6",
+        rateNumber: 3.9
+    },
 ]
 
 export default function Home() {
@@ -60,13 +80,17 @@ export default function Home() {
     });
     return (
         <>
-            {/*<header className="h-screen relative">*/}
-            {/*    <Navbar isLogin={false}/>*/}
-            {/*    <Slider imgAddress={SLIDERS[sliderIndex]}/>*/}
-            {/*</header>*/}
-            <main>
-                {/*<Card data={gyms[0]} />*/}
-                {/*<Button label={"label"} onClick={() => console.log(1)} />*/}
+            <header className="h-screen relative">
+                <Navbar isLogin={false}/>
+                <Slider imgAddress={SLIDERS[sliderIndex]}/>
+            </header>
+            <main className="grid grid-cols-12 grid-rows-2 w-screen">
+                <div className="col-start-3 col-span-8 row-span-1 flex justify-center place-items-center">
+                    <HomeCardsGroup data={gyms} subTitle={"Most popular Gyms"}/>
+                </div>
+                <div className="col-start-3 col-span-8 row-span-1 flex justify-center place-items-center">
+                    <HomeCardsGroup data={coaches} subTitle={"Most popular Coaches"}/>
+                </div>
             </main>
         </>
 

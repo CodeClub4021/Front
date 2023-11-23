@@ -16,6 +16,7 @@ export default {
       height: {
         700: "50rem"
       },
+
     }
     },
   darkMode: "class",
