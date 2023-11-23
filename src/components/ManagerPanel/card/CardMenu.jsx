@@ -16,7 +16,7 @@ function CardMenu(props) {
         <button
           onClick={() => setOpen(!open)}
           open={open}
-          className={`flex items-center text-xl bg-gray-900 text-yellow-400 hover:cursor-pointer ${
+          className={`flex items-center text-xl bg-navy-800 text-yellow-400 hover:cursor-pointer ${
             transparent
               ? "bg-none text-white hover:bg-none active:bg-none"
               : "bg-lightPrimary p-2 text-brand-500 hover:bg-gray-100 dark:bg-navy-700 dark:text-white dark:hover:bg-white/20 dark:active:bg-white/10"

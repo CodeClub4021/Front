@@ -41,16 +41,13 @@ export const columnsDataColumns = [
     Header: "NAME",
     accessor: "name",
   },
+ 
   {
-    Header: "PROGRESS",
-    accessor: "progress",
+    Header: "AGE",
+    accessor: "age",
   },
   {
-    Header: "QUANTITY",
-    accessor: "quantity",
-  },
-  {
-    Header: "DATE",
+    Header: "DATE OF SIGN UP",
     accessor: "date",
   },
 ];
