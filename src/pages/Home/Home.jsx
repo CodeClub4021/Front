@@ -35,6 +35,16 @@ const coaches = [
         name: "coach6",
         rateNumber: 3.9
     },
+    {
+        imageAddress: CARD_LOGO[0],
+        name: "coach6",
+        rateNumber: 3.9
+    },
+    {
+        imageAddress: CARD_LOGO[0],
+        name: "coach7",
+        rateNumber: 3.9
+    },
 ]
 
 const gyms = [
@@ -68,6 +78,16 @@ const gyms = [
         name: "gym6",
         rateNumber: 3.9
     },
+    {
+        imageAddress: CARD_LOGO[1],
+        name: "gym6",
+        rateNumber: 3.9
+    },
+    {
+        imageAddress: CARD_LOGO[1],
+        name: "gym7",
+        rateNumber: 3.9
+    },
 ]
 
 export default function Home() {
@@ -97,7 +117,7 @@ export default function Home() {
                 </div>
             </header>
             <main className="grid grid-cols-12 w-screen">
-                <div className="col-start-3 col-span-8 row-span-1 flex justify-center place-items-center">
+                <div className="col-start-1 col-span-12 row-span-1 flex justify-center place-items-center">
                     <HomeCardsGroup data={gyms} subTitle={"Most popular Gyms"}/>
                 </div>
                 <div className="col-start-1 col-end-13 row-span-2 h-screen relative">
@@ -123,7 +143,7 @@ export default function Home() {
 
                     </div>
                 </div>
-                <div className="col-start-3 col-span-8 row-span-1 flex justify-center place-items-center">
+                <div className="col-start-1 col-span-12 row-span-1 flex justify-center place-items-center">
                     <HomeCardsGroup data={coaches} subTitle={"Most popular Coaches"}/>
                 </div>
             </main>
