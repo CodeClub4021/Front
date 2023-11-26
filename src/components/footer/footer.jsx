@@ -16,7 +16,7 @@ function Footer() {
   ];
   return (
     <>
-      <footer class="w-full p-4 bg-stone-950 rounded-lg  border-t border-gray-200 shadow  md:items-center md:justify-between md:p-6 dark:bg-stone-950 dark:border-gray-600">
+      <footer className="w-full p-4 bg-stone-950 rounded-lg  border-t border-gray-200 shadow  md:items-center md:justify-between md:p-6 dark:bg-stone-950 dark:border-gray-600 z-50">
         <div className="container mx-auto  py-[0rem]">
           {/* footer div all */}
           <div className="flex justify-between flex-col md:flex-row  items-center md:items-start  md:gap-[5rem] text-left">
