@@ -3,6 +3,7 @@ import Slider from "../../components/slider/slider.jsx";
 import {SLIDERS, CARD_LOGO} from "../../Constants.js";
 import Navbar from "../../components/navbar/navbar.jsx";
 import HomeCardsGroup from "../../components/homeCardsQroup/homeCardsGroup.jsx";
+import Footer from "../../components/footer/footer.jsx";
 
 const coaches = [
     {
@@ -147,6 +148,7 @@ export default function Home() {
                     <HomeCardsGroup data={coaches} subTitle={"Most popular Coaches"}/>
                 </div>
             </main>
+            <Footer />
         </>
 
     )
