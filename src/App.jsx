@@ -1,16 +1,10 @@
-import Navbar from "./components/navbar/navbar.jsx";
-function App() {
-    const elem = [];
-    for (let i = 0; i < 100; i++) {
-        elem.push(<br/>);
-    }
+import Login from "./pages/login/login";
 
+
+function App() {
   return (
-    <>
-        <Navbar isLogin={false} />
-        {elem}
-    </>
-  )
+      <Login />
+  );
 }
 
 export default App
