@@ -1,3 +1,5 @@
+import Login from "./pages/login/login";
+
 import Land from "./pages/landing/land.jsx";
 import Home from "./pages/Home/Home.jsx";
 import ManagePanel from "./pages/panel/manager/managePanel";
@@ -11,9 +13,12 @@ function App() {
         // <>
         //   <Home />
         // </>
-        <>
-            <ManagePanel/>
-        </>
-    )
+        // <>
+        //     <ManagePanel/>
+        // </>
+    <>
+        <Login/>
+    </>
+)
 }
 export default App;
