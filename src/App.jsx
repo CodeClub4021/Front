@@ -1,14 +1,9 @@
-import Navbar from "./components/navbar/navbar.jsx";
-function App() {
-    const elem = [];
-    for (let i = 0; i < 100; i++) {
-        elem.push(<br/>);
-    }
+import Footer from "./components/footer/footer.jsx";
 
+function App() {
   return (
     <>
-        <Navbar isLogin={false} />
-        {elem}
+      <Footer />
     </>
   )
 }
