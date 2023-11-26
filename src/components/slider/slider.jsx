@@ -1,13 +1,6 @@
 import React from "react";
-import anime from 'animejs/lib/anime.es.js';
 
 export default function Slider({imgAddress, subTitle, text}) {
-    anime({
-        targets: "id" + subTitle,
-        translateX: 250,
-        duration: 1000,
-
-    });
     return (
         <div className="relative w-full h-full top-22">
             <div className="bg-cover bg-center w-full h-full absolute top-22 " id={"id" + subTitle}
