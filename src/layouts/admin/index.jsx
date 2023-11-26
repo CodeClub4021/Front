@@ -3,6 +3,7 @@ import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import Navbar from "../../components/ManagerPanel/navbar/index.jsx";
 import Sidebar from "../../components/ManagerPanel/sidebar";
 import routes from "../../routes.jsx";
+import NavbarJavad from "../../components/navbar/navbar.jsx";
 
 export default function Admin(props) {
   const { ...rest } = props;
@@ -58,6 +59,7 @@ export default function Admin(props) {
   document.documentElement.dir = "ltr";
   return (
     <div className="flex h-full w-full">
+      
       <Sidebar open={open} onClose={() => setOpen(false)} />
       {/* Navbar & Main Content */}
       <div className="h-full w-full bg-gray-800 dark:!bg-navy-900">
@@ -67,6 +69,7 @@ export default function Admin(props) {
         >
           {/* Routes */}
           <div className="h-full">
+            <NavbarJavad/>
             <Navbar
               onOpenSidenav={() => setOpen(true)}
               logoText={"Horizon UI Tailwind React"}
