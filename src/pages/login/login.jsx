@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { AccountBox } from "../../components/accountBox";
 import NavbarComponent from "../../components/navbar/navbar";
 import "./login.css";
+import Footer from "../../components/footer/footer";
 
 
 const AppContainer = styled.div`
@@ -20,6 +21,7 @@ const Login = () => {
     <AppContainer>
       <AccountBox />
     </AppContainer>
+    <Footer />
     </div>
   );
 }
