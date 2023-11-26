@@ -14,7 +14,7 @@
 }
 
 input.defaultCheckbox::before {
-	content: (); 
+	/*content: ();*/
 	color: white;
 	opacity: 0; 
 	height: 16px; 
@@ -26,4 +26,4 @@ input.defaultCheckbox::before {
 
 input:checked.defaultCheckbox::before { 
 	opacity: 1;
-}  
+}

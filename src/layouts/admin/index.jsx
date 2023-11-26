@@ -4,6 +4,7 @@ import Navbar from "../../components/ManagerPanel/navbar/index.jsx";
 import Sidebar from "../../components/ManagerPanel/sidebar";
 import routes from "../../routes.jsx";
 import NavbarJavad from "../../components/navbar/navbar.jsx";
+import Footer from "../../components/footer/footer.jsx";
 
 export default function Admin(props) {
   const { ...rest } = props;
@@ -89,6 +90,7 @@ export default function Admin(props) {
             </div>
           </div>
         </main>
+        {/*<Footer />*/}
       </div>
     </div>
   );
