@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { AccountBox } from "../../components/accountBox";
+import NavbarComponent from "../../components/navbar/navbar";
 import "./login.css";
 
 
@@ -14,9 +15,12 @@ const AppContainer = styled.div`
 
 const Login = () => {
   return (
+    <div className="w-full h-full">
+      <NavbarComponent isLogin={false} />
     <AppContainer>
       <AccountBox />
     </AppContainer>
+    </div>
   );
 }
 
