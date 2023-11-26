@@ -1,7 +1,7 @@
 import React from "react";
 import Profile from "./profile/profile.jsx";
 import Login from "./login&signup/login.jsx";
-import logo from "../../assets/images/logo.png";
+import logo from "../../assets/images/Logo.png";
 
 const NavbarComponent = ({ isLogin }) => {
   const submitHandler = (e) => {
@@ -82,9 +82,9 @@ const NavbarComponent = ({ isLogin }) => {
             </div>
           </form>
         </li>
-        <li className="col-start-11 col-span-2 flex justify-start">
-          {isLogin ? <Profile /> : <Login />}
-        </li>
+        {/*<li className="col-start-11 col-span-2 flex justify-start">*/}
+        {/*  {isLogin ? <Profile /> : <Login />}*/}
+        {/*</li>*/}
       </ul>
     </nav>
   );
