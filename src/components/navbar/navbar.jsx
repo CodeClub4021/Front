@@ -82,9 +82,9 @@ const NavbarComponent = ({ isLogin }) => {
             </div>
           </form>
         </li>
-        {/*<li className="col-start-11 col-span-2 flex justify-start">*/}
-        {/*  {isLogin ? <Profile /> : <Login />}*/}
-        {/*</li>*/}
+        <li className="col-start-11 col-span-2 flex justify-start">
+          {isLogin ? <Profile /> : <Login />}
+        </li>
       </ul>
     </nav>
   );
