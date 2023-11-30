@@ -26,7 +26,7 @@ const routes = [
     name: "My gym",
     layout: "/admin",
     icon: <CgGym className="h-9 w-9" />,
-    path: "data-tables",
+    path: "my-gym",
     component: <DataTables />,
   },
   
