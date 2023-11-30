@@ -56,7 +56,7 @@ function Coachs(props) {
                     {...column.getHeaderProps(column.getSortByToggleProps())}
                     key={index}
                   >
-                    <div className="flex items-center justify-between pt-4 pb-2 text-start uppercase tracking-wide text-gray-800 text-lg">
+                    <div className="flex items-center justify-between pt-4 pb-2 text-start uppercase tracking-wide text-gray-900 text-lg">
                       {column.render("Header")}
                     </div>
                   </th>

@@ -7,10 +7,10 @@ import React from "react";
 function App() {
     return (
         <>
-            <Land/>
-            {/*<Home />*/}
-            {/*<ManagePanel/>*/}
-            {/*<Login/>*/}
+            {/* <Land/> */}
+            {/* <Home /> */}
+            <ManagePanel/>
+            {/* <Login/> */}
         </>
     )
 }

@@ -16,7 +16,7 @@ function CardMenu(props) {
         <button
           onClick={() => setOpen(!open)}
           open={open}
-          className={`flex items-center text-xl bg-navy-800 text-yellow-400 hover:cursor-pointer ${
+          className={`flex items-center text-xl bg-gray-900 text-amber-300 hover:cursor-pointer ${
             transparent
               ? "bg-none text-white hover:bg-none active:bg-none"
               : "bg-lightPrimary p-2 text-brand-500 hover:bg-gray-100 dark:bg-navy-700 dark:text-white dark:hover:bg-white/20 dark:active:bg-white/10"
@@ -28,8 +28,8 @@ function CardMenu(props) {
       animation={"origin-top-right transition-all duration-300 ease-in-out"}
       classNames={`${transparent ? "top-8" : "top-11"} right-0 w-max`}
       children={
-        <div className="z-50 w-max rounded-xl bg-gray-800 py-3 px-4 text-sm shadow-xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none">
-          <p className="hover:text-black flex cursor-pointer items-center gap-2 text-white hover:font-medium">
+        <div className="z-50 w-max rounded-xl bg-gray-900 py-3 px-4 text-sm shadow-xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none">
+          <p className="hover:text-white flex cursor-pointer items-center gap-2 text-amber-300 hover:font-medium">
             <span>
               <FaUserEdit/>
             </span>

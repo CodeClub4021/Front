@@ -1,8 +1,8 @@
 import React from "react";
 
 // Admin Imports
-import Profile from "./views/admin/profile";
-import DataTables from "./views/admin/tables";
+import Profile from "../../../views/admin/profile";
+import DataTables from "../../../views/admin/tables";
 
 
 

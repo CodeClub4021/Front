@@ -2,7 +2,7 @@ import React from "react";
 import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import Navbar from "../../components/ManagerPanel/navbar/index.jsx";
 import Sidebar from "../../components/ManagerPanel/sidebar";
-import routes from "../../routes.jsx";
+import routes from "../../components/ManagerPanel/sidebar/routes.jsx";
 import NavbarJavad from "../../components/navbar/navbar.jsx";
 import Footer from "../../components/footer/footer.jsx";
 
@@ -63,7 +63,7 @@ export default function Admin(props) {
       
       <Sidebar open={open} onClose={() => setOpen(false)} />
       {/* Navbar & Main Content */}
-      <div className="h-full w-full bg-gray-800 dark:!bg-navy-900">
+      <div className="h-full w-full bg-gray-900 dark:!bg-navy-900">
         {/* Main Content */}
         <main
           className={`mx-[12px] h-full flex-none transition-all md:pr-2 xl:ml-[313px]`}

@@ -12,17 +12,17 @@ const Banner = () => {
         className="relative mt-1 flex h-40 w-full justify-center rounded-2xl bg-cover"
         style={{ backgroundImage: `url(${banner})` }}
       >
-        <div className="absolute -bottom-12 flex h-[150px] w-[150px] items-center justify-center rounded-full border-[4px] border-gray-800 bg-gray-800 dark:!border-navy-700">
+        <div className="absolute -bottom-12 flex h-[150px] w-[150px] items-center justify-center rounded-full border-[4px] border-gray-900 bg-gray-900 dark:!border-navy-700">
           <img className="h-full w-full rounded-full" src={avatar} alt="" />
         </div>
       </div>
 
       {/* Name and position */}
       <div className="mt-14 flex flex-col items-center">
-        <h4 className="text-3xl font-bold text-gray-800 dark:text-white">
+        <h4 className="text-3xl font-bold text-gray-900 dark:text-white">
         Mike Tyson
         </h4>
-        <p className="text-xl font-normal text-gray-800">Gym Manager</p>
+        <p className="text-xl font-normal text-gray-900">Gym Manager</p>
       </div>
 
       {/* Post followers */}
