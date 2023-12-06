@@ -10,8 +10,8 @@ function App() {
         <>
             {/* <Land/> */}
             {/* <Home /> */}
-            {/* <ManagePanel/> */}
-            <CoachPanel/>
+            <ManagePanel/>
+            {/* <CoachPanel/> */}
             {/* <Login/> */}
         </>
     )
