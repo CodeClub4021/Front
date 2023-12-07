@@ -1,7 +1,7 @@
 import Card from "../../../../components/ManagerPanel/card";
 import Progress from "../../../../components/ManagerPanel/progress";
 import React, { useMemo } from "react";
-import CardMenu from "../../../../components/ManagerPanel/card/CardMenu";
+import CoachAdd from "../../../../components/ManagerPanel/card/CoachAdd";
 import ShowStars from "../../../../components/ManagerPanel/ShowStars/ShowStars" 
 import {
   useGlobalFilter,
@@ -36,7 +36,7 @@ function Coachs(props) {
         <h4 className="text-2xl font-bold text-navy-700 dark:text-white">
           Coachs
         </h4>
-        <CardMenu />
+        <CoachAdd />
         {/* <button className="linear rounded-[20px] bg-lightPrimary px-4 py-2 text-base font-medium text-brand-500 transition duration-200 hover:bg-gray-100 active:bg-gray-200 dark:bg-white/5 dark:text-white dark:hover:bg-white/10 dark:active:bg-white/20">
           See all
         </button> */}
