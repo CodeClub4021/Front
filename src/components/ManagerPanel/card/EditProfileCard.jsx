@@ -1,21 +1,25 @@
 import React from "react";
 import { useState } from "react";
 import Dropdown from "../dropdown";
-import { AiOutlineUser } from "react-icons/ai";
 import { BsThreeDots } from "react-icons/bs";
-import { FiSettings } from "react-icons/fi";
-import { AiOutlineShop } from "react-icons/ai";
-import { TiLightbulb } from "react-icons/ti";
 import { FaUserEdit } from "react-icons/fa";
+import { IoKey } from "react-icons/io5";
 import EditProfile from "../../modals/EditProfileModal";
+import ChangePassword from "../../modals/ChangePasswordModal";
 
 function EditProfileCard(props) {
   const { transparent } = props;
   const [open, setOpen] = React.useState(false);
   const [showEditProfile, setShowEditProfile] = useState(false);
+  const [showChangePassword, setShowChangePassword] = useState(false);
   const handleEditClick = () => {
     // Open the ProductModal when Edit Info is clicked
     setShowEditProfile(true);
+    setOpen(false); // Close the dropdown
+  };
+  const handleChangePasswordClick = () => {
+    // Open the ProductModal when Edit Info is clicked
+    setShowChangePassword(true);
     setOpen(false); // Close the dropdown
   };
 
@@ -42,11 +46,20 @@ function EditProfileCard(props) {
         <div className="z-50 w-max rounded-xl bg-gray-900 py-3 px-4 text-sm shadow-xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none">
           <p
             onClick={handleEditClick}
-           className="hover:text-white flex cursor-pointer items-center gap-2 text-amber-300 hover:font-medium">
+           className="hover:text-white text-lg flex cursor-pointer mb-2 items-center gap-2 text-amber-300 hover:font-medium">
             <span>
               <FaUserEdit/>
             </span>
             Edit Profile
+          </p>
+
+          <p
+            onClick={handleChangePasswordClick}
+           className="hover:text-white text-lg flex cursor-pointer items-center gap-2 text-amber-300 hover:font-medium">
+            <span>
+              <IoKey/>
+            </span>
+            Change Password
           </p>
           
           {/* <p className="hover:text-black flex cursor-pointer items-center gap-2 text-gray-600 hover:font-medium">
@@ -76,7 +89,8 @@ function EditProfileCard(props) {
         </div>
       }
     />
-    {showEditProfile && <EditProfile onClose={() => setShowEditProfile(false)} />}
+    {showEditProfile &&  <EditProfile onClose={() => setShowEditProfile(false)} />}
+    {showChangePassword &&  <ChangePassword onClose={() => setShowChangePassword(false)} />}
     </>
   );
 }
