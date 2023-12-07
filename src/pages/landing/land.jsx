@@ -17,7 +17,7 @@ function Land() {
         <div>
           <div className="flex flex-col place-items-start justify-start gap-2 ">
             <div
-              className="font-inter font-serif text-xl uppercase leading-4 tracking-wide"
+              className="font-custom text-sm font-bold uppercase leading-4 tracking-wide"
               style={{
                 textShadow:
                   "-1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black",
@@ -37,23 +37,21 @@ function Land() {
             </h2>
             <br />
             <p
-              className="font-dm-sans text-xl font-medium text-white"
+              className="font-dm-sans text-xl font-normal text-white"
               style={{
                 textShadow:
                   "-1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black",
               }}
             >
-              Welcome to the ultimate destination for fitness enthusiasts and
-              sports lovers! <br />
-              Dive into a world of cutting edge workouts, expert training advice
-              and a community <br />
+              Welcome to the ultimate destination for fitness enthusiasts and sports lovers! <br />
+              Dive into a world of cutting edge workouts, expert training advice and a community <br />
               that shares your passion for a healthier lifestyle.
             </p>
           </div>
 
           <div>
             <button
-              className="bg-rgba-110-128-179 focus:shadow-outline-yellow mt-5 rounded-full border-transparent bg-gray-500 px-6 py-4 text-base font-medium leading-5 tracking-wide text-white transition duration-700 ease-in-out hover:bg-amber-500 hover:text-black focus:outline-none active:bg-amber-400"
+              className="bg-rgba-110-128-179 focus:shadow-outline-yellow mt-5 rounded-full border-transparent bg-custom px-6 py-4 text-base font-medium leading-5 tracking-wide text-black transition duration-700 ease-in-out hover:bg-amber-500 hover:text-white focus:outline-none active:bg-amber-400"
               target="_self"
               href="/map"
             >
