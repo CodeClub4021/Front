@@ -7,7 +7,7 @@ import { AiOutlineShop } from "react-icons/ai";
 import { TiLightbulb } from "react-icons/ti";
 import { FaUserEdit } from "react-icons/fa";
 
-function CoachAdd(props) {
+function CardMenu(props) {
   const { transparent } = props;
   const [open, setOpen] = React.useState(false);
   return (
@@ -33,7 +33,7 @@ function CoachAdd(props) {
             <span>
               <FaUserEdit/>
             </span>
-            Add coach
+            Edit
           </p>
           
           {/* <p className="hover:text-black flex cursor-pointer items-center gap-2 text-gray-600 hover:font-medium">
