@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const AddCoach = ({ onClose }) => {
   const [formData, setFormData] = useState({
     // Initialize form data if needed
     // For example: name: '', price: '', category: '', description: ''
-    birthYear: '',
-    birthMonth: '',
-    birthDay: '',
+    birthYear: "",
+    birthMonth: "",
+    birthDay: "",
   });
 
   const handleSubmit = (e) => {
@@ -26,41 +26,48 @@ const AddCoach = ({ onClose }) => {
     }));
   };
 
-  return (  //change here
+  return (
+    //change here
     <div className="fixed inset-0 z-50 overflow-y-auto">
-      <div className="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+      <div className="flex min-h-screen items-end justify-center px-4 pb-20 pt-4 text-center sm:block sm:p-0">
         <div className="fixed inset-0 transition-opacity" aria-hidden="true">
           <div className="absolute inset-0 bg-gray-500 opacity-75"></div>
         </div>
 
-        <span className="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">
+        <span
+          className="hidden sm:inline-block sm:h-screen sm:align-middle"
+          aria-hidden="true"
+        >
           &#8203;
         </span>
 
         <div
-          className="inline-block align-bottom bg-white rounded-2xl text-left overflow-hidden shadow-xl transform transition sm:my-8 sm:align-middle sm:max-w-md sm:w-full"
+          className="inline-block transform overflow-hidden rounded-2xl bg-white text-left align-bottom shadow-xl transition sm:my-8 sm:w-full sm:max-w-md sm:align-middle"
           role="dialog"
           aria-modal="true"
           aria-labelledby="modal-headline"
         >
-          <div className="bg-amber-400 px-4 py-5 sm:px-6 sm:flex ">
-              <h3 className="text-3xl leading-6 font-medium text-gray-900" id="modal-headline">
-                Edit Profile
-              </h3>
+          <div className="bg-amber-400 px-4 py-5 sm:flex sm:px-6 ">
+            <h3
+              className="text-3xl font-medium leading-6 text-gray-900"
+              id="modal-headline"
+            >
+              Coach Information
+            </h3>
           </div>
-          <div className="bg-gray-900 px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
-            
+          <div className="bg-gray-900 px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
             <div className="sm:flex sm:items-start">
-              
-              <div className="mt-3 mr-6 w-full text-center sm:mt-0 sm:ml-4 sm:text-left">
-              
+              <div className="mr-6 mt-3 w-full text-center sm:ml-4 sm:mt-0 sm:text-left">
                 {/* Form */}
                 <form>
                   {/* Include your form input fields here */}
 
                   <div className="my-0 flex gap-10">
                     <span>
-                      <label htmlFor="name" className="block text-lg font-medium text-amber-400">
+                      <label
+                        htmlFor="name"
+                        className="block text-lg font-medium text-amber-400"
+                      >
                         Name
                       </label>
                       <input
@@ -69,16 +76,17 @@ const AddCoach = ({ onClose }) => {
                         id="name"
                         value={formData.name}
                         onChange={handleInputChange}
-                        className="mt-1 p-2 w-full rounded-md"
+                        className="mt-1 w-full rounded-md p-2 placeholder-gray-500 shadow-sm"
+                        placeholder="Full name"
                       />
                     </span>
-                        
+
                     <span>
                       <label className="block text-lg font-medium text-amber-400">
                         Gender
                       </label>
                       <div className="mt-1">
-                        <label className="inline-flex items-center ml-2">
+                        <label className="ml-2 inline-flex items-center">
                           <input
                             type="radio"
                             name="Gender"
@@ -91,7 +99,7 @@ const AddCoach = ({ onClose }) => {
                         </label>
                       </div>
                       <div className="mt-1">
-                        <label className="inline-flex items-center ml-2 ">
+                        <label className="ml-2 inline-flex items-center ">
                           <input
                             type="radio"
                             name="Gender"
@@ -103,21 +111,20 @@ const AddCoach = ({ onClose }) => {
                           <span className="ml-2 text-amber-400">Female</span>
                         </label>
                       </div>
-                    </span>   
+                    </span>
                   </div>
-
 
                   <div className="my-0">
                     <label className="block text-lg font-medium text-amber-400">
                       Birthday
                     </label>
-                    <div className="flex gap-3 mt-1">
+                    <div className="mt-1 flex gap-3">
                       {/* Year dropdown */}
                       <select
                         name="birthYear"
                         value={formData.birthYear}
                         onChange={handleInputChange}
-                        className="p-2 border rounded-md shadow-sm w-full"
+                        className="w-full rounded-md border p-2 shadow-sm"
                       >
                         <option value="">Year</option>
                         {/* Generate Year options */}
@@ -136,15 +143,20 @@ const AddCoach = ({ onClose }) => {
                         name="birthMonth"
                         value={formData.birthMonth}
                         onChange={handleInputChange}
-                        className="p-2 border rounded-md shadow-sm w-full"
+                        className="w-full rounded-md border p-2 shadow-sm"
                       >
                         <option value="">Month</option>
                         {/* Generate Month options */}
-                        {Array.from({ length: 12 }, (_, i) => i + 1).map((month) => (
-                          <option key={month} value={month}>
-                             {new Date(0, month - 1).toLocaleString('default', {month: 'long'})}
-                          </option>
-                        ))}
+                        {Array.from({ length: 12 }, (_, i) => i + 1).map(
+                          (month) => (
+                            <option key={month} value={month}>
+                              {new Date(0, month - 1).toLocaleString(
+                                "default",
+                                { month: "long" }
+                              )}
+                            </option>
+                          )
+                        )}
                       </select>
 
                       {/* Day dropdown */}
@@ -152,57 +164,62 @@ const AddCoach = ({ onClose }) => {
                         name="birthDay"
                         value={formData.birthDay}
                         onChange={handleInputChange}
-                        className="p-2 border rounded-md shadow-sm w-full"
+                        className="w-full rounded-md border p-2 shadow-sm"
                       >
                         <option value="">Day</option>
                         {/* Generate Day options */}
-                        {Array.from({ length: 31 }, (_, i) => i + 1).map((day) => (
-                          <option key={day} value={day}>
-                            {day.toString().padStart(2, '0')}
-                          </option>
-                        ))}
+                        {Array.from({ length: 31 }, (_, i) => i + 1).map(
+                          (day) => (
+                            <option key={day} value={day}>
+                              {day.toString().padStart(2, "0")}
+                            </option>
+                          )
+                        )}
                       </select>
                     </div>
                   </div>
 
-
                   <div className="my-5 flex gap-10">
                     <span>
                       <label className="block text-lg font-medium text-amber-400">
-                      Location
+                        Gym
                       </label>
-                      
-                        <input
-                          type="text"
-                          name="Location"
-                          id="Location"
-                          value={formData.Location}
-                          onChange={handleInputChange}
-                          className="mt-1 p-2 w-full rounded-md"
-                        />
+
+                      <input
+                        type="text"
+                        name="Location"
+                        id="Location"
+                        value={formData.Location}
+                        onChange={handleInputChange}
+                        className="mt-1 w-full rounded-md p-2 placeholder-gray-500 shadow-sm"
+                        placeholder="Location"
+                      />
                     </span>
-                      
+
                     <span>
-                      <label htmlFor="experience" className="block text-lg font-medium text-amber-400">
+                      <label
+                        htmlFor="experience"
+                        className="block text-lg font-medium text-amber-400"
+                      >
                         Experience (years)
                       </label>
-                        <input
+                      <input
                         type="number"
                         name="experience"
                         id="experience"
                         min="0"
                         value={formData.experience}
                         onChange={handleInputChange}
-                        className="mt-1 p-2 w-full border rounded-md shadow-sm"
+                        className="mt-1 w-full rounded-md border p-2 shadow-sm placeholder-gray-500 shadow-sm"
                         placeholder="0"
                       />
-                    </span>   
+                    </span>
                   </div>
 
                   <div className="my-5 flex gap-10">
-                    <span>
+                    {/* <span>
                       <label className="block text-lg font-medium text-amber-400">
-                      Education
+                        Education
                       </label>
                       <input
                         type="text"
@@ -210,13 +227,13 @@ const AddCoach = ({ onClose }) => {
                         id="Education"
                         value={formData.Education}
                         onChange={handleInputChange}
-                        className="mt-1 p-2 w-full rounded-md"
+                        className="mt-1 w-full rounded-md p-2"
                       />
-                    </span>
-                      
-                    <span>
+                    </span> */}
+
+                    {/* <span>
                       <label className="block text-lg font-thin text-amber-400">
-                      Languages
+                        Languages
                       </label>
                       <input
                         type="text"
@@ -224,13 +241,17 @@ const AddCoach = ({ onClose }) => {
                         id="Languages"
                         value={formData.Languages}
                         onChange={handleInputChange}
-                        className="mt-1 p-2 w-full rounded-md"
+                        className="mt-1 w-full rounded-md p-2"
                       />
-                    </span>   
+                    </span> */}
+                    {/* if it want to be next to each other have to be in same div */}
                   </div>
-                 
+
                   <div className="mb-0">
-                    <label htmlFor="description" className="block text-lg font-medium text-amber-400">
+                    <label
+                      htmlFor="description"
+                      className="block text-lg font-medium text-amber-400"
+                    >
                       Description
                     </label>
                     <textarea
@@ -239,37 +260,33 @@ const AddCoach = ({ onClose }) => {
                       rows="3"
                       onChange={handleInputChange}
                       value={formData.description}
-                      className="mt-1 p-2 w-full border border-gray-300 rounded-md shadow-sm resize-y
-                                placeholder-gray-500"
-                      placeholder="Enter a description..."
+                      className="mt-1 w-full resize-y rounded-md border border-gray-300 p-2 placeholder-gray-500
+                                shadow-sm"
+                      placeholder="Additional Info"
                     />
                   </div>
 
-                  
-                 
                   {/* Add more input fields as needed */}
-                  
-                  
                 </form>
                 {/* End Form */}
               </div>
             </div>
           </div>
-          
-          <div className="bg-amber-400 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+
+          <div className="bg-amber-400 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
             <button
               onClick={onClose}
               type="button"
-              className="inline-flex justify-center ml-5 px-4 py-2 text-xl font-medium text-amber-400 bg-gray-900 border border-transparent rounded-md  hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-              >
+              className="ml-5 inline-flex justify-center rounded-md border border-transparent bg-gray-900 px-4 py-2 text-xl font-medium text-amber-400  hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+            >
               Close
             </button>
             <button
               onClick={handleSubmit}
               type="submit"
-              className="inline-flex justify-center px-4 py-2 text-xl font-medium text-amber-400 bg-gray-900 border border-transparent rounded-md  hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+              className="inline-flex justify-center rounded-md border border-transparent bg-gray-900 px-4 py-2 text-xl font-medium text-amber-400  hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
             >
-              Save Changes
+              Add info
             </button>
           </div>
         </div>

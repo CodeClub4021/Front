@@ -33,7 +33,7 @@ function CardMenu(props) {
             <span>
               <FaUserEdit/>
             </span>
-            Edit
+            Edit info
           </p>
           
           {/* <p className="hover:text-black flex cursor-pointer items-center gap-2 text-gray-600 hover:font-medium">
