@@ -1,0 +1,43 @@
+[
+  {
+    "name": "Armin",
+    "age": 23,
+    "weight": "72",
+    "height": "183",
+    "bmi": "20",
+    "date": "12.Jan.2021"
+    
+  },
+  {
+    "name": "Ali",
+    "age": 22,
+    "weight": "80",
+    "height": "180",
+    "bmi": "21",
+    "date": "21.Feb.2021"
+  },
+  {
+    "name": "Maryam",
+    "age": 25,
+    "weight": "86",
+    "height": "160",
+    "bmi": "26",
+    "date": "13.Mar.2022"
+  },
+  {
+    "name": "Saba",
+    "age": 20,
+    "weight": "60",
+    "height": "170",
+    "bmi": "16",
+    "date": "24.Jan.2023"
+  },
+  {
+    "name": "Majid",
+    "age": 28,
+    "weight": "84",
+    "height": "150",
+    "bmi": "19",
+    "date": "Oct 24, 2022"
+  }
+]
