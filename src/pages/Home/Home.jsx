@@ -101,9 +101,9 @@ export default function Home() {
     });
     return (
         <>
-            <header className="h-screen relative">
-                <Navbar isLogin={false}/>
-                <div className="absolute min-w-full h-full">
+            <Navbar isLogin={false}/>
+            <header className="h-screen w-screen">
+                <div className="relative w-full h-full">
                     <div className="relative w-full h-full">
                         <Slider imgAddress={SLIDERS[sliderIndex]} subTitle={"Find your favorite Coach"}/>
                         <div
