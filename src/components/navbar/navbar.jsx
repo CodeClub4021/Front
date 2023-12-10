@@ -5,21 +5,30 @@ import logo from "../../assets/images/Logo.png";
 import {MdKeyboardArrowDown} from "react-icons/md";
 import {IoIosArrowUp} from "react-icons/io";
 import Filter from "./filter.jsx";
+import {useNavigate} from "react-router-dom";
 
 const NavbarComponent = ({isLogin}) => {
     const [isFilterShow, setIsShowFilter] = useState(false);
     const [state, setState] = useState("");
     const [city, setCity] = useState("");
     const [rate, setRate] = useState("");
-    const submitHandler = (e) => {
-        e.preventDefault();
-        console.log(13);
-    };
+    const [gymName, setGymName] = useState("");
+    const navigate = useNavigate();
+
     const showFilters = (e) => {
         setIsShowFilter(!isFilterShow);
     }
-    const search = () => {
-
+    const search = (e) => {
+        e.preventDefault();
+        if (gymName || city || state || rate)
+            navigate("/search", {
+                state: {
+                    state,
+                    city,
+                    rate,
+                    gymName
+                }
+            });
     }
     return (
         <nav
@@ -81,7 +90,7 @@ const NavbarComponent = ({isLogin}) => {
                 </li>
                 <li className="col-start-8 col-span-3 flex justify-center place-items-center ">
                     {/* Search Bar */}
-                    <form className="search-bar" onSubmit={submitHandler}>
+                    <form className="search-bar" onSubmit={search}>
                         <div className="flex justify-between gap-3 place-items-center">
                             {isFilterShow ?
                                 <IoIosArrowUp size={25}
@@ -98,8 +107,11 @@ const NavbarComponent = ({isLogin}) => {
                                     placeholder="Search..."
                                     className="bg-gray-900 text-gray-200 border border-gray-500 p-2 pl-11 pr-4 rounded-full placeholder-right placeholder:text-zinc-200 text-left hover:border focus:border-gray-200"
                                     required={true}
+                                    value={gymName}
+                                    onChange={e => setGymName(e.target.value)}
                                 />
-                                <button className="absolute inset-y-0 left-3 flex items-center w-7 text-white" onClick={search}>
+                                <button className="absolute inset-y-0 left-3 flex items-center w-7 text-white"
+                                        onClick={search}>
                                     <i className="fas fa-search text-white-400"></i>
                                 </button>
                             </div>

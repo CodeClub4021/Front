@@ -53,49 +53,57 @@ const gyms = [
         imageAddress: CARD_LOGO[1],
         name: "gym1",
         rateNumber: 5,
-        location: "Isfahan, Isfahan"
+        state: "isfahan",
+        city: "khomeini shahr"
     },
     {
         imageAddress: CARD_LOGO[1],
         name: "gym2",
         rateNumber: 4.5,
-        location: "Isfahan, Isfahan"
+        state: "isfahan",
+        city: "khomeini shahr"
     },
     {
         imageAddress: CARD_LOGO[1],
         name: "gym3",
         rateNumber: 4,
-        location: "Isfahan, Isfahan"
+        state: "isfahan",
+        city: "khomeini shahr"
     },
     {
         imageAddress: CARD_LOGO[1],
         name: "gym4",
         rateNumber: 3,
-        location: "Isfahan, Isfahan"
+        state: "isfahan",
+        city: "khomeini shahr"
     },
     {
         imageAddress: CARD_LOGO[1],
         name: "gym5",
         rateNumber: 3.9,
-        location: "Isfahan, Isfahan"
+        state: "isfahan",
+        city: "khomeini shahr"
     },
     {
         imageAddress: CARD_LOGO[1],
         name: "gym6",
         rateNumber: 3.9,
-        location: "Isfahan, Isfahan"
+        state: "isfahan",
+        city: "khomeini shahr"
     },
     {
         imageAddress: CARD_LOGO[1],
         name: "gym6",
         rateNumber: 3.9,
-        location: "Isfahan, Isfahan"
+        state: "isfahan",
+        city: "khomeini shahr"
     },
     {
         imageAddress: CARD_LOGO[1],
         name: "gym7",
         rateNumber: 3.9,
-        location: "Isfahan, Isfahan"
+        state: "isfahan",
+        city: "khomeini shahr"
     },
 ]
 
@@ -157,7 +165,7 @@ export default function Home() {
                     <HomeCardsGroup data={coaches} subTitle={"Most popular Coaches"}/>
                 </div>
             </main>
-            <Footer />
+            <Footer/>
         </>
 
     )

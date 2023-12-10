@@ -4,7 +4,6 @@ import {FILTER_VALUES} from "../../Constants.js";
 
 const Filter = ({props}) => {
     const {state, setState, city, setCity, rate, setRate} = props;
-    console.log(state, setState, city, setCity, rate, setRate);
     return (
         <div className="w-full flex justify-around place-items-center bg-gray-950 p-2 transition-all duration-1000">
             <label className="flex gap-3">
