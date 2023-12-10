@@ -19,7 +19,7 @@ const General = () => {
       <div className="grid grid-cols-3 gap-4 px-2">
 
         <div className="flex flex-col justify-center rounded-2xl bg-gray-900 bg-clip-border px-3 py-4 shadow-3xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none">
-          <p className="text-base text-gray-500">Gender</p>
+          <p className="text-base text-gray-500">Sex</p>
           <p className="text-lg font-medium text-white dark:text-white">
             Male
           </p>
