@@ -10,7 +10,7 @@ const NavbarComponent = ({ isLogin }) => {
   };
   return (
     <nav
-      className="bg-gray-900 text-gray text-lg py-2 fixed top-0 w-full h-fit z-50"
+      className="bg-gray-900 text-gray text-lg py-2 sticky absolute top-0 w-full h-fit z-50"
       id="navbar"
     >
       <ul className="grid grid-cols-12 md:text-md">

@@ -103,17 +103,18 @@ export default function Home() {
         <>
             <header className="h-screen relative">
                 <Navbar isLogin={false}/>
-                <div className="absolute top-22 min-w-full h-full">
-                    <Slider imgAddress={SLIDERS[sliderIndex]} subTitle={"Find your favorite Coach"}
-                            text={"Practice in your favorite Gym..."}/>
-                    <div
-                        className="absolute bottom-1/4 z-20 w-full h-full text-white text-opacity-70 capitalize flex flex-col justify-center gap-3 px-8">
-                        <h1 className="text-6xl">
-                            {"Find your favorite Coach"}
-                        </h1>
-                        <span className="text-4xl">
+                <div className="absolute min-w-full h-full">
+                    <div className="relative w-full h-full">
+                        <Slider imgAddress={SLIDERS[sliderIndex]} subTitle={"Find your favorite Coach"}/>
+                        <div
+                            className="absolute bottom-1/4 z-20 w-full h-3/4 text-white text-opacity-70 capitalize flex flex-col justify-start py-28 gap-3 px-8">
+                            <h1 className="text-6xl">
+                                {"Find your favorite Coach"}
+                            </h1>
+                            <span className="text-4xl">
                     {"Practice in your favorite Gym..."}
                         </span>
+                        </div>
                     </div>
                 </div>
             </header>
