@@ -1,8 +1,8 @@
 import Card from "../../../../components/ManagerPanel/card";
 import Progress from "../../../../components/ManagerPanel/progress";
 import React, { useMemo } from "react";
-import CardMenu from "../../../../components/ManagerPanel/card/CardMenu";
-import ShowStars from "../../../../components/ManagerPanel/ShowStars/ShowStars" 
+import AddCoachCard from "../../../../components/ManagerPanel/card/addcoachcard";
+import ShowStars from "../../../../components/ManagerPanel/ShowStars/ShowStars";
 import {
   useGlobalFilter,
   usePagination,
@@ -32,11 +32,11 @@ function Coachs(props) {
   return (
     <Card extra={"h-[300px] w-full"}>
       {/* Top Creator Header */}
-      <div className="flex h-fit w-full items-center justify-between rounded-t-2xl px-4 pt-4 pb-[20px]  dark:!bg-navy-700 dark:shadow-none">
-        <h4 className="text-2xl font-bold text-navy-700 dark:text-white">
+      <div className="dark:!bg-navy-700 flex h-fit w-full items-center justify-between rounded-t-2xl px-4 pb-[20px]  pt-4 dark:shadow-none">
+        <h4 className="text-navy-700 text-2xl font-bold dark:text-white">
           Coachs
         </h4>
-        <CardMenu />
+        <AddCoachCard />
         {/* <button className="linear rounded-[20px] bg-lightPrimary px-4 py-2 text-base font-medium text-brand-500 transition duration-200 hover:bg-gray-100 active:bg-gray-200 dark:bg-white/5 dark:text-white dark:hover:bg-white/10 dark:active:bg-white/20">
           See all
         </button> */}
@@ -56,7 +56,7 @@ function Coachs(props) {
                     {...column.getHeaderProps(column.getSortByToggleProps())}
                     key={index}
                   >
-                    <div className="flex items-center justify-between pt-4 pb-2 text-start uppercase tracking-wide text-gray-900 text-lg">
+                    <div className="flex items-center justify-between pb-2 pt-4 text-start text-lg uppercase tracking-wide text-gray-900">
                       {column.render("Header")}
                     </div>
                   </th>
@@ -87,11 +87,10 @@ function Coachs(props) {
                           </a>
                         </div>
                       );
-                
                     } else if (cell.column.Header === "Rating") {
                       data = (
                         <div class="mx-2 flex font-bold">
-                          <ShowStars StarsNumbers="3"/>
+                          <ShowStars StarsNumbers="3" />
                         </div>
                       );
                     }
