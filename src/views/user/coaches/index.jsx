@@ -6,6 +6,7 @@ import coach2 from "../../../assets/img/avatars/avatar2.png";
 import coach3 from "../../../assets/img/avatars/avatar3.png";
 import coach4 from "../../../assets/img/avatars/avatar4.png";
 import { Button } from "@chakra-ui/react";
+import { rating } from "@material-tailwind/react";
 
 const MyCoaches = () => {
   const coaches = [
@@ -66,7 +67,7 @@ const CoachCard = ({ coach }) => {
             </h4>
             <div className="flex items-center pr-14">
               <div className="mx-2 flex font-bold">
-                <ShowStars StarsNumbers="3" />
+                <ShowStars />
               </div>
               <span className="ml-2 inline-block px-4 text-sm text-gray-600">
                 <span className="whitespace-nowrap">123 reviews</span>

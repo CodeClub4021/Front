@@ -56,7 +56,7 @@ const GymCard = () => {
           </h4>
           <div className="flex items-center">
             <div class="mx-2 flex font-bold">
-              <ShowStars StarsNumbers="3" />
+              <ShowStars />
             </div>
             <span className="ml-2 text-sm text-gray-600">123 reviews</span>
           </div>
