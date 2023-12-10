@@ -53,49 +53,49 @@ const gyms = [
         imageAddress: CARD_LOGO[1],
         name: "gym1",
         rateNumber: 5,
-        location: "Iran, Isfahan"
+        location: "Isfahan, Isfahan"
     },
     {
         imageAddress: CARD_LOGO[1],
         name: "gym2",
         rateNumber: 4.5,
-        location: "Iran, Isfahan"
+        location: "Isfahan, Isfahan"
     },
     {
         imageAddress: CARD_LOGO[1],
         name: "gym3",
         rateNumber: 4,
-        location: "Iran, Isfahan"
+        location: "Isfahan, Isfahan"
     },
     {
         imageAddress: CARD_LOGO[1],
         name: "gym4",
         rateNumber: 3,
-        location: "Iran, Isfahan"
+        location: "Isfahan, Isfahan"
     },
     {
         imageAddress: CARD_LOGO[1],
         name: "gym5",
         rateNumber: 3.9,
-        location: "Iran, Isfahan"
+        location: "Isfahan, Isfahan"
     },
     {
         imageAddress: CARD_LOGO[1],
         name: "gym6",
         rateNumber: 3.9,
-        location: "Iran, Isfahan"
+        location: "Isfahan, Isfahan"
     },
     {
         imageAddress: CARD_LOGO[1],
         name: "gym6",
         rateNumber: 3.9,
-        location: "Iran, Isfahan"
+        location: "Isfahan, Isfahan"
     },
     {
         imageAddress: CARD_LOGO[1],
         name: "gym7",
         rateNumber: 3.9,
-        location: "Iran, Isfahan"
+        location: "Isfahan, Isfahan"
     },
 ]
 

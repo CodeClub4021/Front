@@ -19,3 +19,13 @@ if (!slider4)
 
 export const SLIDERS = [slider1, slider2, slider3, slider4];
 export const CARD_LOGO = [cardLogo1, cardLogo2];
+
+export const FILTER_VALUES = {
+    states : ["isfahan", "tehran", "yazd"],
+    cities: {
+        isfahan: ["khomeini Shahr", "Isfahan", "Meymeh"],
+        tehran: ["tehran", "rey"],
+        yazd: ["yazd", "meybod", "ardakan"]
+    },
+    rate: [1, 2, 3, 4, 5]
+}

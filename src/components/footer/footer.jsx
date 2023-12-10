@@ -16,7 +16,7 @@ function Footer() {
   ];
   return (
     <>
-      <footer class="w-full p-4 bg-stone-950 rounded-lg  border-t border-gray-200 shadow  md:items-center md:justify-between md:p-6 dark:bg-stone-950 dark:border-gray-600">
+      <footer className="w-full p-4 bg-stone-950 rounded-lg  border-t border-gray-200 shadow  md:items-center md:justify-between md:p-6 dark:bg-stone-950 dark:border-gray-600">
         <div className="container mx-auto  py-[0rem]">
           {/* footer div all */}
           <div className="flex justify-between flex-col md:flex-row  items-center md:items-start  md:gap-[5rem] text-left">
@@ -98,8 +98,8 @@ function Footer() {
             <span></span>
           </div>
         </div>
-        <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-        <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400"><a href="http://ce.iust.ac.ir/" class="hover:underline">Privacy Policy | © {new Date().getFullYear()} Gyms™ <br />{" "} Design by{" "}Code Club Inc.</a> All Rights Reserved.</span>
+        <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+        <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400"><a href="http://ce.iust.ac.ir/" className="hover:underline">Privacy Policy | © {new Date().getFullYear()} Gyms™ <br />{" "} Design by{" "}Code Club Inc.</a> All Rights Reserved.</span>
       </footer>
     </>
   );
