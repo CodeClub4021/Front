@@ -87,4 +87,47 @@ export const GYM_MOCKS = [
         state: "yazd",
         city: "ardakan"
     },
+];
+
+export const COACHES = [
+    {
+        imageAddress: CARD_LOGO[0],
+        name: "coach1",
+        rateNumber: 5
+    },
+    {
+        imageAddress: CARD_LOGO[0],
+        name: "coach2",
+        rateNumber: 4.5
+    },
+    {
+        imageAddress: CARD_LOGO[0],
+        name: "coach3",
+        rateNumber: 4
+    },
+    {
+        imageAddress: CARD_LOGO[0],
+        name: "coach4",
+        rateNumber: 3
+    },
+    {
+        imageAddress: CARD_LOGO[0],
+        name: "coach5",
+        rateNumber: 3.9
+    },
+    {
+        imageAddress: CARD_LOGO[0],
+        name: "coach6",
+        rateNumber: 3.9
+    },
+    {
+        imageAddress: CARD_LOGO[0],
+        name: "coach6",
+        rateNumber: 3.9
+    },
+    {
+        imageAddress: CARD_LOGO[0],
+        name: "coach7",
+        rateNumber: 3.9
+    },
 ]
