@@ -75,14 +75,14 @@ export const GYM_MOCKS = [
     },
     {
         imageAddress: CARD_LOGO[1],
-        name: "gym6",
+        name: "gym7",
         rateNumber: 3.9,
         state: "yazd",
         city: "yazd"
     },
     {
         imageAddress: CARD_LOGO[1],
-        name: "gym7",
+        name: "gym8",
         rateNumber: 3.9,
         state: "yazd",
         city: "ardakan"

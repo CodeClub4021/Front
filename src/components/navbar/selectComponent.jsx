@@ -5,8 +5,8 @@ const SelectComponent = ({options, selectedOption, setSelectedOption}) => {
         setSelectedOption(e.target.value);
     }
     return(
-        <select className="select select-bordered select-sm w-full max-w-xs transition-all duration-300" value={selectedOption} onChange={changeHandler}>
-            <option selected={true} disabled={true}>---</option>
+        <select className="select select-bordered w-full max-w-xs transition-all duration-300" value={selectedOption} onChange={changeHandler}>
+            <option disabled value={""}>---</option>
             {options.map((opt, index) => {
                 return (<option key={index + opt} value={opt}>{opt}</option>)
             })}

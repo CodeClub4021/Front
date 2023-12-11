@@ -7,12 +7,12 @@ import {IoIosArrowUp} from "react-icons/io";
 import Filter from "./filter.jsx";
 import {useNavigate} from "react-router-dom";
 
-const NavbarComponent = ({isLogin}) => {
+const NavbarComponent = ({isLogin, searchValue}) => {
     const [isFilterShow, setIsShowFilter] = useState(false);
     const [state, setState] = useState("");
     const [city, setCity] = useState("");
     const [rate, setRate] = useState("");
-    const [gymName, setGymName] = useState("");
+    const [gymName, setGymName] = useState(searchValue);
     const navigate = useNavigate();
 
     const showFilters = (e) => {
