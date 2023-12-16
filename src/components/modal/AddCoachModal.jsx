@@ -27,7 +27,6 @@ const AddCoach = ({ onClose }) => {
   };
 
   return (
-    //change here
     <div className="fixed inset-0 z-50 overflow-y-auto">
       <div className="flex min-h-screen items-end justify-center px-4 pb-20 pt-4 text-center sm:block sm:p-0">
         <div className="fixed inset-0 transition-opacity" aria-hidden="true">
@@ -58,9 +57,7 @@ const AddCoach = ({ onClose }) => {
           <div className="bg-gray-900 px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
             <div className="sm:flex sm:items-start">
               <div className="mr-6 mt-3 w-full text-center sm:ml-4 sm:mt-0 sm:text-left">
-                {/* Form */}
                 <form>
-                  {/* Include your form input fields here */}
 
                   <div className="my-0 flex gap-10">
                     <span>
@@ -265,10 +262,7 @@ const AddCoach = ({ onClose }) => {
                       placeholder="Additional Info"
                     />
                   </div>
-
-                  {/* Add more input fields as needed */}
                 </form>
-                {/* End Form */}
               </div>
             </div>
           </div>
