@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import ImageShower from "../../components/slider/imageShower.jsx";
 import {COACHES, SLIDERS, GYM_MOCKS} from "../../Constants.js";
 import Navbar from "../../components/navbar/navbar.jsx";
@@ -12,9 +12,11 @@ export default function Home() {
     return (
         <div>
             <Navbar isLogin={false}/>
-            <header className="h-screen w-screen">
-                <Slider/>
-            </header>
+            <div className="h-screen w-screen flex flex-col justify-startq">
+                <header className="h-full w-full">
+                    <Slider/>
+                </header>
+            </div>
             <main className="grid grid-cols-12 w-screen">
                 <div className="col-start-1 col-span-12 row-span-1 flex justify-center place-items-center">
                     <HomeCardsGroup data={GYM_MOCKS} subTitle={"Most popular Gyms"}/>
