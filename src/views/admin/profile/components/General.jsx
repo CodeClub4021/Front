@@ -1,11 +1,19 @@
 import Card from "../../../../components/ManagerPanel/card/";
 import EditProfileCard from "../../../../components/ManagerPanel/card/EditProfileCard";
-import React from "react";
+import React, { Component } from "react";
 import axios from "axios";
 
-const General = () => {
-  return (
-    <Card extra={"w-full h-full p-3"}>
+class General extends Component {
+  state = {};
+  async componentDidMount(){
+    // const response  = await axios.get('http://127.0.0.1:9000/gyms');
+    // console.log(response);
+     console.log("response");
+
+  }
+  render() { 
+    return (
+      <Card extra={"w-full h-full p-3"}>
       {/* Edit Profile */}
       <div className="ml-auto">
         <EditProfileCard />
@@ -62,21 +70,8 @@ const General = () => {
         </div>
 
       </div>
-
-      <div className="mt-8 mb-8 w-full">
-        <h4 className="px-2 text-2xl font-bold text-gray-900 dark:text-white">
-        Achievements
-        </h4>
-        <ul className= "ml-12 mt-2 px-2  text-gray-900 text-xl list-disc ">
-          <li>Ring magazine Prospect of the Year (1985)</li>
-          <li>2× Ring magazine Fighter of the Year (1986, 1988)</li>
-          <li>2× Sugar Ray Robinson Award winner (1987, 1989)</li>
-          <li>BBC Sports Personality of the Year Overseas Personality (1989)</li>  
-          <li>International Boxing Hall of Fame inductee (Class of 2011)</li>
-        </ul>
-      </div>
-        
-      <div className="mt-2 mb-8 w-full">
+  
+      <div className="mt-5 mb-8 w-full">
         <h4 className="px-2 text-2xl font-bold text-gray-900 dark:text-white">
         More Description
         </h4>
@@ -86,7 +81,7 @@ const General = () => {
         </p>
       </div>
     </Card>
-  );
-};
-
+    );
+  }
+}
 export default General;
