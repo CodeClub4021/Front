@@ -6,6 +6,7 @@ import { FiSettings } from "react-icons/fi";
 import { AiOutlineShop } from "react-icons/ai";
 import { TiLightbulb } from "react-icons/ti";
 import { FaUserEdit } from "react-icons/fa";
+// import axios from "axios";
 
 function CardMenu(props) {
   const { transparent } = props;
