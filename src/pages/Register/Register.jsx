@@ -45,7 +45,7 @@ function Register() {
               aria-modal="true"
               aria-labelledby="modal-headline"
             >
-              {/* Your existing modal content goes here */} 
+              {/* modal content goes here */} 
               {/* ... */}
 
               <div className="bg-amber-400 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
@@ -56,7 +56,6 @@ function Register() {
                 >
                   Close
                 </button>
-                {/* You might want to replace the onClick function below with your form submission logic */}
                 <button
                   // onClick={handleSubmit}
                   type="submit"
