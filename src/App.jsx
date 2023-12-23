@@ -4,6 +4,7 @@ import Home from "./pages/Home/Home.jsx";
 import ManagePanel from "./pages/panel/manager/managePanel";
 import CoachPanel from "./pages/panel/coach/coachPanel.jsx";
 import UserPanel from "./pages/panel/user/userpanel";
+import Register from "./pages/Register/Register.jsx";
 import React from "react";
 
 function App() {
@@ -11,10 +12,11 @@ function App() {
     <>
       {/* <Land/> */}
       {/* <Home /> */}
-      <ManagePanel />
+      {/* <ManagePanel /> */}
             {/* <CoachPanel/> */}
       {/* <UserPanel /> */}
       {/* <Login /> */}
+      <Register/>
     </>
   );
 }
