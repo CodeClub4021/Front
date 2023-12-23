@@ -4,11 +4,14 @@ import React, { Component } from "react";
 import axios from "axios";
 
 class General extends Component {
-  state = {};
+  state = {
+    manager: []
+  };
   async componentDidMount(){
-    // const response  = await axios.get('http://127.0.0.1:9000/gyms');
-    // console.log(response);
-     console.log("response");
+    const response  = (await axios.get('https://reqres.in/api/users/2'));
+    console.log(response);
+    this.setState({manager: response.data.data})
+    //  console.log("response");
 
   }
   render() { 
@@ -30,42 +33,48 @@ class General extends Component {
         <div className="flex flex-col justify-center rounded-2xl bg-gray-900 bg-clip-border px-3 py-4 shadow-3xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none">
           <p className="text-base text-gray-500">Sex</p>
           <p className="text-lg font-medium text-white dark:text-white">
-            Male
+            {/* Male */}
+            {this.state.manager.id}
           </p>
         </div>
 
         <div className="flex flex-col justify-center rounded-2xl bg-gray-900 bg-clip-border px-3 py-4 shadow-3xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none">
           <p className="text-base text-gray-500">Birthday</p>
           <p className="text-lg font-medium text-white dark:text-white">
-            20 July 1966
+            {/* 20 July 1966 */}
+            {this.state.manager.id}
           </p>
         </div>
         
         <div className="flex flex-col items-start justify-center rounded-2xl bg-gray-900 bg-clip-border px-3 py-4 shadow-3xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none">
           <p className="text-base text-gray-500">Education</p>
           <p className="text-lg font-medium text-white dark:text-white">
-            Stanford University
+            {/* Stanford University */}
+            {this.state.manager.id}
           </p>
         </div>
 
         <div className="flex flex-col justify-center rounded-2xl bg-gray-900 bg-clip-border px-3 py-4 shadow-3xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none">
           <p className="text-base text-gray-500">Languages</p>
           <p className="text-lg font-medium text-white dark:text-white">
-            English - Spanish - Italian
+            {/* English - Spanish - Italian */}
+            {this.state.manager.first_name}
           </p>
         </div>
 
         <div className="flex flex-col items-start justify-center rounded-2xl bg-gray-900 bg-clip-border px-3 py-4 shadow-3xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none">
           <p className="text-base text-gray-500">Location</p>
           <p className="text-lg font-medium text-white dark:text-white">
-          USA - LA
+          {/* USA - LA */}
+          {this.state.manager.last_name}
           </p>
         </div>
 
         <div className="flex flex-col justify-center rounded-2xl bg-gray-900 bg-clip-border px-3 py-4 shadow-3xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none">
           <p className="text-base text-gray-500">Work Experience</p>
           <p className="text-lg font-medium text-white dark:text-white">
-            10 years
+            {/* 10 years */}
+            {this.state.manager.email}
           </p>
         </div>
 
@@ -76,8 +85,10 @@ class General extends Component {
         More Description
         </h4>
         <p className="ml-5 mt-2 px-2 text-xl text-gray-900">
-        Michael Gerard Tyson is an American former 
-        professional boxer who competed from 1985 to 2005.....
+        {/* Michael Gerard Tyson is an American former 
+        professional boxer who competed from 1985 to 2005..... */}
+        {this.state.manager.email}
+
         </p>
       </div>
     </Card>
