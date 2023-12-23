@@ -1,7 +1,6 @@
 import Card from "../../../../components/ManagerPanel/card/";
 import EditProfileCard from "../../../../components/ManagerPanel/card/EditProfileCard";
 import React from "react";
-import axios from "axios";
 
 const General = () => {
   return (
@@ -61,19 +60,6 @@ const General = () => {
           </p>
         </div>
 
-      </div>
-
-      <div className="mt-8 mb-8 w-full">
-        <h4 className="px-2 text-2xl font-bold text-gray-900 dark:text-white">
-        Achievements
-        </h4>
-        <ul className= "ml-12 mt-2 px-2  text-gray-900 text-xl list-disc ">
-          <li>Ring magazine Prospect of the Year (1985)</li>
-          <li>2× Ring magazine Fighter of the Year (1986, 1988)</li>
-          <li>2× Sugar Ray Robinson Award winner (1987, 1989)</li>
-          <li>BBC Sports Personality of the Year Overseas Personality (1989)</li>  
-          <li>International Boxing Hall of Fame inductee (Class of 2011)</li>
-        </ul>
       </div>
         
       <div className="mt-2 mb-8 w-full">
