@@ -1,5 +1,5 @@
 import Card from "../../../../components/ManagerPanel/card/";
-import CardMenu from "../../../../components/ManagerPanel/card/CardMenu";
+import EditProfileCard from "../../../../components/CoachPanel/Card/EditProfileCard";
 import React from "react";
 
 const General = () => {
@@ -7,7 +7,7 @@ const General = () => {
     <Card extra={"w-full h-full p-3"}>
       {/* Edit Profile */}
       <div className="ml-auto">
-        <CardMenu />
+        <EditProfileCard />
       </div>
       {/* Header */}
       <div className="mt-2 mb-5 w-full">
