@@ -1,6 +1,7 @@
 import Card from "../../../../components/ManagerPanel/card/";
 import EditProfileCard from "../../../../components/ManagerPanel/card/EditProfileCard";
 import React from "react";
+import axios from "axios";
 
 const General = () => {
   return (
