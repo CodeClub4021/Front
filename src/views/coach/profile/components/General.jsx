@@ -9,6 +9,7 @@ class General extends Component {
    } 
   async componentDidMount(){
     const response  = (await axios.get('https://reqres.in/api/users/4'));
+    //const response  = (await axios.get('http://127.0.0.1:9000/gyms/'));
     console.log(response);
     this.setState({coach: response.data.data})
     //  console.log("response");

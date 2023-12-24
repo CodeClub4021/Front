@@ -4,8 +4,8 @@ import Dropdown from "../../ManagerPanel/dropdown";
 import { BsThreeDots } from "react-icons/bs";
 import { FaUserEdit } from "react-icons/fa";
 import { IoKey } from "react-icons/io5";
-import EditProfile from "../../modals/EditProfileModal";
-import ChangePassword from "../../modals/ChangePasswordModal";
+import EditProfile from "../../modals/EditProfileCoachModal";
+import ChangePassword from "../../modals/ChangePasswordCoachModal";
 
 function EditProfileCard(props) {
   const { transparent } = props;
