@@ -4,16 +4,19 @@ import Home from "./pages/Home/Home.jsx";
 import ManagePanel from "./pages/panel/manager/managePanel";
 import CoachPanel from "./pages/panel/coach/coachPanel.jsx";
 import UserPanel from "./pages/panel/user/userpanel";
+import Gym from "./pages/gym_win/gym_win";
 import React from "react";
 
 function App() {
   return (
     <>
       {/* <Land /> */}
-      <Home />
+      {/* <Home /> */}
       {/* <ManagePanel /> */}
+
       {/* <CoachPanel/> */}
       {/* <UserPanel /> */}
+      <Gym />
       {/* <Login /> */}
     </>
   );

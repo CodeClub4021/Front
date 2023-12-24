@@ -5,6 +5,7 @@ import { BsThreeDots } from "react-icons/bs";
 import { FaUserEdit } from "react-icons/fa";
 import { IoKey } from "react-icons/io5";
 import AddCoach from "../../modal/AddCoachModal";
+import axios from "axios";
 
 function AddCoachCard(props) {
   const { transparent } = props;
@@ -45,31 +46,6 @@ function AddCoachCard(props) {
               </span>
               Add Coach
             </p>
-
-            {/* <p className="hover:text-black flex cursor-pointer items-center gap-2 text-gray-600 hover:font-medium">
-            <span>
-              <AiOutlineUser />
-            </span>
-            Panel 11111
-          </p>
-          <p className="hover:text-black mt-2 flex cursor-pointer items-center gap-2 pt-1 text-gray-600 hover:font-medium">
-            <span>
-              <AiOutlineShop />
-            </span>
-            Panel 2
-          </p>
-          <p className="hover:text-black mt-2 flex cursor-pointer items-center gap-2 pt-1 text-gray-600 hover:font-medium">
-            <span>
-              <TiLightbulb />
-            </span>
-            Panel 3
-          </p>
-          <p className="hover:text-black mt-2 flex cursor-pointer items-center gap-2 pt-1 text-gray-600 hover:font-medium">
-            <span>
-              <FiSettings />
-            </span>
-            Panel 4
-          </p> */}
           </div>
         }
       />

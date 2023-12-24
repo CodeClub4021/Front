@@ -6,6 +6,7 @@ import { FiSettings } from "react-icons/fi";
 import { AiOutlineShop } from "react-icons/ai";
 import { TiLightbulb } from "react-icons/ti";
 import { FaUserEdit } from "react-icons/fa";
+// import axios from "axios";
 
 function CardMenu(props) {
   const { transparent } = props;
@@ -35,31 +36,6 @@ function CardMenu(props) {
             </span>
             Edit info
           </p>
-          
-          {/* <p className="hover:text-black flex cursor-pointer items-center gap-2 text-gray-600 hover:font-medium">
-            <span>
-              <AiOutlineUser />
-            </span>
-            Panel 11111
-          </p>
-          <p className="hover:text-black mt-2 flex cursor-pointer items-center gap-2 pt-1 text-gray-600 hover:font-medium">
-            <span>
-              <AiOutlineShop />
-            </span>
-            Panel 2
-          </p>
-          <p className="hover:text-black mt-2 flex cursor-pointer items-center gap-2 pt-1 text-gray-600 hover:font-medium">
-            <span>
-              <TiLightbulb />
-            </span>
-            Panel 3
-          </p>
-          <p className="hover:text-black mt-2 flex cursor-pointer items-center gap-2 pt-1 text-gray-600 hover:font-medium">
-            <span>
-              <FiSettings />
-            </span>
-            Panel 4
-          </p> */}
         </div>
       }
     />
