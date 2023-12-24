@@ -10,21 +10,21 @@ const NavbarComponent = ({ isLogin }) => {
   };
   return (
     <nav
-      className="bg-gray-900 text-gray text-lg py-2 fixed top-0 w-full h-fit z-50"
+      className="text-gray fixed top-0 z-50 h-fit w-full bg-gray-900 py-2 text-lg"
       id="navbar"
     >
-      <ul className="grid grid-cols-12 md:text-md">
-        <li className="col-start-1 col-span-1">
+      <ul className="md:text-md grid grid-cols-12">
+        <li className="col-span-1 col-start-1">
           <div className="">
             {/*shouls stay in a router after defining routers*/}
-            <img src={logo} alt="Logo" className="w-full h-16" />
+            <img src={logo} alt="Logo" className="h-16 w-full" />
           </div>
         </li>
         {}
         {/* Navigation Links */}
         <li className="col-span-4">
-          <ul className="flex justify-around place-items-center h-full px-3 gap-1">
-            <li className="w-15 h-full flex justify-center place-items-center text-gray-100  hover:border-b-2 border-b-white">
+          <ul className="flex h-full place-items-center justify-around gap-1 px-3">
+            <li className="w-15 flex h-full place-items-center justify-center border-b-white  text-gray-100 hover:border-b-2">
               <a href="#" className="flex">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -32,7 +32,7 @@ const NavbarComponent = ({ isLogin }) => {
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
                   stroke="currentColor"
-                  className="w-6 h-6 inline-block space-x-2 justify-center"
+                  className="inline-block h-6 w-6 justify-center space-x-2"
                 >
                   <path
                     strokeLinecap="round"
@@ -43,46 +43,46 @@ const NavbarComponent = ({ isLogin }) => {
                 Home
               </a>
             </li>
-            <li className="w-15 h-full flex justify-center place-items-center text-gray-100  hover:border-b-2 border-b-white">
+            <li className="w-15 flex h-full place-items-center justify-center border-b-white  text-gray-100 hover:border-b-2">
               <a href="#" className="">
                 Gyms
               </a>
             </li>
 
-            <li className="w-15 h-full flex justify-center place-items-center text-gray-100  hover:border-b-2 border-b-white">
+            <li className="w-15 flex h-full place-items-center justify-center border-b-white  text-gray-100 hover:border-b-2">
               <a href="#" className="">
                 Coaches
               </a>
             </li>
-            <li className="w-15 h-full flex justify-center place-items-center text-gray-100  hover:border-b-2 border-b-white">
+            <li className="w-15 flex h-full place-items-center justify-center border-b-white  text-gray-100 hover:border-b-2">
               <a href="#" className="">
                 Contact us
               </a>
             </li>
-            <li className="w-15  h-full flex justify-center place-items-center text-gray-100  hover:border-b-2 border-b-white">
+            <li className="w-15  flex h-full place-items-center justify-center border-b-white  text-gray-100 hover:border-b-2">
               <a href="#" className="">
                 About us
               </a>
             </li>
           </ul>
         </li>
-        <li className="col-start-8 col-span-3 flex justify-center place-items-center ">
+        <li className="col-span-3 col-start-8 flex place-items-center justify-center ">
           {/* Search Bar */}
           <form className="search-bar" onSubmit={submitHandler}>
             <div className="relative">
               <input
                 type="text"
                 placeholder="Search..."
-                className="bg-gray-900 text-gray-200 border border-gray-200 p-2 pl-11 pr-4 rounded-full placeholder-right placeholder:text-zinc-200 text-left hover:border border-gray-500"
+                className="placeholder-right rounded-full border border-gray-200 border-gray-500 bg-gray-900 p-2 pl-11 pr-4 text-left text-gray-200 placeholder:text-zinc-200 hover:border"
                 required={true}
               />
-              <span className="absolute inset-y-0 left-3 flex items-center mr-3  w-7 text-white">
+              <span className="absolute inset-y-0 left-3 mr-3 flex w-7  items-center text-white">
                 <i className="fas fa-search text-white-400"></i>
               </span>
             </div>
           </form>
         </li>
-        <li className="col-start-11 col-span-2 flex justify-start">
+        <li className="col-span-2 col-start-11 flex justify-start">
           {isLogin ? <Profile /> : <Login />}
         </li>
       </ul>
