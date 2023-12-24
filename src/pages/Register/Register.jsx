@@ -104,8 +104,11 @@ function Register() {
               </div>
 
               {/* Updated sections */}
-              <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
-                <h3 className="text-lg leading-6 font-medium text-gray-900" id="modal-headline">
+              <div className="bg-gray-900 px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
+                <h3
+                  className="text-lg font-medium leading-6 text-white"
+                  id="modal-headline"
+                >
                   Please Fill Out The Sections
                 </h3>
 
@@ -198,8 +201,19 @@ function Register() {
                   </label>
                   <div className="mt-1">
                     {/* Adjust the options as needed */}
-                    {['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'].map(day => (
-                      <label key={day} className="ml-2 inline-flex items-center">
+                    {[
+                      "Monday",
+                      "Tuesday",
+                      "Wednesday",
+                      "Thursday",
+                      "Friday",
+                      "Saturday",
+                      "Sunday",
+                    ].map((day) => (
+                      <label
+                        key={day}
+                        className="ml-2 inline-flex items-center"
+                      >
                         <input
                           type="checkbox"
                           name="availability"
@@ -235,18 +249,18 @@ function Register() {
                 </div>
               </div>
 
-              <div className="bg-amber-400 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
+              <div className="justify-center bg-amber-400 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
                 <button
                   onClick={closeModal}
                   type="button"
-                  className="ml-5 inline-flex justify-center rounded-md border border-transparent bg-gray-900 px-4 py-2 text-xl font-medium text-amber-400  hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                  className="ml-2 inline-flex justify-center w-full rounded-md border border-transparent bg-gray-900 px-4 py-2 text-xl font-medium text-amber-400  hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                 >
-                  Close
+                  Close Form
                 </button>
                 <button
                   onClick={handleSubmit}
                   type="submit"
-                  className="inline-flex justify-center rounded-md border border-transparent bg-gray-900 px-4 py-2 text-xl font-medium text-amber-400  hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                  className="ml-2 inline-flex justify-center w-full rounded-md border border-transparent bg-gray-900 px-4 py-2 text-xl font-medium text-amber-400  hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                 >
                   Send Request
                 </button>
