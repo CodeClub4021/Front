@@ -11,12 +11,12 @@ function App() {
   return (
     <>
       {/* <Land /> */}
-      {/* <Home /> */}
+      <Home />
       {/* <ManagePanel /> */}
 
       {/* <CoachPanel/> */}
       {/* <UserPanel /> */}
-      <Gym />
+      {/* <Gym /> */}
       {/* <Login /> */}
     </>
   );

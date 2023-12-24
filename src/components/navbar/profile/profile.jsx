@@ -1,16 +1,15 @@
 import React from "react";
 
-
 export default function Profile() {
   return (
-    <div className="logo text-gray-200 flex justify-center place-items-center items-center w-full ml-36 hover:text-amber-500 ">
+    <div className="logo ml-24 flex h-fit w-full place-items-center items-center justify-center text-gray-200 hover:text-amber-500 ">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
         strokeWidth={1.5}
         stroke="currentColor"
-        className="w-14 h-14 hover:text-shadow-xl"
+        className="hover:text-shadow-xl h-16 w-16"
       >
         <path
           strokeLinecap="round"
