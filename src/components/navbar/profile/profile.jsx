@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../../assets/images/Untitled5.jpg";
+
 
 export default function Profile() {
   return (
