@@ -2,6 +2,17 @@ import React, { useState } from "react";
 
 function Register() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [formData, setFormData] = useState({
+    birthYear: "",
+    birthMonth: "",
+    birthDay: "",
+    name: "",
+    gender: "",
+    phoneNumber: "",
+    emailAddress: "", // Added emailAddress field
+    description: "",
+    availability: [],
+  });
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -9,6 +20,39 @@ function Register() {
 
   const closeModal = () => {
     setIsModalOpen(false);
+  };
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  // New function to handle changes in availability
+  const handleAvailabilityChange = (e) => {
+    const { value } = e.target;
+
+    // Toggle the selected day in the availability array
+    setFormData((prevData) => {
+      const newAvailability = prevData.availability.includes(value)
+        ? prevData.availability.filter((day) => day !== value)
+        : [...prevData.availability, value];
+
+      return {
+        ...prevData,
+        availability: newAvailability,
+      };
+    });
+  };
+
+  const handleSubmit = () => {
+    // Implement your form submission logic here
+    // You can use formData to access the form values
+    // For example: console.log(formData);
+    // Close the modal after submission
+    closeModal();
   };
 
   return (
@@ -40,13 +84,156 @@ function Register() {
             </span>
 
             <div
-              className="inline-block transform overflow-hidden rounded-2xl bg-white text-left align-bottom shadow-xl transition sm:my-8 sm:w-full sm:max-w-md sm:align-middle"
+              className="inline-block transform overflow-hidden rounded-2xl bg-white text-left align-bottom shadow-xl transition sm:my-8 sm:w-full sm:max-w-3xl sm:align-middle" // Adjusted max-w-3xl
               role="dialog"
               aria-modal="true"
               aria-labelledby="modal-headline"
             >
-              {/* modal content goes here */} 
-              {/* ... */}
+              <div className="bg-amber-400 px-4 py-5 sm:flex sm:px-6 ">
+                <h3
+                  className="text-3xl font-medium leading-6 text-gray-900"
+                  id="modal-headline"
+                >
+                  Coach Registration Requirement
+                </h3>
+              </div>
+
+              {/* Existing form sections */}
+              <div className="bg-gray-900 px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
+                {/* Existing form content */}
+              </div>
+
+              {/* Updated sections */}
+              <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                <h3 className="text-lg leading-6 font-medium text-gray-900" id="modal-headline">
+                  Please Fill Out The Sections
+                </h3>
+
+                {/* Name Section */}
+                <div className="mt-4">
+                  <label
+                    htmlFor="name"
+                    className="block text-lg font-medium text-amber-400"
+                  >
+                    Name
+                  </label>
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    className="mt-1 w-full rounded-md p-2 placeholder-gray-500 shadow-sm"
+                    placeholder="Full name"
+                  />
+                </div>
+
+                {/* Gender Section */}
+                <div className="mt-4">
+                  <label className="block text-lg font-medium text-amber-400">
+                    Gender
+                  </label>
+                  <div className="mt-1">
+                    <label className="ml-2 inline-flex items-center">
+                      <input
+                        type="radio"
+                        name="gender"
+                        value="Male"
+                        checked={formData.gender === "Male"}
+                        onChange={handleInputChange}
+                        className="form-radio h-5 w-5 text-amber-400"
+                      />
+                      <span className="ml-2 text-amber-400">Male</span>
+                    </label>
+                    <label className="ml-2 inline-flex items-center">
+                      <input
+                        type="radio"
+                        name="gender"
+                        value="Female"
+                        checked={formData.gender === "Female"}
+                        onChange={handleInputChange}
+                        className="form-radio h-5 w-5 text-amber-400"
+                      />
+                      <span className="ml-2 text-amber-400">Female</span>
+                    </label>
+                  </div>
+                </div>
+
+                {/* Phone Number Section */}
+                <div className="mt-4">
+                  <label className="block text-lg font-medium text-amber-400">
+                    Phone Number
+                  </label>
+                  <input
+                    type="text"
+                    name="phoneNumber"
+                    id="phoneNumber"
+                    value={formData.phoneNumber}
+                    onChange={handleInputChange}
+                    className="mt-1 w-full rounded-md p-2 placeholder-gray-500 shadow-sm"
+                    placeholder="Phone Number"
+                  />
+                </div>
+
+                {/* Email Address Section */}
+                <div className="mt-4">
+                  <label className="block text-lg font-medium text-amber-400">
+                    Email Address
+                  </label>
+                  <input
+                    type="text"
+                    name="emailAddress"
+                    id="emailAddress"
+                    value={formData.emailAddress}
+                    onChange={handleInputChange}
+                    className="mt-1 w-full rounded-md p-2 placeholder-gray-500 shadow-sm"
+                    placeholder="Email Address"
+                  />
+                </div>
+
+                {/* Availability Section */}
+                <div className="mt-4">
+                  <label className="block text-lg font-medium text-amber-400">
+                    Week Availability
+                  </label>
+                  <div className="mt-1">
+                    {/* Adjust the options as needed */}
+                    {['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'].map(day => (
+                      <label key={day} className="ml-2 inline-flex items-center">
+                        <input
+                          type="checkbox"
+                          name="availability"
+                          value={day}
+                          checked={formData.availability.includes(day)}
+                          onChange={handleAvailabilityChange}
+                          className="form-checkbox h-5 w-5 text-amber-400"
+                        />
+                        <span className="ml-2 text-amber-400">{day}</span>
+                      </label>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Description Section */}
+                <div className="mt-4">
+                  <label
+                    htmlFor="description"
+                    className="block text-lg font-medium text-amber-400"
+                  >
+                    Skills and Fields
+                  </label>
+                  <textarea
+                    name="description"
+                    id="description"
+                    rows="3"
+                    onChange={handleInputChange}
+                    value={formData.description}
+                    className="mt-1 w-full resize-y rounded-md border border-gray-300 p-2 placeholder-gray-500
+                          shadow-sm"
+                    placeholder="Skills Information"
+                  />
+                </div>
+              </div>
 
               <div className="bg-amber-400 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
                 <button
@@ -57,11 +244,11 @@ function Register() {
                   Close
                 </button>
                 <button
-                  // onClick={handleSubmit}
+                  onClick={handleSubmit}
                   type="submit"
                   className="inline-flex justify-center rounded-md border border-transparent bg-gray-900 px-4 py-2 text-xl font-medium text-amber-400  hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                 >
-                  Add info
+                  Send Request
                 </button>
               </div>
             </div>
@@ -73,287 +260,3 @@ function Register() {
 }
 
 export default Register;
-
-
-
-// import React, { useState } from 'react';
-
-// const EditProfile = ({ onClose }) => {
-//   const [formData, setFormData] = useState({
-//     // Initialize form data if needed
-//     // For example: name: '', price: '', category: '', description: ''
-//     birthYear: '',
-//     birthMonth: '',
-//     birthDay: '',
-//   });
-
-//   const handleSubmit = (e) => {
-//     e.preventDefault();
-//     // Handle form submission logic here
-//     // You can use formData to access the form values
-//     // For example: console.log(formData);
-//     // Close the modal after submission
-//     onClose();
-//   };
-
-//   const handleInputChange = (e) => {
-//     const { name, value } = e.target;
-//     setFormData((prevData) => ({
-//       ...prevData,
-//       [name]: value,
-//     }));
-//   };
-
-//   return (
-//     <div className="fixed inset-0 z-50 overflow-y-auto">
-//       <div className="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
-//         <div className="fixed inset-0 transition-opacity" aria-hidden="true">
-//           <div className="absolute inset-0 bg-gray-500 opacity-75"></div>
-//         </div>
-
-//         <span className="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">
-//           &#8203;
-//         </span>
-
-//         <div
-//           className="inline-block align-bottom bg-white rounded-2xl text-left overflow-hidden shadow-xl transform transition sm:my-8 sm:align-middle sm:max-w-md sm:w-full"
-//           role="dialog"
-//           aria-modal="true"
-//           aria-labelledby="modal-headline"
-//         >
-//           <div className="bg-amber-400 px-4 py-5 sm:px-6 sm:flex ">
-//               <h3 className="text-3xl leading-6 font-medium text-gray-900" id="modal-headline">
-//                 Edit Profile
-//               </h3>
-//           </div>
-//           <div className="bg-gray-900 px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
-            
-//             <div className="sm:flex sm:items-start">
-              
-//               <div className="mt-3 mr-6 w-full text-center sm:mt-0 sm:ml-4 sm:text-left">
-              
-//                 {/* Form */}
-//                 <form>
-//                   {/* Include your form input fields here */}
-
-//                   <div className="my-0 flex gap-10">
-//                     <span>
-//                       <label htmlFor="name" className="block text-lg font-medium text-amber-400">
-//                         Name
-//                       </label>
-//                       <input
-//                         type="text"
-//                         name="name"
-//                         id="name"
-//                         value={formData.name}
-//                         onChange={handleInputChange}
-//                         className="mt-1 p-2 w-full rounded-md"
-//                       />
-//                     </span>
-                        
-//                     <span>
-//                       <label className="block text-lg font-medium text-amber-400">
-//                         Gender
-//                       </label>
-//                       <div className="mt-1">
-//                         <label className="inline-flex items-center ml-2">
-//                           <input
-//                             type="radio"
-//                             name="Gender"
-//                             value="Male"
-//                             checked={formData.Gender === "Male"}
-//                             onChange={handleInputChange}
-//                             className="form-radio h-5 w-5 text-amber-400"
-//                           />
-//                           <span className="ml-2 text-amber-400">Male</span>
-//                         </label>
-//                       </div>
-//                       <div className="mt-1">
-//                         <label className="inline-flex items-center ml-2 ">
-//                           <input
-//                             type="radio"
-//                             name="Gender"
-//                             value="Female"
-//                             checked={formData.Gender === "Female"}
-//                             onChange={handleInputChange}
-//                             className="form-radio h-5 w-5 text-amber-400"
-//                           />
-//                           <span className="ml-2 text-amber-400">Female</span>
-//                         </label>
-//                       </div>
-//                     </span>   
-//                   </div>
-
-
-//                   <div className="my-0">
-//                     <label className="block text-lg font-medium text-amber-400">
-//                       Birthday
-//                     </label>
-//                     <div className="flex gap-3 mt-1">
-//                       {/* Year dropdown */}
-//                       <select
-//                         name="birthYear"
-//                         value={formData.birthYear}
-//                         onChange={handleInputChange}
-//                         className="p-2 border rounded-md shadow-sm w-full"
-//                       >
-//                         <option value="">Year</option>
-//                         {/* Generate Year options */}
-//                         {[...Array(100).keys()].map((offset) => {
-//                           const year = new Date().getFullYear() - offset;
-//                           return (
-//                             <option key={year} value={year}>
-//                               {year}
-//                             </option>
-//                           );
-//                         })}
-//                       </select>
-
-//                       {/* Month dropdown */}
-//                       <select
-//                         name="birthMonth"
-//                         value={formData.birthMonth}
-//                         onChange={handleInputChange}
-//                         className="p-2 border rounded-md shadow-sm w-full"
-//                       >
-//                         <option value="">Month</option>
-//                         {/* Generate Month options */}
-//                         {Array.from({ length: 12 }, (_, i) => i + 1).map((month) => (
-//                           <option key={month} value={month}>
-//                              {new Date(0, month - 1).toLocaleString('default', {month: 'long'})}
-//                           </option>
-//                         ))}
-//                       </select>
-
-//                       {/* Day dropdown */}
-//                       <select
-//                         name="birthDay"
-//                         value={formData.birthDay}
-//                         onChange={handleInputChange}
-//                         className="p-2 border rounded-md shadow-sm w-full"
-//                       >
-//                         <option value="">Day</option>
-//                         {/* Generate Day options */}
-//                         {Array.from({ length: 31 }, (_, i) => i + 1).map((day) => (
-//                           <option key={day} value={day}>
-//                             {day.toString().padStart(2, '0')}
-//                           </option>
-//                         ))}
-//                       </select>
-//                     </div>
-//                   </div>
-
-
-//                   <div className="my-5 flex gap-10">
-//                     <span>
-//                       <label className="block text-lg font-medium text-amber-400">
-//                       Location
-//                       </label>
-                      
-//                         <input
-//                           type="text"
-//                           name="Location"
-//                           id="Location"
-//                           value={formData.Location}
-//                           onChange={handleInputChange}
-//                           className="mt-1 p-2 w-full rounded-md"
-//                         />
-//                     </span>
-                      
-//                     <span>
-//                       <label htmlFor="experience" className="block text-lg font-medium text-amber-400">
-//                         Experience (years)
-//                       </label>
-//                         <input
-//                         type="number"
-//                         name="experience"
-//                         id="experience"
-//                         min="0"
-//                         value={formData.experience}
-//                         onChange={handleInputChange}
-//                         className="mt-1 p-2 w-full border rounded-md shadow-sm"
-//                         placeholder="0"
-//                       />
-//                     </span>   
-//                   </div>
-
-//                   <div className="my-5 flex gap-10">
-//                     <span>
-//                       <label className="block text-lg font-medium text-amber-400">
-//                       Education
-//                       </label>
-//                       <input
-//                         type="text"
-//                         name="Education"
-//                         id="Education"
-//                         value={formData.Education}
-//                         onChange={handleInputChange}
-//                         className="mt-1 p-2 w-full rounded-md"
-//                       />
-//                     </span>
-                      
-//                     <span>
-//                       <label className="block text-lg font-thin text-amber-400">
-//                       Languages
-//                       </label>
-//                       <input
-//                         type="text"
-//                         name="Languages"
-//                         id="Languages"
-//                         value={formData.Languages}
-//                         onChange={handleInputChange}
-//                         className="mt-1 p-2 w-full rounded-md"
-//                       />
-//                     </span>   
-//                   </div>
-                 
-//                   <div className="mb-0">
-//                     <label htmlFor="description" className="block text-lg font-medium text-amber-400">
-//                       Description
-//                     </label>
-//                     <textarea
-//                       name="description"
-//                       id="description"
-//                       rows="3"
-//                       onChange={handleInputChange}
-//                       value={formData.description}
-//                       className="mt-1 p-2 w-full border border-gray-300 rounded-md shadow-sm resize-y
-//                                 placeholder-gray-500"
-//                       placeholder="Enter a description..."
-//                     />
-//                   </div>
-
-                  
-                 
-//                   {/* Add more input fields as needed */}
-                  
-                  
-//                 </form>
-//                 {/* End Form */}
-//               </div>
-//             </div>
-//           </div>
-          
-//           <div className="bg-amber-400 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
-//             <button
-//               onClick={onClose}
-//               type="button"
-//               className="inline-flex justify-center ml-5 px-4 py-2 text-xl font-medium text-amber-400 bg-gray-900 border border-transparent rounded-md  hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-//               >
-//               Close
-//             </button>
-//             <button
-//               onClick={handleSubmit}
-//               type="submit"
-//               className="inline-flex justify-center px-4 py-2 text-xl font-medium text-amber-400 bg-gray-900 border border-transparent rounded-md  hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-//             >
-//               Save Changes
-//             </button>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default EditProfile;
