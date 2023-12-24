@@ -9,11 +9,11 @@ import React from "react";
 function App() {
   return (
     <>
-      {/* <Land/> */}
-      {/* <Home /> */}
+      {/* <Land /> */}
+      <Home />
       {/* <ManagePanel /> */}
-            {/* <CoachPanel/> */}
-      <UserPanel />
+      {/* <CoachPanel/> */}
+      {/* <UserPanel /> */}
       {/* <Login /> */}
     </>
   );
