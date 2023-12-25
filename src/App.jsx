@@ -28,6 +28,7 @@ function App() {
         <Route path="/managerpanel" element={<ManagePanel />} />
         <Route path="/coachpanel" element={<CoachPanel />} />
         <Route path="/gympanel" element={<Gym />} />
+        <Route path="/about" element={<AboutUs />} />
       </Routes>
       {/* <Land/> */}
       {/* <Home /> */}
@@ -37,7 +38,7 @@ function App() {
       {/* <Gym /> */}
       {/* <Login /> */}
       {/* <CoachRegister/> */}
-      // <AboutUs />
+      {/* <AboutUs /> */}
     </>
   );
 }
