@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const HomeLink = () => {
   return (
-    <a href="#" className="flex">
+    <Link to="/home" className="flex">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
@@ -18,7 +19,7 @@ const HomeLink = () => {
         />
       </svg>
       <span>Home</span>
-    </a>
+    </Link>
   );
 };
 
