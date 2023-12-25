@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function Register() {
+function CoachRegister() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [formData, setFormData] = useState({
     birthYear: "",
@@ -273,4 +273,4 @@ function Register() {
   );
 }
 
-export default Register;
+export default CoachRegister;
