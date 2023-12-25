@@ -32,10 +32,15 @@ const ChangePassword = ({ onClose }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here
-    // You can use formData to access the form values
-    // For example: console.log(formData);
-    // Close the modal after submission
+    
+    console.log("khaaaaaaaaaaaaaaaaaaaaaaaaat from Manager pass");
+    const UpdatedPass = {
+      currentPassword: formData.currentPassword,
+      newPassword: formData.newPassword,
+      confirmPassword: formData.confirmPassword,
+    };
+    console.log(UpdatedPass);
+   
     onClose();
   };
 
