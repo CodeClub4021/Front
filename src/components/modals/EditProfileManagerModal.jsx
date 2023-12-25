@@ -11,10 +11,20 @@ const EditProfile = ({ onClose }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here
-    // You can use formData to access the form values
-    // For example: console.log(formData);
-    // Close the modal after submission
+
+    console.log("khaaaaaaaaaaaaaaaaaaaaaaaaat from manager");
+    const UpdatedUser = {
+      name: formData.name,
+      gender: formData.Gender,
+      birthday: `${formData.birthYear}-${formData.birthMonth}-${formData.birthDay}`,
+      location: formData.Location,
+      experience: formData.experience,
+      education: formData.Education,
+      languages: formData.Languages,
+      description: formData.description,
+    };
+    console.log(UpdatedUser);
+   
     onClose();
   };
 
