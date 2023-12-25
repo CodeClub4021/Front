@@ -8,10 +8,10 @@ class General extends Component {
     coach: []
    } 
   async componentDidMount(){
-    const response  = (await axios.get('https://reqres.in/api/users/4'));
-    //const response  = (await axios.get('http://127.0.0.1:9000/gyms/'));
-    console.log(response);
-    this.setState({coach: response.data.data})
+    //const response  = (await axios.get('https://reqres.in/api/users/4'));
+    const response  = (await axios.get('http://127.0.0.1:8000/gyms/'));
+    console.log(response.data);
+    this.setState({coach: response.data[1]})
     //  console.log("response");
   }
   render() { 
@@ -34,7 +34,7 @@ class General extends Component {
           <p className="text-base text-gray-500">Sex</p>
           <p className="text-lg font-medium text-white dark:text-white">
             {/* Male */}
-            {this.state.coach.id}
+            {this.state.coach.name}
           </p>
         </div>
 
@@ -42,7 +42,7 @@ class General extends Component {
           <p className="text-base text-gray-500">Birthday</p>
           <p className="text-lg font-medium text-white dark:text-white">
             {/* 20 July 1966 */}
-            {this.state.coach.id}
+            {this.state.coach.name}
           </p>
         </div>
 
@@ -50,7 +50,7 @@ class General extends Component {
           <p className="text-base text-gray-500">Education</p>
           <p className="text-lg font-medium text-white dark:text-white">
             {/* Stanford University */}
-            {this.state.coach.id}
+            {this.state.coach.name}
           </p>
         </div>
 
@@ -58,7 +58,7 @@ class General extends Component {
           <p className="text-base text-gray-500">Languages</p>
           <p className="text-lg font-medium text-white dark:text-white">
             {/* English - Spanish - Italian */}
-            {this.state.coach.first_name}
+            {this.state.coach.name}
           </p>
         </div>
 
@@ -66,7 +66,7 @@ class General extends Component {
           <p className="text-base text-gray-500">Location</p>
           <p className="text-lg font-medium text-white dark:text-white">
           {/* USA - LA */}
-          {this.state.coach.last_name}
+          {this.state.coach.name}
           </p>
         </div>
 
@@ -74,7 +74,7 @@ class General extends Component {
           <p className="text-base text-gray-500">Work Experience</p>
           <p className="text-lg font-medium text-white dark:text-white">
             {/* 10 years */}
-            {this.state.coach.email}
+            {this.state.coach.name}
           </p>
         </div>
 
@@ -87,7 +87,7 @@ class General extends Component {
         <p className="ml-5 mt-2 px-2 text-xl text-gray-900">
           {/* Michael Gerard Tyson is an American former 
           professional boxer who competed from 1985 to 2005..... */}
-          {this.state.coach.email}
+          {this.state.coach.address}
 
         </p>
       </div>
