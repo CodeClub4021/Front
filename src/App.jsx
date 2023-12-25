@@ -5,19 +5,28 @@ import ManagePanel from "./pages/panel/manager/managePanel";
 import CoachPanel from "./pages/panel/coach/coachPanel.jsx";
 import UserPanel from "./pages/panel/user/userpanel";
 import Gym from "./pages/gym_win/gym_win";
+import Register from "./pages/Register/Register.jsx";
+import CoachRegister from
 import React from "react";
 
 function App() {
   return (
     <>
+
       {/* <Land /> */}
       <Home />
       {/* <ManagePanel /> */}
 
       {/* <CoachPanel/> */}
+      CoachRegister
+      {/* <Land/> */}
+      {/* <Home /> */}
+      {/* <ManagePanel /> */}
+            {/* <CoachPanel/> */}
       {/* <UserPanel /> */}
       {/* <Gym /> */}
       {/* <Login /> */}
+      <Register/>
     </>
   );
 }
