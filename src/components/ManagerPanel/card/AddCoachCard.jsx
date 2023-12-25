@@ -16,9 +16,13 @@ function AddCoachCard(props) {
     setShowAddCoach(true);
     setOpen(false); // Close the dropdown
 
-    axios.post("http://127.0.0.1:8000/gyms/123/add-coach/", 
+    // axios.post("http://127.0.0.1:8000/gyms/123/add-coach/", 
+    // {
+    //   "coach_username": "test"
+    // })
+    axios.post("http://127.0.0.1:8000/gyms/321/add-coach/",
     {
-      "coach_username": "test"
+      "coach_username": "test2"
     })
   };
 
