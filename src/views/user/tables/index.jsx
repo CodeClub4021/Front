@@ -5,6 +5,7 @@ import ShowStars from "../../../components/UserPanel/ShowStars/ShowStars";
 import avatar from "../../../assets/img/profile/banner.png";
 import { Button } from "@chakra-ui/react";
 import GymSlideshow from "./components/GymSlideshow.jsx";
+import { Link } from "react-router-dom";
 const MyGyms = () => {
   return (
     <div className="flex w-full flex-col gap-5">
@@ -40,9 +41,12 @@ const GymCard = () => {
       <div className="grid grid-cols-2 gap-4">
         <div className="col-span-2  lg:col-span-1">
           <Button>
-            <h4 className="text-lg font-bold text-gray-800 hover:text-gray-600 dark:text-white">
+            <Link
+              to="/gympanel"
+              className="text-lg font-bold text-gray-800 hover:text-gray-600 dark:text-white"
+            >
               Gym Name
-            </h4>
+            </Link>
           </Button>
           <div className="mb-2 text-sm text-gray-600">
             <p className="mr-40 inline-block">Location: City, Country</p>

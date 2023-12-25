@@ -1,5 +1,6 @@
 import React from "react";
 import gym from "../../assets/videos/gym.mp4";
+import { Link } from "react-router-dom";
 
 function Land() {
   return (
@@ -43,20 +44,22 @@ function Land() {
                   "-1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black",
               }}
             >
-              Welcome to the ultimate destination for fitness enthusiasts and sports lovers! <br />
-              Dive into a world of cutting edge workouts, expert training advice and a community <br />
+              Welcome to the ultimate destination for fitness enthusiasts and
+              sports lovers! <br />
+              Dive into a world of cutting edge workouts, expert training advice
+              and a community <br />
               that shares your passion for a healthier lifestyle.
             </p>
           </div>
 
-          <div>
-            <button
-              className="bg-rgba-110-128-179 focus:shadow-outline-yellow mt-5 rounded-full border-transparent bg-custom px-6 py-4 text-base font-medium leading-5 tracking-wide text-black transition duration-700 ease-in-out hover:bg-amber-500 hover:text-white focus:outline-none active:bg-amber-400"
+          <div className="mt-10">
+            <Link
+              className="bg-rgba-110-128-179 focus:shadow-outline-yellow rounded-full border-transparent bg-custom px-6 py-4 text-base font-medium leading-5 tracking-wide text-black transition duration-700 ease-in-out hover:bg-amber-500 hover:text-white focus:outline-none active:bg-amber-400"
               target="_self"
-              href="/map"
+              to="/home"
             >
               learn more
-            </button>
+            </Link>
           </div>
         </div>
       </div>
