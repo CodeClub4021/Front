@@ -56,7 +56,7 @@ function CoachRegister() {
   };
 
   return (
-    <div className="content absolute top-0 flex h-full w-full flex-col items-center justify-center text-white">
+    <div className="content relative top-0 flex h-full w-full flex-col items-center justify-center text-white">
       <div>
         <button
           className="bg-rgba-110-128-179 focus:shadow-outline-yellow mt-5 rounded-full border-transparent bg-custom px-6 py-4 text-base font-medium leading-5 tracking-wide text-black transition duration-700 ease-in-out hover:bg-amber-500 hover:text-white focus:outline-none active:bg-amber-400"
@@ -253,14 +253,14 @@ function CoachRegister() {
                 <button
                   onClick={closeModal}
                   type="button"
-                  className="ml-2 inline-flex justify-center w-full rounded-md border border-transparent bg-gray-900 px-4 py-2 text-xl font-medium text-amber-400  hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                  className="ml-2 inline-flex w-full justify-center rounded-md border border-transparent bg-gray-900 px-4 py-2 text-xl font-medium text-amber-400  hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                 >
                   Close Form
                 </button>
                 <button
                   onClick={handleSubmit}
                   type="submit"
-                  className="ml-2 inline-flex justify-center w-full rounded-md border border-transparent bg-gray-900 px-4 py-2 text-xl font-medium text-amber-400  hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                  className="ml-2 inline-flex w-full justify-center rounded-md border border-transparent bg-gray-900 px-4 py-2 text-xl font-medium text-amber-400  hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                 >
                   Send Request
                 </button>
