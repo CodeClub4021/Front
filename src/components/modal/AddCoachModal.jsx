@@ -3,11 +3,10 @@ import React, { useState } from "react";
 
 const AddCoach = ({ onClose }) => {
   const [formData, setFormData] = useState({
-    // Initialize form data if needed
-    // For example: name: '', price: '', category: '', description: ''
-    birthYear: "",
-    birthMonth: "",
-    birthDay: "",
+    // Initialize form data if needed For example: name: '', price: '', category: '', description: ''
+    // birthYear: "",
+    // birthMonth: "",
+    // birthDay: "",
   });
   const [coachUsername, setCoachUsername] = useState("");
 
@@ -80,127 +79,10 @@ const AddCoach = ({ onClose }) => {
                         value={coachUsername}
                         onChange={(e) => setCoachUsername(e.target.value)}
                         className="mt-1 w-full rounded-md p-2 placeholder-gray-500 shadow-sm"
-                        placeholder="Full name"
+                        placeholder="Name"
                       />
                     </span>
-
-                    {/* <span>
-                      <label className="block text-lg font-medium text-amber-400">
-                        Gym
-                      </label>
-
-                      <input
-                        type="text" //slectoption
-                        name="Location"
-                        id="Location"
-                        value={formData.Location}
-                        onChange={handleInputChange}
-                        className="mt-1 w-full rounded-md p-2 placeholder-gray-500 shadow-sm"
-                        placeholder="Location"
-                      />
-                    </span> */}
-
-
-                    {/* <span>
-                      <label className="block text-lg font-medium text-amber-400">
-                        Gender
-                      </label>
-                      <div className="mt-1">
-                        <label className="ml-2 inline-flex items-center">
-                          <input
-                            type="radio"
-                            name="Gender"
-                            value="Male"
-                            checked={formData.Gender === "Male"}
-                            onChange={handleInputChange}
-                            className="form-radio h-5 w-5 text-amber-400"
-                          />
-                          <span className="ml-2 text-amber-400">Male</span>
-                        </label>
-                      </div>
-                      <div className="mt-1">
-                        <label className="ml-2 inline-flex items-center ">
-                          <input
-                            type="radio"
-                            name="Gender"
-                            value="Female"
-                            checked={formData.Gender === "Female"}
-                            onChange={handleInputChange}
-                            className="form-radio h-5 w-5 text-amber-400"
-                          />
-                          <span className="ml-2 text-amber-400">Female</span>
-                        </label>
-                      </div>
-                    </span> */}
                   </div>
-
-
-                  {/* <div className="my-5 flex gap-10">
-                    <span>
-                      <label className="block text-lg font-medium text-amber-400">
-                        Education
-                      </label>
-                      <input
-                        type="text"
-                        name="Education"
-                        id="Education"
-                        value={formData.Education}
-                        onChange={handleInputChange}
-                        className="mt-1 w-full rounded-md p-2"
-                      />
-                    </span>
-
-                    <span>
-                      <label className="block text-lg font-thin text-amber-400">
-                        Languages
-                      </label>
-                      <input
-                        type="text"
-                        name="Languages"
-                        id="Languages"
-                        value={formData.Languages}
-                        onChange={handleInputChange}
-                        className="mt-1 w-full rounded-md p-2"
-                      />
-                    </span>
-                  </div> */}
-
-                  {/* <div className="mb-0">
-                    <span>
-                      <label className="block text-lg font-medium text-amber-400">
-                        Location
-                      </label>
-
-                      <input
-                        type="text"
-                        name="Location"
-                        id="Location"
-                        value={formData.Location}
-                        onChange={handleInputChange}
-                        className="mt-1 w-full rounded-md p-2 placeholder-gray-500 shadow-sm"
-                        placeholder="Gym"
-                      />
-                    </span>
-                  </div> */}
-
-                  {/* <div className="mb-0">
-                    <label
-                      htmlFor="description"
-                      className="block text-lg font-medium text-amber-400"
-                    >
-                      Description
-                    </label>
-                    <textarea
-                      name="description"
-                      id="description"
-                      rows="3"
-                      onChange={handleInputChange}
-                      value={formData.description}
-                      className="mt-1 w-full resize-y rounded-md border border-gray-300 p-2 placeholder-gray-500
-                                shadow-sm"
-                      placeholder="Additional Info"
-                    />
-                  </div> */}
                 </form>
               </div>
             </div>
@@ -219,7 +101,7 @@ const AddCoach = ({ onClose }) => {
               type="submit"
               className="inline-flex justify-center rounded-md border border-transparent bg-gray-900 px-4 py-2 text-xl font-medium text-amber-400  hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
             >
-              Add info
+              Add
             </button>
           </div>
         </div>
@@ -229,3 +111,20 @@ const AddCoach = ({ onClose }) => {
 };
 
 export default AddCoach;
+
+
+{/* <span>
+                      <label className="block text-lg font-medium text-amber-400">
+                        Gym
+                      </label>
+
+                      <input
+                        type="text" //slectoption
+                        name="Location"
+                        id="Location"
+                        value={formData.Location}
+                        onChange={handleInputChange}
+                        className="mt-1 w-full rounded-md p-2 placeholder-gray-500 shadow-sm"
+                        placeholder="Location"
+                      />
+                    </span> */}
