@@ -15,6 +15,15 @@ function AddCoachCard(props) {
     // Open the ProductModal when Edit Info is clicked
     setShowAddCoach(true);
     setOpen(false); // Close the dropdown
+
+    // axios.post("http://127.0.0.1:8000/gyms/123/add-coach/", 
+    // {
+    //   "coach_username": "test"
+    // })
+    axios.post("http://127.0.0.1:8000/gyms/321/add-coach/",
+    {
+      "coach_username": "test2"
+    })
   };
 
   return (

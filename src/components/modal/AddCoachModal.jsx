@@ -58,7 +58,6 @@ const AddCoach = ({ onClose }) => {
             <div className="sm:flex sm:items-start">
               <div className="mr-6 mt-3 w-full text-center sm:ml-4 sm:mt-0 sm:text-left">
                 <form>
-
                   <div className="my-0 flex gap-10">
                     <span>
                       <label
@@ -179,7 +178,7 @@ const AddCoach = ({ onClose }) => {
                   <div className="my-5 flex gap-10">
                     <span>
                       <label className="block text-lg font-medium text-amber-400">
-                        Gym
+                        Location
                       </label>
 
                       <input
@@ -207,14 +206,14 @@ const AddCoach = ({ onClose }) => {
                         min="0"
                         value={formData.experience}
                         onChange={handleInputChange}
-                        className="mt-1 w-full rounded-md border p-2 shadow-sm placeholder-gray-500 shadow-sm"
+                        className="mt-1 w-full rounded-md border p-2 placeholder-gray-500 shadow-sm shadow-sm"
                         placeholder="0"
                       />
                     </span>
                   </div>
 
                   <div className="my-5 flex gap-10">
-                    {/* <span>
+                    <span>
                       <label className="block text-lg font-medium text-amber-400">
                         Education
                       </label>
@@ -226,9 +225,9 @@ const AddCoach = ({ onClose }) => {
                         onChange={handleInputChange}
                         className="mt-1 w-full rounded-md p-2"
                       />
-                    </span> */}
+                    </span>
 
-                    {/* <span>
+                    <span>
                       <label className="block text-lg font-thin text-amber-400">
                         Languages
                       </label>
@@ -240,8 +239,26 @@ const AddCoach = ({ onClose }) => {
                         onChange={handleInputChange}
                         className="mt-1 w-full rounded-md p-2"
                       />
-                    </span> */}
+                    </span>
                     {/* if it want to be next to each other have to be in same div */}
+                  </div>
+
+                  <div className="mb-0">
+                    <span>
+                      <label className="block text-lg font-medium text-amber-400">
+                        Gym
+                      </label>
+
+                      <input
+                        type="text"
+                        name="Location"
+                        id="Location"
+                        value={formData.Location}
+                        onChange={handleInputChange}
+                        className="mt-1 w-full rounded-md p-2 placeholder-gray-500 shadow-sm"
+                        placeholder="Gym"
+                      />
+                    </span>
                   </div>
 
                   <div className="mb-0">
