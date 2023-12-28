@@ -20,7 +20,7 @@ function App() {
       {/* <ManagePanel /> */}
       {/* <CoachPanel/> */}
       {/* <Home /> */}
-      <Routes>
+      {/* <Routes>
         <Route path="/" element={<Land />} />
         <Route path="/home" element={<Home />} />
         <Route path="/login" element={<Login />} />
@@ -29,10 +29,10 @@ function App() {
         <Route path="/coachpanel" element={<CoachPanel />} />
         <Route path="/gympanel" element={<Gym />} />
         <Route path="/about" element={<AboutUs />} />
-      </Routes>
+      </Routes> */}
       {/* <Land/> */}
       {/* <Home /> */}
-      {/* <ManagePanel /> */}
+      <ManagePanel />
       {/* <CoachPanel /> */}
       {/* <UserPanel /> */}
       {/* <Gym /> */}

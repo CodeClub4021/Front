@@ -64,7 +64,7 @@ const AddCoach = ({ onClose }) => {
                         htmlFor="name"
                         className="block text-lg font-medium text-amber-400"
                       >
-                        Name
+                        User Name
                       </label>
                       <input
                         type="text"
@@ -78,6 +78,22 @@ const AddCoach = ({ onClose }) => {
                     </span>
 
                     <span>
+                      <label className="block text-lg font-medium text-amber-400">
+                        Gym
+                      </label>
+
+                      <input
+                        type="text"
+                        name="Location"
+                        id="Location"
+                        value={formData.Location}
+                        onChange={handleInputChange}
+                        className="mt-1 w-full rounded-md p-2 placeholder-gray-500 shadow-sm"
+                        placeholder="Location"
+                      />
+                    </span>
+
+                    {/* <span>
                       <label className="block text-lg font-medium text-amber-400">
                         Gender
                       </label>
@@ -107,92 +123,15 @@ const AddCoach = ({ onClose }) => {
                           <span className="ml-2 text-amber-400">Female</span>
                         </label>
                       </div>
-                    </span>
+                    </span> */}
                   </div>
 
-                  <div className="my-0">
-                    <label className="block text-lg font-medium text-amber-400">
-                      Birthday
-                    </label>
-                    <div className="mt-1 flex gap-3">
-                      {/* Year dropdown */}
-                      <select
-                        name="birthYear"
-                        value={formData.birthYear}
-                        onChange={handleInputChange}
-                        className="w-full rounded-md border p-2 shadow-sm"
-                      >
-                        <option value="">Year</option>
-                        {/* Generate Year options */}
-                        {[...Array(100).keys()].map((offset) => {
-                          const year = new Date().getFullYear() - offset;
-                          return (
-                            <option key={year} value={year}>
-                              {year}
-                            </option>
-                          );
-                        })}
-                      </select>
-
-                      {/* Month dropdown */}
-                      <select
-                        name="birthMonth"
-                        value={formData.birthMonth}
-                        onChange={handleInputChange}
-                        className="w-full rounded-md border p-2 shadow-sm"
-                      >
-                        <option value="">Month</option>
-                        {/* Generate Month options */}
-                        {Array.from({ length: 12 }, (_, i) => i + 1).map(
-                          (month) => (
-                            <option key={month} value={month}>
-                              {new Date(0, month - 1).toLocaleString(
-                                "default",
-                                { month: "long" }
-                              )}
-                            </option>
-                          )
-                        )}
-                      </select>
-
-                      {/* Day dropdown */}
-                      <select
-                        name="birthDay"
-                        value={formData.birthDay}
-                        onChange={handleInputChange}
-                        className="w-full rounded-md border p-2 shadow-sm"
-                      >
-                        <option value="">Day</option>
-                        {/* Generate Day options */}
-                        {Array.from({ length: 31 }, (_, i) => i + 1).map(
-                          (day) => (
-                            <option key={day} value={day}>
-                              {day.toString().padStart(2, "0")}
-                            </option>
-                          )
-                        )}
-                      </select>
-                    </div>
-                  </div>
+                 
 
                   <div className="my-5 flex gap-10">
-                    <span>
-                      <label className="block text-lg font-medium text-amber-400">
-                        Location
-                      </label>
+                    
 
-                      <input
-                        type="text"
-                        name="Location"
-                        id="Location"
-                        value={formData.Location}
-                        onChange={handleInputChange}
-                        className="mt-1 w-full rounded-md p-2 placeholder-gray-500 shadow-sm"
-                        placeholder="Location"
-                      />
-                    </span>
-
-                    <span>
+                    {/* <span>
                       <label
                         htmlFor="experience"
                         className="block text-lg font-medium text-amber-400"
@@ -209,10 +148,10 @@ const AddCoach = ({ onClose }) => {
                         className="mt-1 w-full rounded-md border p-2 placeholder-gray-500 shadow-sm shadow-sm"
                         placeholder="0"
                       />
-                    </span>
+                    </span> */}
                   </div>
 
-                  <div className="my-5 flex gap-10">
+                  {/* <div className="my-5 flex gap-10">
                     <span>
                       <label className="block text-lg font-medium text-amber-400">
                         Education
@@ -240,13 +179,12 @@ const AddCoach = ({ onClose }) => {
                         className="mt-1 w-full rounded-md p-2"
                       />
                     </span>
-                    {/* if it want to be next to each other have to be in same div */}
-                  </div>
+                  </div> */}
 
-                  <div className="mb-0">
+                  {/* <div className="mb-0">
                     <span>
                       <label className="block text-lg font-medium text-amber-400">
-                        Gym
+                        Location
                       </label>
 
                       <input
@@ -259,9 +197,9 @@ const AddCoach = ({ onClose }) => {
                         placeholder="Gym"
                       />
                     </span>
-                  </div>
+                  </div> */}
 
-                  <div className="mb-0">
+                  {/* <div className="mb-0">
                     <label
                       htmlFor="description"
                       className="block text-lg font-medium text-amber-400"
@@ -278,7 +216,7 @@ const AddCoach = ({ onClose }) => {
                                 shadow-sm"
                       placeholder="Additional Info"
                     />
-                  </div>
+                  </div> */}
                 </form>
               </div>
             </div>
