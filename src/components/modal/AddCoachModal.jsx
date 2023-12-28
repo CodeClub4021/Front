@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { useState } from "react";
 
 const AddCoach = ({ onClose }) => {
@@ -8,13 +9,19 @@ const AddCoach = ({ onClose }) => {
     birthMonth: "",
     birthDay: "",
   });
+  const [coachUsername, setCoachUsername] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission logic here
-    // You can use formData to access the form values
-    // For example: console.log(formData);
-    // Close the modal after submission
+    try{
+      const res = await axios.post(`http://127.0.0.1:8000/gyms/${id}/add-coach/`, 
+      {
+        coach_username: coachUsername
+      });
+      console.log(res.data);
+    } catch(err){
+      console.error(err);
+    }
     onClose();
   };
 
@@ -70,20 +77,20 @@ const AddCoach = ({ onClose }) => {
                         type="text"
                         name="name"
                         id="name"
-                        value={formData.name}
-                        onChange={handleInputChange}
+                        value={coachUsername}
+                        onChange={(e) => setCoachUsername(e.target.value)}
                         className="mt-1 w-full rounded-md p-2 placeholder-gray-500 shadow-sm"
                         placeholder="Full name"
                       />
                     </span>
 
-                    <span>
+                    {/* <span>
                       <label className="block text-lg font-medium text-amber-400">
                         Gym
                       </label>
 
                       <input
-                        type="text"
+                        type="text" //slectoption
                         name="Location"
                         id="Location"
                         value={formData.Location}
@@ -91,7 +98,8 @@ const AddCoach = ({ onClose }) => {
                         className="mt-1 w-full rounded-md p-2 placeholder-gray-500 shadow-sm"
                         placeholder="Location"
                       />
-                    </span>
+                    </span> */}
+
 
                     {/* <span>
                       <label className="block text-lg font-medium text-amber-400">
@@ -126,30 +134,6 @@ const AddCoach = ({ onClose }) => {
                     </span> */}
                   </div>
 
-                 
-
-                  <div className="my-5 flex gap-10">
-                    
-
-                    {/* <span>
-                      <label
-                        htmlFor="experience"
-                        className="block text-lg font-medium text-amber-400"
-                      >
-                        Experience (years)
-                      </label>
-                      <input
-                        type="number"
-                        name="experience"
-                        id="experience"
-                        min="0"
-                        value={formData.experience}
-                        onChange={handleInputChange}
-                        className="mt-1 w-full rounded-md border p-2 placeholder-gray-500 shadow-sm shadow-sm"
-                        placeholder="0"
-                      />
-                    </span> */}
-                  </div>
 
                   {/* <div className="my-5 flex gap-10">
                     <span>
