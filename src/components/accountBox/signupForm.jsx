@@ -21,25 +21,21 @@ export function SignupForm(props) {
   const [email, setEmail] = useState("");
   const [userType, setUserType] = useState("");
 
-  useEffect(() => {
-    console.log(userType);
-  }, [userType])
-
 
   const submitHandler = async () => {
     console.log(userType);
     if (!username){
       // error
-      console.log("username is necessary");
+      console.error("username is necessary");
     } else if(!password){
             // error
-            console.log("password is necessary");
+            console.error("password is necessary");
     } else if(!repeatPassword){
             // error
-            console.log("rpassword is necessary");
+            console.error("rpassword is necessary");
     } else if(!email){
             // error
-            console.log("email is necessary");
+            console.error("email is necessary");
     } else{
       try{
         const res = await axios.post("http://127.0.0.1:8000/signup/", 
@@ -66,7 +62,7 @@ export function SignupForm(props) {
         <Input type="email" placeholder="Email"  value={email} onChange={(e) => setEmail(e.target.value)}/>
         <Input type="password" placeholder="Password"  value={password} onChange={(e) => setPassword(e.target.value)}/>
         <Input type="password" placeholder="Confirm Password" value={repeatPassword} onChange={(e) => setRepeatPassword(e.target.value)}/>
-        <div>
+        <div className="flex justify-between">
         <UserTypeCheckBox text={"manager"} setValue={setUserType} />
         <UserTypeCheckBox text={"coach"} setValue={setUserType} />
         <UserTypeCheckBox text={"user"} setValue={setUserType} />

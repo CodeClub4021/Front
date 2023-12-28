@@ -17,11 +17,9 @@ const AppContainer = styled.div`
 const Login = () => {
   return (
     <div className="w-full h-full">
-      <NavbarComponent isLogin={false} />
     <AppContainer>
       <AccountBox />
     </AppContainer>
-    <Footer />
     </div>
   );
 }
