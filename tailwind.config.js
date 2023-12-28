@@ -1,5 +1,4 @@
-// import daisyui from "daisyui";
-// import daisyui from "daisyui";   // when someone need this add to plugins
+import daisyui from "daisyui";
 
 /** @type {import('tailwindcss').Config} */
 
@@ -35,5 +34,5 @@ export default {
     },
   },
   darkMode: "class",
-  plugins: []
+  plugins: [daisyui]
 }

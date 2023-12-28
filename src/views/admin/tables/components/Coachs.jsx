@@ -1,7 +1,7 @@
 import Card from "../../../../components/ManagerPanel/card";
 import Progress from "../../../../components/ManagerPanel/progress";
 import React, { useMemo } from "react";
-import AddCoachCard from "../../../../components/ManagerPanel/card/addcoachcard";
+import AddCoachCard from "../../../../components/ManagerPanel/card/AddCoachCard.jsx";
 import ShowStars from "../../../../components/ManagerPanel/ShowStars/ShowStars";
 import {
   useGlobalFilter,
