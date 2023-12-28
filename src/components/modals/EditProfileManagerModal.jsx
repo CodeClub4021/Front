@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { useState } from 'react';
 
 const EditProfile = ({ onClose }) => {
@@ -9,7 +10,7 @@ const EditProfile = ({ onClose }) => {
     birthDay: '',
   });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     console.log("khaaaaaaaaaaaaaaaaaaaaaaaaat from manager");
@@ -24,7 +25,17 @@ const EditProfile = ({ onClose }) => {
       description: formData.description,
     };
     console.log(UpdatedUser);
-   
+      try{
+        const res = await axios.patch("http://127.0.0.1:8000/manager/edit/", UpdatedUser, 
+        {
+          headers: {
+            Authorization: localStorage.getItem("access_token")
+          }
+        });
+        console.log(res.data);
+      } catch(err){
+        console.error(err);
+      }
     onClose();
   };
 
