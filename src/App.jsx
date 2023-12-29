@@ -9,6 +9,7 @@ import UserPanel from "./pages/panel/user/userpanel";
 import Gym from "./pages/gym_win/gym_win";
 import CoachRegister from "./pages/CoachRegister/CoachRegister.jsx";
 import Navbar from "./components/navbar/navbar.jsx";
+import Comment from "./pages/Comment/Comment.jsx";
 
 import React from "react";
 
@@ -20,7 +21,7 @@ function App() {
       {/* <ManagePanel /> */}
       {/* <CoachPanel/> */}
       {/* <Home /> */}
-      <Routes>
+      {/* <Routes>
         <Route path="/" element={<Land />} />
         <Route path="/home" element={<Home />} />
         <Route path="/login" element={<Login />} />
@@ -29,7 +30,7 @@ function App() {
         <Route path="/coachpanel" element={<CoachPanel />} />
         <Route path="/gympanel" element={<Gym />} />
         <Route path="/about" element={<AboutUs />} />
-      </Routes>
+      </Routes> */}
       {/* <Land/> */}
       {/* <Home /> */}
       {/* <ManagePanel /> */}
@@ -39,6 +40,7 @@ function App() {
       {/* <Login /> */}
       {/* <CoachRegister/> */}
       {/* <AboutUs /> */}
+      <Comment/>
     </>
   );
 }
