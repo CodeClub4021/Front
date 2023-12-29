@@ -9,7 +9,7 @@ import UserPanel from "./pages/panel/user/userpanel";
 import Gym from "./pages/gym_win/gym_win";
 import CoachRegister from "./pages/CoachRegister/CoachRegister.jsx";
 import Navbar from "./components/navbar/navbar.jsx";
-import Comment from "./pages/Comment/Comment.jsx";
+import CommentSection from "./pages/Comment/CommentSection.jsx";
 
 import React from "react";
 
@@ -40,7 +40,7 @@ function App() {
       {/* <Login /> */}
       {/* <CoachRegister/> */}
       {/* <AboutUs /> */}
-      <Comment/>
+      <CommentSection/>
     </>
   );
 }
