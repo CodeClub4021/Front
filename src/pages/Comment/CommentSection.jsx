@@ -35,12 +35,12 @@ const CommentSection = () => {
       <div className="my-4">
         <textarea
           className="border p-2 w-full mb-2"
-          placeholder="Add a comment..."
+          placeholder="Add comment..."
           value={newCommentText}
           onChange={(e) => setNewCommentText(e.target.value)}
         />
         <button
-          className="bg-green-500 text-white p-2"
+          className="bg-amber-500 text-white p-2"
           onClick={addComment}
         >
           Send

@@ -31,7 +31,7 @@ const Comment = ({ comment, onDelete, onEdit }) => {
             onChange={(e) => setEditedComment(e.target.value)}
           />
           <button
-            className="bg-blue-500 text-white p-2 mr-2"
+            className="bg-yellow-300 text-black p-2 mr-2"
             onClick={handleSave}
           >
             Save
@@ -44,7 +44,7 @@ const Comment = ({ comment, onDelete, onEdit }) => {
         <div>
           <p>{comment.text}</p>
           <div className="mt-2">
-            <button className="bg-blue-500 text-white p-2 mr-2" onClick={handleEdit}>
+            <button className="bg-slate-500 text-white p-2 mr-2" onClick={handleEdit}>
               Edit
             </button>
             <button
