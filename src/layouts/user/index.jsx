@@ -47,7 +47,7 @@ export default function User(props) {
   };
   const getRoutes = (routes) => {
     return routes.map((prop, key) => {
-      if (prop.layout === "/admin") {
+      if (prop.layout === "/user") {
         return (
           <Route path={`/${prop.path}`} element={prop.component} key={key} />
         );
@@ -83,7 +83,7 @@ export default function User(props) {
 
                 <Route
                   path="/"
-                  element={<Navigate to="/admin/profile" replace />}
+                  element={<Navigate to="/user/profile" replace />}
                 />
               </Routes>
             </div>
