@@ -37,7 +37,7 @@ const ColumnsTable = (props) => {
   return (
     <Card extra={"w-full pb-10 p-4 h-full"}>
       <header className="relative flex items-center justify-between">
-        <div className="text-2xl text- font-bold text-navy-700 dark:text-white">
+        <div className="text-2xl text- font-bold text-gray-900 dark:text-white">
           Members
         </div>
         <CardMenu />
@@ -71,25 +71,25 @@ const ColumnsTable = (props) => {
                     let data;
                     if (cell.column.Header === "NAME") {
                       data = (
-                        <p className="text-sm font-bold text-navy-700 dark:text-white">
+                        <p className="text-sm font-bold text-gray-900 dark:text-white">
                           {cell.value}
                         </p>
                       );
                     } else if (cell.column.Header === "PROGRESS") {
                       data = (
-                        <p className="mr-[10px] text-sm font-semibold text-navy-700 dark:text-white">
+                        <p className="mr-[10px] text-sm font-semibold text-gray-900 dark:text-white">
                           {cell.value}%
                         </p>
                       );
                     } else if (cell.column.Header === "AGE") {
                       data = (
-                        <p className="text-sm font-bold text-navy-700 dark:text-white">
+                        <p className="text-sm font-bold text-gray-900 dark:text-white">
                           {cell.value}
                         </p>
                       );
                     } else if (cell.column.Header === "DATE OF SIGN UP") {
                       data = (
-                        <p className="text-sm font-bold text-navy-700 dark:text-white">
+                        <p className="text-sm font-bold text-gray-900 dark:text-white">
                           {cell.value}
                         </p>
                       );
