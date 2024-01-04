@@ -33,7 +33,7 @@ function Coachs(props) {
     <Card extra={"h-[300px] w-full"}>
       {/* Top Creator Header */}
       <div className="dark:!bg-navy-700 flex h-fit w-full items-center justify-between rounded-t-2xl px-4 pb-[20px]  pt-4 dark:shadow-none">
-        <h4 className="text-navy-700 text-2xl font-bold dark:text-white">
+        <h4 className="text-gray-900 text-2xl font-bold dark:text-white">
           Coachs
         </h4>
         <AddCoachCard />

@@ -8,8 +8,8 @@ const UserPanel = () => {
     <div className="flex flex-col ">
       <div>
         <Routes>
-          <Route path="admin/*" element={<User />} />
-          <Route path="/" element={<Navigate to="/admin" replace />} />
+          <Route path="/*" element={<User />} />
+          <Route path="/" element={<Navigate to="/user" replace />} />
         </Routes>
       </div>
       <Footer />

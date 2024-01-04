@@ -9,7 +9,7 @@ const GymGallery = () => {
   return (
     <Card extra={"w-full p-4 h-full"}>
       <div className="my-8 w-full">
-        <h4 className="text-4xl font-bold text-center text-navy-700 dark:text-white">
+        <h4 className="text-4xl font-bold text-center text-gray-900 dark:text-white">
           Gallery
         </h4>
         

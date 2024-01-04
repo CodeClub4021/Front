@@ -13,21 +13,21 @@ import coachesIcon from "./coach.png";
 const routes = [
   {
     name: "Profile",
-    layout: "/admin",
+    layout: "/user",
     path: "profile",
     icon: <MdPerson className="h-9 w-9" />,
     component: <Profile />,
   },
   {
     name: "My gyms",
-    layout: "/admin",
+    layout: "/user",
     icon: <CgGym className="h-9 w-9" />,
     path: "my-gyms",
     component: <My_Gym />,
   },
   {
     name: "My coaches",
-    layout: "/admin",
+    layout: "/user",
     icon: <img src={coachesIcon} className="h-9 w-9" alt="Coaches Icon" />,
     path: "my-coaches",
     component: <My_Coach />,
