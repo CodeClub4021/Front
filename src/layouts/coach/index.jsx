@@ -59,7 +59,7 @@ export default function coach(props) {
 
   document.documentElement.dir = "ltr";
   return (
-    <div className="flex h-full w-full">
+    <div className="flex h-auto w-full">
       
       <Sidebar open={open} onClose={() => setOpen(false)} />
       {/* Navbar & Main Content */}
