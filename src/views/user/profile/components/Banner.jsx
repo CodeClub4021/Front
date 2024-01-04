@@ -46,17 +46,17 @@ const Banner = () => {
 
               {/* Component 3 */}
               <div className="shadow-3xl shadow-shadow-500 dark:!bg-navy-700 flex flex-col justify-center rounded-2xl bg-gray-800 bg-clip-border px-4 py-6 dark:shadow-none">
-                <p className="text-base text-gray-600">Phone Number</p>
+                <p className="text-base text-gray-600">height</p>
                 <p className="text-lg font-medium text-white dark:text-white">
-                  +1 234 567 890
+                  175 cm
                 </p>
               </div>
 
               {/* Component 4 */}
               <div className="shadow-3xl shadow-shadow-500 dark:!bg-navy-700 flex flex-col justify-center rounded-2xl bg-gray-800 bg-clip-border px-4 py-6  dark:shadow-none">
-                <p className="text-base text-gray-600">Membership</p>
+                <p className="text-base text-gray-600">weight</p>
                 <p className="text-lg font-medium text-white dark:text-white">
-                  Premium
+                  70 kg
                 </p>
               </div>
             </div>

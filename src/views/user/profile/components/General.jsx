@@ -47,9 +47,9 @@ const General = () => {
         </div>
 
         <div className="shadow-3xl shadow-shadow-500 dark:!bg-navy-700 flex flex-col justify-center rounded-2xl bg-gray-800 bg-clip-border px-3 py-4 dark:shadow-none">
-          <p className="text-base text-gray-600">Work Experience</p>
+          <p className="text-base text-gray-600">Age</p>
           <p className="text-lg font-medium text-white dark:text-white">
-            10 years
+            10 years old
           </p>
         </div>
       </div>
