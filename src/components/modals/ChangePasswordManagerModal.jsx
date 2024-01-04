@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { IoEye , IoEyeOff } from "react-icons/io5";
+import ErrorBoxModal from './ErrorBoxModal';
+
 
 const EyeIcon = ({ onClick, isShown }) => {
   const iconName = isShown ? <IoEyeOff className="h-5 w-5 text-amber-400"/> : <IoEye className="h-5 w-5 text-amber-400"/>;
@@ -11,6 +13,8 @@ const EyeIcon = ({ onClick, isShown }) => {
 };
 
 const ChangePassword = ({ onClose }) => {
+  const [showErrorBoxModal, setShowErrorBoxModal] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
   const [showPassword, setShowPassword] = useState({
     current: false,
     new: false,
@@ -29,19 +33,33 @@ const ChangePassword = ({ onClose }) => {
     }));
   };
 
+  const hasStandardPassword = (password) => {
+    return password.length >= 8 && /\d/.test(password);
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
-    console.log("khaaaaaaaaaaaaaaaaaaaaaaaaat from Manager pass");
-    const UpdatedPass = {
-      currentPassword: formData.currentPassword,
-      newPassword: formData.newPassword,
-      confirmPassword: formData.confirmPassword,
-    };
-    console.log(UpdatedPass);
-   
-    onClose();
+    if(formData.currentPassword!=="passback"){ //check with back
+      setErrorMessage('The current password is not correct.'); 
+      setShowErrorBoxModal(true);
+    }else if (formData.newPassword !== formData.confirmPassword) {
+      setErrorMessage('The new passwords do not match.'); 
+      setShowErrorBoxModal(true);
+    } else if (!hasStandardPassword(formData.newPassword)) {
+      setErrorMessage('The new password must be at least 8 characters long and include a number.'); 
+      setShowErrorBoxModal(true);
+    } else {
+        console.log("khaaaaaaaaaaaaaaaaaaaaaaaaat from Manager pass");
+        const UpdatedPass = {
+          currentPassword: formData.currentPassword,
+          newPassword: formData.newPassword,
+          confirmPassword: formData.confirmPassword,
+        };
+        console.log(UpdatedPass);
+        onClose();
+      // Proceed with password change logic...
+    }
+
   };
 
   const handleInputChange = (e) => {
@@ -52,7 +70,7 @@ const ChangePassword = ({ onClose }) => {
     }));
   };
 
-  return (
+  return (<>
     <div className="fixed inset-0 z-50 overflow-y-auto">
       <div className="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
         <div className="fixed inset-0 transition-opacity" aria-hidden="true">
@@ -165,6 +183,8 @@ const ChangePassword = ({ onClose }) => {
         </div>
       </div>
     </div>
+{showErrorBoxModal && <ErrorBoxModal onClose={() => setShowErrorBoxModal(false)} message={errorMessage} />}
+  </>
   );
 };
 
