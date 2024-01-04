@@ -82,7 +82,7 @@ function Coachs(props) {
                               alt=""
                             />
                           </div>
-                          <a href="http://localhost:5173/coach/" className="text-xl font-medium text-gray-900 dark:text-white">
+                          <a href="http://localhost:5173/coach/profile" className="text-xl font-medium text-gray-900 dark:text-white">
                             {cell.value[0]}
                           </a>
                         </div>

@@ -34,5 +34,5 @@ export default {
     },
   },
   darkMode: "class",
-  //plugins: [daisyui]
+  plugins: [daisyui]
 }
