@@ -15,11 +15,6 @@ import React from "react";
 function App() {
   return (
     <>
-      {/* <Land/> */}
-      {/* <Home /> */}
-      {/* <ManagePanel /> */}
-      {/* <CoachPanel/> */}
-      {/* <Home /> */}
       <Routes>
         <Route path="/" element={<Land />} />
         <Route path="/home" element={<Home />} />
@@ -30,15 +25,6 @@ function App() {
         <Route path="/gympanel" element={<Gym />} />
         <Route path="/about" element={<AboutUs />} />
       </Routes>
-      {/* <Land/> */}
-      {/* <Home /> */}
-      {/* <ManagePanel /> */}
-      {/* <CoachPanel /> */}
-      {/* <UserPanel /> */}
-      {/* <Gym /> */}
-      {/* <Login /> */}
-      {/* <CoachRegister/> */}
-      {/* <AboutUs /> */}
     </>
   );
 }
