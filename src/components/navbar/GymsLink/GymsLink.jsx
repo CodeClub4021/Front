@@ -17,3 +17,24 @@ const GymsLink = () => {
 };
 
 export default GymsLink;
+// import React from "react";
+// import { Link } from "react-router-dom";
+// import { scroller } from "react-scroll";
+
+// const scrollToGyms = () => {
+//   // Scroll to the gyms section
+//   scroller.scrollTo("gyms-section", {
+//     smooth: true,
+//     duration: 500,
+//   });
+// };
+
+// const GymsLink = () => {
+//   return (
+//     <Link to="/home" onClick={scrollToGyms}>
+//       <span>Gyms</span>
+//     </Link>
+//   );
+// };
+
+// export default GymsLink;
