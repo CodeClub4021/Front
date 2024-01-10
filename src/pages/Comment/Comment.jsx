@@ -31,12 +31,12 @@ const Comment = ({ comment, onDelete, onEdit }) => {
             onChange={(e) => setEditedComment(e.target.value)}
           />
           <button
-            className="bg-yellow-300 text-black p-2 mr-2"
+            className="bg-yellow-300 hover:bg-yellow-400 text-black p-2 mr-2 rounded-md"
             onClick={handleSave}
           >
             Save
           </button>
-          <button className="bg-gray-500 text-white p-2" onClick={handleEdit}>
+          <button className="bg-gray-500 hover:bg-gray-600 text-white p-2 rounded-md" onClick={handleEdit}>
             Cancel
           </button>
         </div>
@@ -44,11 +44,11 @@ const Comment = ({ comment, onDelete, onEdit }) => {
         <div>
           <p>{comment.text}</p>
           <div className="mt-2">
-            <button className="bg-slate-500 text-white p-2 mr-2" onClick={handleEdit}>
+            <button className="bg-slate-500 hover:bg-slate-700 text-white p-2 mr-2 rounded-md" onClick={handleEdit}>
               Edit
             </button>
             <button
-              className="bg-red-500 text-white p-2"
+              className="bg-red-500 hover:bg-red-700 text-white p-2 rounded-md"
               onClick={handleDelete}
             >
               Delete
