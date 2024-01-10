@@ -7,6 +7,7 @@ import Programs from '../../components/gym_win/Programs/Programs';
 import Reasons from '../../components/gym_win/Reasons/Reasons';
 import Testimonials from '../../components/gym_win/Testimonials/Testimonials';
 import Navbar from "../../components/navbar/navbar.jsx";
+import CommentSection from '../Comment/CommentSection.jsx';
 
 function Gym() {
   return (
@@ -19,6 +20,7 @@ function Gym() {
       <Plans/>
       <Testimonials/>
       <Join/>
+      <CommentSection />
       <Footer />
     </div>
     </>
