@@ -62,7 +62,7 @@ const GymCard = () => {
             <div class="mx-2 flex font-bold">
               <ShowStars />
             </div>
-            <span className="ml-2 text-sm text-gray-600">123 reviews</span>
+            {/* <span className="ml-2 text-sm text-gray-600">123 reviews</span> */}
           </div>
         </div>
       </div>
