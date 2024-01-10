@@ -38,8 +38,8 @@ const GymCard = () => {
       <GymSlideshow />
 
       {/* Gym Information */}
-      <div className="grid grid-cols-2 gap-4">
-        <div className="col-span-2  lg:col-span-1">
+      <div className="grid grid-cols-3 gap-2">
+        <div className="col-span-1 lg:col-span-1">
           <Button>
             <Link
               to="/gympanel"
@@ -49,21 +49,25 @@ const GymCard = () => {
             </Link>
           </Button>
           <div className="mb-2 text-sm text-gray-600">
-            <p className="mr-40 inline-block">Location: City, Country</p>
+            <p className="mr-20 inline-block">Location: City, Country</p>
             <p className="inline-block">Phone: +123 456 7890</p>
           </div>
         </div>
 
-        <div className="col-span-2 lg:col-span-1">
-          <h4 className="pl-4 text-lg font-bold text-gray-800 dark:text-white">
+        <div className="col-span-1 lg:col-span-1">
+          <h4 className="pl-48 text-lg font-bold text-gray-800 dark:text-white">
             Rating
           </h4>
-          <div className="flex items-center">
-            <div class="mx-2 flex font-bold">
+          <div className="ml-44 flex items-center">
+            <div className="flex font-bold">
               <ShowStars />
             </div>
-            {/* <span className="ml-2 text-sm text-gray-600">123 reviews</span> */}
           </div>
+        </div>
+        <div className="col-span-1">
+          <button className=" ml-36  rounded-full bg-custom px-6 py-4 font-medium tracking-wide text-black transition duration-700 ease-in-out hover:bg-amber-500 hover:text-white">
+            show program
+          </button>
         </div>
       </div>
     </Card>
