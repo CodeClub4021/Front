@@ -69,9 +69,9 @@ const CoachCard = ({ coach }) => {
               <div className="mx-2 flex font-bold">
                 <ShowStars />
               </div>
-              <span className="ml-2 inline-block px-4 text-sm text-gray-600">
+              {/* <span className="ml-2 inline-block px-4 text-sm text-gray-600">
                 <span className="whitespace-nowrap">123 reviews</span>
-              </span>
+              </span> */}
             </div>
           </div>
         </li>
