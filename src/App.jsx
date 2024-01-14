@@ -14,32 +14,32 @@ import React from "react";
 
 function App() {
   return (
-    <>
-      {/* <Land/> */}
-      {/* <Home /> */}
-      {/* <ManagePanel /> */}
-      {/* <CoachPanel/> */}
-      {/* <Home /> */}
-      {/* <Routes>
-        <Route path="/" element={<Land />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="*" element={<UserPanel />} />
-        <Route path="/managerpanel" element={<ManagePanel />} />
-        <Route path="/coachpanel" element={<CoachPanel />} />
-        <Route path="/gympanel" element={<Gym />} />
-        <Route path="/about" element={<AboutUs />} />
-      </Routes> */}
-      {/* <Land/> */}
-      {/* <Home /> */}
-      <ManagePanel />
-      {/* <CoachPanel /> */}
-      {/* <UserPanel /> */}
-      {/* <Gym /> */}
-      {/* <Login /> */}
-      {/* <CoachRegister/> */}
-      {/* <AboutUs /> */}
-    </>
+  <>
+    {/* <Land/> */}
+    {/* <Home /> */}
+    {/* <ManagePanel /> */}
+    {/* <CoachPanel/> */}
+    {/* <Home /> */}
+    {/* <Routes>
+      <Route path="/" element={<Land />} />
+      <Route path="/home" element={<Home />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="*" element={<UserPanel />} />
+      <Route path="/managerpanel" element={<ManagePanel />} />
+      <Route path="/coachpanel" element={<CoachPanel />} />
+      <Route path="/gympanel" element={<Gym />} />
+      <Route path="/about" element={<AboutUs />} />
+    </Routes> */}
+    {/* <Land/> */}
+    {/* <Home /> */}
+    <ManagePanel />
+    {/* <CoachPanel /> */}
+    {/* <UserPanel /> */}
+    {/* <Gym /> */}
+    {/* <Login /> */}
+    {/* <CoachRegister/> */}
+    {/* <AboutUs /> */}
+  </>
   );
 }
 

@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 
-const AddCoach = ({ onClose }) => {
+const AddCoach = ({ onClose, manager_id }) => {
   const [formData, setFormData] = useState({
     // Initialize form data if needed For example: name: '', price: '', category: '', description: ''
     // birthYear: "",
@@ -13,7 +13,7 @@ const AddCoach = ({ onClose }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try{
-      const res = await axios.post(`https://codeclub-api.liara.run/gyms/${id}/add-coach/`, 
+      const res = await axios.post(`https://codeclub-api.liara.run/gyms/${manager_id}/add-coach/`, 
       {
         coach_username: coachUsername
       });
