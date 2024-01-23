@@ -38,7 +38,7 @@ export function SignupForm(props) {
             console.error("email is necessary");
         } else {
             try {
-                const res = await axios.post("http://127.0.0.1:8000/signup/",
+                const res = await axios.post("https://codeclub-api.liara.run/swagger/signup",
                     {
                         username,
                         email,

@@ -28,7 +28,7 @@ export function LoginForm(props) {
             console.error("password is necessary");
         } else {
             try {
-                const res = await axios.post("http://127.0.0.1:8000/login/",
+                const res = await axios.post("https://codeclub-api.liara.run/swagger/login",
                     {
                         username,
                         password

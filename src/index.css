@@ -7,73 +7,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/*@layer base {*/
-/*    html {*/
-/*        @apply text-neutral-800;*/
-/*    }*/
-/*    html.dark {*/
-/*        @apply text-neutral-50;*/
-/*        @apply bg-neutral-800;*/
-/*    }*/
-/*}*/
-body{
-    background-color: gray;
-}
-
-/*@layer base {*/
-/*	html {*/
-/*		font-family: 'DM Sans', sans-serif !important;*/
-/*		font-feature-settings: 'kern' !important;*/
-/*		-webkit-font-smoothing: antialiased;*/
-/*		letter-spacing: -0.5px;*/
-/*	}*/
-/*}*/
-
-/*input.defaultCheckbox::before {*/
-/*	!*content: ();*!*/
-/*	color: white;*/
-/*	opacity: 0; */
-/*	height: 16px; */
-/*	width: 16px;*/
-/*	position: absolute; */
-/*	left: 50%;*/
-/*	transform: translate(-50%, 0px);*/
-/*} */
-
-/*input:checked.defaultCheckbox::before { */
-/*	opacity: 1;*/
-/*}*/
-
-/*html,*/
-/*body {*/
-/*  width: 100%;*/
-/*  height: 100%;*/
-/*  overflow-x: hidden;*/
-/*}*/
-
-/** {*/
-/*  box-sizing: border-box;*/
-/*}*/
-
-/*body {*/
-/*  margin: 0;*/
-/*  font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI",*/
-/*    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",*/
-/*    "Helvetica Neue", sans-serif;*/
-/*  -webkit-font-smoothing: antialiased;*/
-/*  -moz-osx-font-smoothing: grayscale;*/
-/*}*/
-
-/*code {*/
-/*  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",*/
-/*    monospace;*/
-/*}*/
-
-/*#root {*/
-/*  width: 100%;*/
-/*  height: 100%;*/
-/*}*/
-
 * {
     margin: 0;
     padding: 0;
@@ -82,5 +15,8 @@ body{
 html, body, #root{
     height: 100%;
 
+}
+body{
+    background-color: gray;
 }
 

@@ -12,19 +12,6 @@ export default {
   ],
   theme: {
     extend: {
-
-    //   height: {
-    //     700: "50rem"
-    //   },
-    // },
-    //   fontFamily: {
-    //     poppins: ["Poppins", "sans-serif"],
-    //     dm: ["DM Sans", "sans-serif"],
-    //   },
-     
-     
-      
-
       fontFamily: {
         custom: ['Inter', 'Helvetica', 'Arial', 'sans-serif'],
       },
@@ -33,9 +20,14 @@ export default {
       },
     },
   },
+  plugins: [daisyui],
   daisyui: {
-    themes: false
-  },
-  darkMode: "class",
-  plugins: [daisyui]
+    themes: false, // false: only light + dark | true: all themes | array: specific themes like this ["light", "dark", "cupcake"]
+    darkTheme: "dark", // name of one of the included themes for dark mode
+    base: false, // applies background color and foreground color for root element by default
+    styled: true, // include daisyUI colors and design decisions for all components
+    utils: true, // adds responsive and modifier utility classes
+    logs: true, // Shows info about daisyUI version and used config in the console when building your CSS
+    themeRoot: ":root", // The element that receives theme color CSS variables
+  }
 }

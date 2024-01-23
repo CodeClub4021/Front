@@ -6,8 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="2673c54f-d602-4401-a8f4-27c67076f6fb" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/accountBox/userTypeCheckbox.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/accountBox/userTypeCheckbox.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/accountBox/loginForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/accountBox/loginForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/accountBox/signupForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/accountBox/signupForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/user/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/user/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/user/coaches/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/user/coaches/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,6 +39,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -50,7 +59,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;chat&quot;,
     &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;18.13.0&quot;,
     &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;18.13.0&quot;,
     &quot;last_opened_file_path&quot;: &quot;/home/moosavi/Arrash/tahlil/myProject/front&quot;,
@@ -85,11 +94,29 @@
       <workItem from="1703777103207" duration="3217000" />
       <workItem from="1704020585429" duration="95000" />
       <workItem from="1704634986645" duration="1223000" />
-      <workItem from="1704642741466" duration="2895000" />
+      <workItem from="1704642741466" duration="3115000" />
+      <workItem from="1704649794031" duration="2999000" />
+      <workItem from="1704911799100" duration="765000" />
+      <workItem from="1704912759032" duration="1287000" />
+      <workItem from="1705996631388" duration="22000" />
+      <workItem from="1705996688322" duration="1683000" />
+      <workItem from="1706002451835" duration="10065000" />
+      <workItem from="1706015877555" duration="6775000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
