@@ -6,15 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="2673c54f-d602-4401-a8f4-27c67076f6fb" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/accountBox/loginForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/accountBox/loginForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/accountBox/signupForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/accountBox/signupForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/chat/chat.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/chat/chat.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/chat/header/header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/chat/header/header.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layouts/user/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/user/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/user/coaches/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/user/coaches/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +95,8 @@
       <workItem from="1705996631388" duration="22000" />
       <workItem from="1705996688322" duration="1683000" />
       <workItem from="1706002451835" duration="10065000" />
-      <workItem from="1706015877555" duration="6775000" />
+      <workItem from="1706015877555" duration="8404000" />
+      <workItem from="1706062793881" duration="4969000" />
     </task>
     <servers />
   </component>
