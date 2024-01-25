@@ -58,7 +58,7 @@ export default function User(props) {
     };
 
     return (
-        <div className="flex h-auto w-full">
+        <div className="flex h-screen max-h-screen w-full justify-start">
             <Sidebar open={open} onClose={() => setOpen(false)} className="w-fit"/>
             {/* Navbar & Main Content */}
             <div className="dark:!bg-navy-900 h-full w-full bg-gray-900">
@@ -67,7 +67,7 @@ export default function User(props) {
                     className={`mx-[12px] h-full flex-none transition-all md:pr-2 xl:ml-[313px]`}
                 >
                     {/* Routes */}
-                    <div className="h-full">
+                    <div className="h-full flex flex-col">
                         <NavbarJavad className="w-full"/>
                         <Navbar
                             onOpenSidenav={() => setOpen(true)}
@@ -76,7 +76,7 @@ export default function User(props) {
                             secondary={getActiveNavbar(routes)}
                             {...rest}
                         />
-                        <div className="pt-5s mx-auto mb-auto h-full relative min-h-[84vh] p-2 md:pr-2">
+                        <div className="pt-5s w-full h-full basis-full p-2 md:pr-2">
                             <Routes>
                                 {getRoutes(routes)}
                                 <Route path="my-coaches/chat/:id" element={<Chat />} />

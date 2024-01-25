@@ -1,8 +1,6 @@
 import React from "react";
 import Card from "../../../components/UserPanel/card";
-import ShowStar from "../../../components/rating/profile_rate.jsx";
 import ShowStars from "../../../components/UserPanel/ShowStars/ShowStars";
-import avatar from "../../../assets/img/profile/banner.png";
 import {
   Button,
   Modal,
@@ -11,7 +9,6 @@ import {
   ModalHeader,
   ModalBody,
   ModalFooter,
-  ModalCloseButton,
 } from "@chakra-ui/react";
 import GymSlideshow from "./components/GymSlideshow.jsx";
 import { Link } from "react-router-dom";
@@ -109,7 +106,6 @@ const GymCard = () => {
               </h3>
             </div>
           </ModalHeader>
-          {/* <ModalCloseButton className="ml-96" /> */}
           <ModalBody className="bg-gray-900">
             <ModalBody>
               <Table className="w-full" colorScheme="gray">
