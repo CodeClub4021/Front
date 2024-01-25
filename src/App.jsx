@@ -30,7 +30,7 @@ function App() {
       {/* <ManagePanel /> */}
       {/* <CoachPanel /> */}
       {/* <UserPanel /> */}
-      // <Gym />
+      <Gym />
       {/* <Login /> */}
       {/* <CoachRegister/> */}
       {/* <AboutUs /> */}

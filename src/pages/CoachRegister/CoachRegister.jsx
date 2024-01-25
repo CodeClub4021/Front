@@ -9,7 +9,7 @@ function CoachRegister() {
     name: "",
     gender: "",
     phoneNumber: "",
-    emailAddress: "", // Added emailAddress field
+    emailAddress: "",
     description: "",
     availability: [],
   });
@@ -94,13 +94,8 @@ function CoachRegister() {
                   className="text-3xl font-medium leading-6 text-gray-900"
                   id="modal-headline"
                 >
-                  Coach Registration Requirement
+                  {/*Coach Registration*/} Requirement
                 </h3>
-              </div>
-
-              {/* Existing form sections */}
-              <div className="bg-gray-900 px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
-                {/* Existing form content */}
               </div>
 
               {/* Updated sections */}
@@ -109,7 +104,7 @@ function CoachRegister() {
                   className="text-lg font-medium leading-6 text-white"
                   id="modal-headline"
                 >
-                  Please Fill Out The Sections
+                  Please Fill Out The Section
                 </h3>
 
                 {/* Name Section */}
@@ -127,12 +122,12 @@ function CoachRegister() {
                     value={formData.name}
                     onChange={handleInputChange}
                     className="mt-1 w-full rounded-md p-2 placeholder-gray-500 shadow-sm"
-                    placeholder="Full name"
+                    placeholder="ID name"
                   />
                 </div>
 
                 {/* Gender Section */}
-                <div className="mt-4">
+                {/* <div className="mt-4">
                   <label className="block text-lg font-medium text-amber-400">
                     Gender
                   </label>
@@ -160,10 +155,10 @@ function CoachRegister() {
                       <span className="ml-2 text-amber-400">Female</span>
                     </label>
                   </div>
-                </div>
+                </div> */}
 
                 {/* Phone Number Section */}
-                <div className="mt-4">
+                {/* <div className="mt-4">
                   <label className="block text-lg font-medium text-amber-400">
                     Phone Number
                   </label>
@@ -176,10 +171,10 @@ function CoachRegister() {
                     className="mt-1 w-full rounded-md p-2 placeholder-gray-500 shadow-sm"
                     placeholder="Phone Number"
                   />
-                </div>
+                </div> */}
 
                 {/* Email Address Section */}
-                <div className="mt-4">
+                {/* <div className="mt-4">
                   <label className="block text-lg font-medium text-amber-400">
                     Email Address
                   </label>
@@ -192,16 +187,16 @@ function CoachRegister() {
                     className="mt-1 w-full rounded-md p-2 placeholder-gray-500 shadow-sm"
                     placeholder="Email Address"
                   />
-                </div>
+                </div> */}
 
                 {/* Availability Section */}
-                <div className="mt-4">
+                {/*<div className="mt-4">
                   <label className="block text-lg font-medium text-amber-400">
                     Week Availability
                   </label>
                   <div className="mt-1">
                     {/* Adjust the options as needed */}
-                    {[
+                    {/* {[
                       "Monday",
                       "Tuesday",
                       "Wednesday",
@@ -226,10 +221,10 @@ function CoachRegister() {
                       </label>
                     ))}
                   </div>
-                </div>
+                </div> */}
 
                 {/* Description Section */}
-                <div className="mt-4">
+                {/*<div className="mt-4">
                   <label
                     htmlFor="description"
                     className="block text-lg font-medium text-amber-400"
@@ -246,7 +241,7 @@ function CoachRegister() {
                           shadow-sm"
                     placeholder="Skills Information"
                   />
-                </div>
+                    </div>*/}
               </div>
 
               <div className="justify-center bg-amber-400 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
