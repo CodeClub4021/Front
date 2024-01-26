@@ -29,6 +29,7 @@
     "@testing-library/user-event": "^13.5.0",
     "apexcharts": "3.35.5",
     "axios": "^1.6.2",
+    "dotenv": "^16.4.1",
     "framer-motion": "^10.16.4",
     "number-counter": "^1.0.3",
     "react": "^18.2.0",

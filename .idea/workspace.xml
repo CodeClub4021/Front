@@ -6,9 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="2673c54f-d602-4401-a8f4-27c67076f6fb" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/accountBox/userTypeCheckbox.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/accountBox/userTypeCheckbox.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/footer/footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer/footer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/admin/tables/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/admin/tables/index.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +52,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;crud&quot;,
     &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;18.13.0&quot;,
     &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;18.13.0&quot;,
     &quot;last_opened_file_path&quot;: &quot;/home/moosavi/Arrash/tahlil/myProject/front&quot;,
@@ -86,6 +88,7 @@
       <workItem from="1704020585429" duration="95000" />
       <workItem from="1704634986645" duration="1223000" />
       <workItem from="1704642741466" duration="2895000" />
+      <workItem from="1706252663802" duration="2961000" />
     </task>
     <servers />
   </component>

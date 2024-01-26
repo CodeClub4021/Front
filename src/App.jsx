@@ -13,6 +13,7 @@ import CommentSection from "./pages/Comment/CommentSection.jsx";
 
 import React from "react";
 
+
 function App() {
   return ( <>
       <Routes>
@@ -30,7 +31,7 @@ function App() {
       {/* <ManagePanel /> */}
       {/* <CoachPanel /> */}
       {/* <UserPanel /> */}
-      // <Gym />
+      {/*// <Gym />*/}
       {/* <Login /> */}
       {/* <CoachRegister/> */}
       {/* <AboutUs /> */}
