@@ -6,10 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="2673c54f-d602-4401-a8f4-27c67076f6fb" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ManagerPanel/navbar/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ManagerPanel/navbar/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/footer/footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer/footer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navbar/navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar/navbar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/admin/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/admin/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/admin/tables/components/addGym.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/admin/tables/components/addGym.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/admin/tables/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/admin/tables/index.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -89,6 +90,7 @@
       <workItem from="1704634986645" duration="1223000" />
       <workItem from="1704642741466" duration="2895000" />
       <workItem from="1706252663802" duration="2961000" />
+      <workItem from="1706267016574" duration="1504000" />
     </task>
     <servers />
   </component>
