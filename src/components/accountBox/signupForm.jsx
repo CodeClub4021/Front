@@ -144,7 +144,7 @@ export function SignupForm(props) {
           <div className="flex justify-between">
             <UserTypeCheckBox text={"manager"} setValue={setRole} />
             <UserTypeCheckBox text={"coach"} setValue={setRole} />
-            <UserTypeCheckBox text={"user"} setValue={setRole} />
+            <UserTypeCheckBox text={"customer"} setValue={setRole} />
           </div>
 
           <Marginer direction="vertical" margin={10} />

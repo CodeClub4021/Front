@@ -28,6 +28,11 @@ export function LoginForm(props) {
     type: "",
   });
 
+  const redirect = (path) => {
+    // Perform your redirection logic here
+    window.location.href = path;
+  };
+
   const handleToastControll = () => {
     setTimeout(() => setToast({ ...toast, isVisible: false }), 5000);
   };
@@ -46,11 +51,11 @@ export function LoginForm(props) {
     validationSchema,
 
     onSubmit: (values) => {
-      henleLogin(values);
+      handleLogin(values);
     },
   });
 
-  const henleLogin = (values) => {
+  const handleLogin = (values) => {
     setLoading(true);
     const formData = new FormData();
     formData.append("username", values.username);
@@ -60,14 +65,17 @@ export function LoginForm(props) {
       .post(`${url}/login/`, formData)
       .then((res) => {
         setLoading(false);
-        res.status >= 200 && res.status < 300
-          ? (setToast({
-              isVisible: true,
-              text: "Wellcom!",
-              type: "success",
-            }),
-            handleToastControll())
-          : null;
+        if (res.status >= 200 && res.status < 300) {
+          setToast({
+            isVisible: true,
+            text: "Welcome!",
+            type: "success",
+          });
+          handleToastControll();
+
+          // Redirect should be placed here, not in a separate then block
+          return redirect("/");
+        }
       })
       .catch((err) => {
         setLoading(false);

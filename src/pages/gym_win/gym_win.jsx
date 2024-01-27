@@ -1,4 +1,3 @@
-import "./gym_win.css";
 import Footer from "../../components/footer/footer";
 import Hero from "../../components/gym_win/Hero/Hero";
 import Join from "../../components/gym_win/Join/Join";
@@ -8,7 +7,6 @@ import Reasons from "../../components/gym_win/Reasons/Reasons";
 import Testimonials from "../../components/gym_win/Testimonials/Testimonials";
 import Navbar from "../../components/navbar/navbar.jsx";
 import CommentSection from "../Comment/CommentSection.jsx";
-import ProgramsEdited from "../../components/gym_win/Programs/Programs_edited.jsx";
 
 function Gym() {
   return (
@@ -16,12 +14,12 @@ function Gym() {
       <Navbar />
       <div className="Gym mt-20">
         <Hero />
-        <ProgramsEdited />
-        {/* <Reasons />
+        <Programs />
+        <Reasons />
         <Plans />
         <Testimonials />
         <Join />
-        <CommentSection /> */}
+        <CommentSection />
         <Footer />
       </div>
     </>
