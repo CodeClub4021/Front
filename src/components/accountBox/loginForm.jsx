@@ -19,6 +19,7 @@ import { handleShowToast } from "../../functions";
 
 export function LoginForm(props) {
   const { switchToSignup } = useContext(AccountContext);
+  const { switchToForgotpass } = useContext(AccountContext);
   const [loading, setLoading] = useState(false);
   const [toast, setToast] = useState({
     isVisible: false,
@@ -108,7 +109,11 @@ export function LoginForm(props) {
           <Marginer direction="vertical" margin={10} />
 
           <MutedLink href="#">
-            Forget your <span className="text-amber-300">password</span>?
+            Forget your{" "}
+            <span onClick={switchToForgotpass} className="text-amber-300">
+              password
+            </span>
+            ?
           </MutedLink>
 
           <Marginer direction="vertical" margin={10} />
