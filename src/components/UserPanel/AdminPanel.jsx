@@ -9,7 +9,7 @@ const AdminPanel = () => {
         <h1>Admin Panel</h1>
       </div>
 
-      <div class="flex items-center">
+      <div className="flex items-center">
         <ShowStars StarsNumbers="3" />
       </div>
     </>

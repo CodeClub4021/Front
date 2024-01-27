@@ -33,7 +33,7 @@ function Coachs(props) {
     <Card extra={"h-[300px] w-full"}>
       {/* Top Creator Header */}
       <div className="dark:!bg-navy-700 flex h-fit w-full items-center justify-between rounded-t-2xl px-4 pb-[20px]  pt-4 dark:shadow-none">
-        <h4 className="text-gray-900 text-2xl font-bold dark:text-white">
+        <h4 className="text-2xl font-bold text-gray-900 dark:text-white">
           Coachs
         </h4>
         <AddCoachCard />
@@ -82,14 +82,17 @@ function Coachs(props) {
                               alt=""
                             />
                           </div>
-                          <a href="http://localhost:5173/coach/profile" className="text-xl font-medium text-gray-900 dark:text-white">
+                          <a
+                            href="http://localhost:5173/coach/profile"
+                            className="text-xl font-medium text-gray-900 dark:text-white"
+                          >
                             {cell.value[0]}
                           </a>
                         </div>
                       );
                     } else if (cell.column.Header === "Rating") {
                       data = (
-                        <div class="mx-2 flex font-bold">
+                        <div className="mx-2 flex font-bold">
                           <ShowStars StarsNumbers="3" />
                         </div>
                       );

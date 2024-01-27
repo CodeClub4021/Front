@@ -16,7 +16,7 @@ import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
-    <>
+    <div className="main-routes-wrapper">
       <Routes>
         <Route path="/" element={<Land />} />
         <Route path="/home" element={<Home />} />
@@ -32,12 +32,12 @@ function App() {
       {/* <ManagePanel /> */}
       {/* <CoachPanel /> */}
       {/* <UserPanel /> */}
-      <Gym />
+      {/* <Gym /> */}
       {/* <Login /> */}
       {/* <CoachRegister/> */}
       {/* <AboutUs /> */}
       {/* <CommentSection/> */}
-    </>
+    </div>
   );
 }
 

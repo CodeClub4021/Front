@@ -54,13 +54,13 @@ export function LoginForm(props) {
     },
   });
 
-  const handleLogin = (values) => {
+  const handleLogin = async (values) => {
     setLoading(true);
     const formData = new FormData();
     formData.append("username", values.username);
     formData.append("password", values.password);
 
-    axios
+    await axios
       .post(`${url}/login/`, formData)
       .then((res) => {
         setLoading(false);

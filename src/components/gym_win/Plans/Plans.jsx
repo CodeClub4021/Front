@@ -3,10 +3,11 @@ import "./Plans.css";
 import { plansData } from "../../../assets/gym-win/data/plansData";
 import whiteTick from "../../../assets/gym-win/whiteTick.png";
 const Plans = () => {
+  const btn = `bg-white p-2 font-bold border-4 border-transparent transition-all duration-300 hover:cursor-pointer`;
   return (
     <div className="plans-container">
-      <div className="blur plans-blur-1"></div>
-      <div className="blur plans-blur-2"></div>
+      <div className="plans-blur-1 blur"></div>
+      <div className="plans-blur-2 blur"></div>
       <div className="programs-header" style={{ gap: "2rem" }}>
         <span className="stroke-text">Ready to Start</span>
         <span>Your Journey</span>
@@ -27,9 +28,9 @@ const Plans = () => {
               ))}
             </div>
             <div>
-                <span>See more benefits  </span>
+              <span>See more benefits </span>
             </div>
-            <button className="btn">Join now</button>
+            <button className={btn}>Join now</button>
           </div>
         ))}
       </div>

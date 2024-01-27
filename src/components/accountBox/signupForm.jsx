@@ -58,7 +58,7 @@ export function SignupForm(props) {
     },
   });
 
-  const handleSignup = (values) => {
+  const handleSignup = async (values) => {
     console.log(role);
     setLoading(true);
     const formData = new FormData();
@@ -67,7 +67,7 @@ export function SignupForm(props) {
     formData.append("password", formik.values.password);
     formData.append("role", role);
 
-    axios
+    await axios
       .post(`${url}/register/`, formData)
       .then((res) => {
         setLoading(false);
