@@ -20,8 +20,6 @@ import { handleShowToast } from "../../functions";
 export function LoginForm(props) {
   const { switchToSignup } = useContext(AccountContext);
   const [loading, setLoading] = useState(false);
-  //   const [username, setUsername] = useState("");
-  //   const [password, setPassword] = useState("");
   const [toast, setToast] = useState({
     isVisible: false,
     text: "",
@@ -29,7 +27,7 @@ export function LoginForm(props) {
   });
 
   const handleToastControll = () => {
-    setTimeout(() => setToast({ ...toast, isVisible: false }), 3000);
+    setTimeout(() => setToast({ ...toast, isVisible: false }), 5000);
   };
 
   //validations
@@ -46,18 +44,18 @@ export function LoginForm(props) {
     validationSchema,
 
     onSubmit: (values) => {
-      clickHandler(values);
+      henleLogin(values);
     },
   });
 
-  const clickHandler = (values) => {
+  const henleLogin = (values) => {
     setLoading(true);
     const formData = new FormData();
     formData.append("username", values.username);
     formData.append("password", values.password);
 
     axios
-      .post(`${url}/login`, formData)
+      .post(`${url}/login/`, formData)
       .then((res) => {
         setLoading(false);
         res.status >= 200 && res.status < 300
@@ -84,6 +82,7 @@ export function LoginForm(props) {
     <>
       <BoxContainer>
         <FormContainer onSubmit={formik.handleSubmit}>
+          {/* username */}
           <Input
             placeholder="Username"
             name="username"
@@ -93,6 +92,8 @@ export function LoginForm(props) {
           {formik.errors.username && formik.touched.username && (
             <HelperText>{formik.errors.username}</HelperText>
           )}
+
+          {/* password */}
           <Input
             placeholder="Password"
             type="password"
