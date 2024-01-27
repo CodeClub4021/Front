@@ -11,21 +11,14 @@ import {
 import { Marginer } from "../marginer";
 import { AccountContext } from "./accountContext";
 import axios from "axios";
-import UserTypeCheckBox from "./userTypeCheckbox";
-import { useEffect } from "react";
+import { url } from "../../axiosConfig/useHttp";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { url } from "../../axiosConfig/useHttp";
 import { handleShowToast } from "../../functions";
 
-export function SignupForm(props) {
-  const { switchToSignin } = useContext(AccountContext);
+const ForgotPass = () => {
+  const { switchToSignup } = useContext(AccountContext);
   const [loading, setLoading] = useState(false);
-  //   const [username, setUsername] = useState("");
-  //   const [password, setPassword] = useState("");
-  //   const [repeatPassword, setRepeatPassword] = useState("");
-  //   const [email, setEmail] = useState("");
-  const [role, setRole] = useState("");
   const [toast, setToast] = useState({
     isVisible: false,
     text: "",
@@ -38,37 +31,30 @@ export function SignupForm(props) {
 
   //validations
   const validationSchema = Yup.object().shape({
-    username: Yup.string().required("Please enter this field"),
-    password: Yup.string().required("Please enter this field"),
-    repeatPassword: Yup.string().required("Please enter this field"),
-    email: Yup.string().required("Please enter this field"),
+    username: Yup.string().required("Please enter your username"),
+    password: Yup.string().required("Pease enter your password"),
   });
   const formik = useFormik({
     initialValues: {
       username: "",
       password: "",
-      repeatPassword: "",
-      email: "",
     },
 
     validationSchema,
 
     onSubmit: (values) => {
-      handleSignup(values);
+      henleLogin(values);
     },
   });
 
-  const handleSignup = (values) => {
-    console.log(role);
+  const henleLogin = (values) => {
     setLoading(true);
     const formData = new FormData();
-    formData.append("username", formik.values.username);
-    formData.append("email", formik.values.email);
-    formData.append("password", formik.values.password);
-    formData.append("role", role);
+    formData.append("username", values.username);
+    formData.append("password", values.password);
 
     axios
-      .post(`${url}/register/`, formData)
+      .post(`${url}/login/`, formData)
       .then((res) => {
         setLoading(false);
         res.status >= 200 && res.status < 300
@@ -93,7 +79,7 @@ export function SignupForm(props) {
 
   return (
     <>
-      <BoxContainer className="pb-3">
+      <BoxContainer>
         <FormContainer onSubmit={formik.handleSubmit}>
           {/* username */}
           <Input
@@ -106,22 +92,10 @@ export function SignupForm(props) {
             <HelperText>{formik.errors.username}</HelperText>
           )}
 
-          {/* email */}
-          <Input
-            type="email"
-            placeholder="Email"
-            name="email"
-            value={formik.values.email}
-            onChange={formik.handleChange}
-          />
-          {formik.errors.email && formik.touched.email && (
-            <HelperText>{formik.errors.email}</HelperText>
-          )}
-
           {/* password */}
           <Input
-            type="password"
             placeholder="Password"
+            type="password"
             name="password"
             value={formik.values.password}
             onChange={formik.handleChange}
@@ -129,23 +103,16 @@ export function SignupForm(props) {
           {formik.errors.password && formik.touched.password && (
             <HelperText>{formik.errors.password}</HelperText>
           )}
-          {/* repeat pass */}
-          <Input
-            type="password"
-            placeholder="Confirm Password"
-            name="repeatPassword"
-            value={formik.values.repeatPassword}
-            onChange={formik.handleChange}
-          />
-          {formik.errors.repeatPassword && formik.touched.repeatPassword && (
-            <HelperText>{formik.errors.repeatPassword}</HelperText>
-          )}
 
-          <div className="flex justify-between">
-            <UserTypeCheckBox text={"manager"} setValue={setRole} />
-            <UserTypeCheckBox text={"coach"} setValue={setRole} />
-            <UserTypeCheckBox text={"user"} setValue={setRole} />
-          </div>
+          <Marginer direction="vertical" margin={10} />
+
+          {/* <MutedLink href="#">
+            Forget your{" "}
+            <span onClick={switchToForgotpass} className="text-amber-300">
+              password
+            </span>
+            ?
+          </MutedLink> */}
 
           <Marginer direction="vertical" margin={10} />
 
@@ -153,21 +120,24 @@ export function SignupForm(props) {
             style={loading ? { opacity: 0.5 } : {}}
             type={loading ? "button" : "submit"}
           >
-            Signup
+            Recover
           </SubmitButton>
-
-          <Marginer direction="vertical" margin="1em" />
-
-          <MutedLink style={{ margin: "0 auto" }} href="#">
-            Already have an account?
-            <BoldLink href="#" onClick={switchToSignin}>
-              Signin
-            </BoldLink>
-          </MutedLink>
         </FormContainer>
+
+        <Marginer direction="vertical" margin="1.6em" />
+
+        <Marginer direction="vertical" margin="1em" />
+        <MutedLink href="#">
+          Don't have an accoun?{" "}
+          <BoldLink href="#" onClick={switchToSignup}>
+            Signup
+          </BoldLink>
+        </MutedLink>
       </BoxContainer>
 
       {toast.isVisible && handleShowToast(toast.type, toast.text)}
     </>
   );
-}
+};
+
+export default ForgotPass;
