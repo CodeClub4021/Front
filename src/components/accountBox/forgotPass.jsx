@@ -32,7 +32,7 @@ const ForgotPass = () => {
   //validations
   const validationSchema = Yup.object().shape({
     username: Yup.string().required("Please enter your username"),
-    email: Yup.string().required("Pease enter your email"),
+    email: Yup.string().required("Please enter your email"),
   });
   const formik = useFormik({
     initialValues: {

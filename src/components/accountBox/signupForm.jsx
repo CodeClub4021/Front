@@ -17,10 +17,11 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import { url } from "../../axiosConfig/useHttp";
 import { handleShowToast } from "../../functions";
-import { redirect } from "react-router-dom";
+import { redirect, useNavigate } from "react-router-dom";
 
 export function SignupForm(props) {
   const { switchToSignin } = useContext(AccountContext);
+  const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
   const [role, setRole] = useState("");
   const [toast, setToast] = useState({
@@ -77,7 +78,8 @@ export function SignupForm(props) {
               type: "success",
             }),
             handleToastControll(),
-            redirect("/login"))
+            navigate("/login"),
+            window.location.reload())
           : null;
       })
       .catch((err) => {
@@ -147,7 +149,7 @@ export function SignupForm(props) {
             <UserTypeCheckBox text={"coach"} setValue={setRole} />
             <UserTypeCheckBox text={"customer"} setValue={setRole} />
           </div>
-          {role.length == 0 && formik.touched.repeatPassword && (
+          {role.length == 0 && formik.touched.password && (
             <HelperText>{"Please select role"}</HelperText>
           )}
 
