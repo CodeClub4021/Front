@@ -81,7 +81,7 @@ export function LoginForm(props) {
         setLoading(false);
         setToast({
           isVisible: true,
-          text: "We did not found your Authentication Info",
+          text: err?.response.data.non_field_errors[0],
           type: "error",
         });
         handleToastControll();

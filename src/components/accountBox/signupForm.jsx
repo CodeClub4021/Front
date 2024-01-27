@@ -21,10 +21,6 @@ import { handleShowToast } from "../../functions";
 export function SignupForm(props) {
   const { switchToSignin } = useContext(AccountContext);
   const [loading, setLoading] = useState(false);
-  //   const [username, setUsername] = useState("");
-  //   const [password, setPassword] = useState("");
-  //   const [repeatPassword, setRepeatPassword] = useState("");
-  //   const [email, setEmail] = useState("");
   const [role, setRole] = useState("");
   const [toast, setToast] = useState({
     isVisible: false,
@@ -42,6 +38,7 @@ export function SignupForm(props) {
     password: Yup.string().required("Please enter this field"),
     repeatPassword: Yup.string().required("Please enter this field"),
     email: Yup.string().required("Please enter this field"),
+    role: Yup.string(),
   });
   const formik = useFormik({
     initialValues: {
@@ -49,17 +46,18 @@ export function SignupForm(props) {
       password: "",
       repeatPassword: "",
       email: "",
+      role: role,
     },
 
     validationSchema,
 
     onSubmit: (values) => {
-      handleSignup(values);
+      role.length !== 0 ? handleSignup(values) : null;
     },
   });
 
   const handleSignup = (values) => {
-    console.log(role);
+    // console.log(role);
     setLoading(true);
     const formData = new FormData();
     formData.append("username", formik.values.username);
@@ -81,10 +79,11 @@ export function SignupForm(props) {
           : null;
       })
       .catch((err) => {
+        console.log(err?.response.data);
         setLoading(false);
         setToast({
           isVisible: true,
-          text: "We did not found your Authentication Info",
+          text: err?.response.data.email || err?.response.data.username,
           type: "error",
         });
         handleToastControll();
@@ -146,6 +145,9 @@ export function SignupForm(props) {
             <UserTypeCheckBox text={"coach"} setValue={setRole} />
             <UserTypeCheckBox text={"customer"} setValue={setRole} />
           </div>
+          {role.length == 0 && formik.touched.repeatPassword && (
+            <HelperText>{"Please select role"}</HelperText>
+          )}
 
           <Marginer direction="vertical" margin={10} />
 
