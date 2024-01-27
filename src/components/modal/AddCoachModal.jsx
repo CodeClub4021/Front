@@ -2,26 +2,32 @@ import axios from "axios";
 import React, { useState } from "react";
 
 const AddCoach = ({ onClose, manager_id }) => {
-  const [formData, setFormData] = useState({
-    // Initialize form data if needed For example: name: '', price: '', category: '', description: ''
-    // birthYear: "",
-    // birthMonth: "",
-    // birthDay: "",
-  });
+  // const [formData, setFormData] = useState({
+  //   // Initialize form data if needed For example: name: '', price: '', category: '', description: ''
+  //   // birthYear: "",
+  //   // birthMonth: "",
+  //   // birthDay: "",
+  // });
+  const [formData, setFormData] = useState({});
   const [coachUsername, setCoachUsername] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try{
-      const res = await axios.post(`https://codeclub-api.liara.run/gyms/${manager_id}/add-coach/`, 
-      {
+    try {
+      const res = await axios.post(`https://codeclub-api.liara.run/gyms/${manager_id}/add-coach/`, {
         coach_username: coachUsername
       });
       console.log(res.data);
-    } catch(err){
+      onClose();
+    } catch (err) {
       console.error(err);
+      if (err.response && err.response.status === 400) {
+        setErrorMessage("Invalid ID. Please check the provided information.");
+      } else {
+        setErrorMessage("An error occurred. Please try again.");
+      }
     }
-    onClose();
   };
 
   const handleInputChange = (e) => {
@@ -60,6 +66,7 @@ const AddCoach = ({ onClose, manager_id }) => {
               Coach Information
             </h3>
           </div>
+          
           <div className="bg-gray-900 px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
             <div className="sm:flex sm:items-start">
               <div className="mr-6 mt-3 w-full text-center sm:ml-4 sm:mt-0 sm:text-left">
@@ -84,9 +91,29 @@ const AddCoach = ({ onClose, manager_id }) => {
                     </span>
                   </div>
                 </form>
+
+                {/* Display error message if present */}
+                {errorMessage && <p className="text-white">{errorMessage}</p>}
+                
               </div>
             </div>
           </div>
+
+          {/* <span>
+                      <label className="block text-lg font-medium text-amber-400">
+                        Gym
+                      </label>
+
+                      <input
+                        type="text" //slectoption
+                        name="Location"
+                        id="Location"
+                        value={formData.Location}
+                        onChange={handleInputChange}
+                        className="mt-1 w-full rounded-md p-2 placeholder-gray-500 shadow-sm"
+                        placeholder="Location"
+                      />
+                    </span> */}
 
           <div className="bg-amber-400 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
             <button
@@ -111,20 +138,3 @@ const AddCoach = ({ onClose, manager_id }) => {
 };
 
 export default AddCoach;
-
-
-{/* <span>
-                      <label className="block text-lg font-medium text-amber-400">
-                        Gym
-                      </label>
-
-                      <input
-                        type="text" //slectoption
-                        name="Location"
-                        id="Location"
-                        value={formData.Location}
-                        onChange={handleInputChange}
-                        className="mt-1 w-full rounded-md p-2 placeholder-gray-500 shadow-sm"
-                        placeholder="Location"
-                      />
-                    </span> */}
