@@ -32,12 +32,12 @@ const ForgotPass = () => {
   //validations
   const validationSchema = Yup.object().shape({
     username: Yup.string().required("Please enter your username"),
-    password: Yup.string().required("Pease enter your password"),
+    email: Yup.string().required("Pease enter your email"),
   });
   const formik = useFormik({
     initialValues: {
       username: "",
-      password: "",
+      email: "",
     },
 
     validationSchema,
@@ -92,16 +92,16 @@ const ForgotPass = () => {
             <HelperText>{formik.errors.username}</HelperText>
           )}
 
-          {/* password */}
+          {/* email */}
           <Input
-            placeholder="Password"
-            type="password"
-            name="password"
-            value={formik.values.password}
+            placeholder="Email"
+            type="email"
+            name="email"
+            value={formik.values.email}
             onChange={formik.handleChange}
           />
-          {formik.errors.password && formik.touched.password && (
-            <HelperText>{formik.errors.password}</HelperText>
+          {formik.errors.email && formik.touched.email && (
+            <HelperText>{formik.errors.email}</HelperText>
           )}
 
           <Marginer direction="vertical" margin={10} />

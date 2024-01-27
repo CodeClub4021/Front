@@ -17,6 +17,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import { url } from "../../axiosConfig/useHttp";
 import { handleShowToast } from "../../functions";
+import { redirect } from "react-router-dom";
 
 export function SignupForm(props) {
   const { switchToSignin } = useContext(AccountContext);
@@ -36,7 +37,7 @@ export function SignupForm(props) {
   const validationSchema = Yup.object().shape({
     username: Yup.string().required("Please enter this field"),
     password: Yup.string().required("Please enter this field"),
-    repeatPassword: Yup.string().required("Please enter this field"),
+    // repeatPassword: Yup.string().required("Please enter this field"),
     email: Yup.string().required("Please enter this field"),
     role: Yup.string(),
   });
@@ -44,7 +45,7 @@ export function SignupForm(props) {
     initialValues: {
       username: "",
       password: "",
-      repeatPassword: "",
+      // repeatPassword: "",
       email: "",
       role: role,
     },
@@ -75,7 +76,8 @@ export function SignupForm(props) {
               text: "Wellcom!",
               type: "success",
             }),
-            handleToastControll())
+            handleToastControll(),
+            redirect("/login"))
           : null;
       })
       .catch((err) => {
@@ -129,7 +131,7 @@ export function SignupForm(props) {
             <HelperText>{formik.errors.password}</HelperText>
           )}
           {/* repeat pass */}
-          <Input
+          {/* <Input
             type="password"
             placeholder="Confirm Password"
             name="repeatPassword"
@@ -138,7 +140,7 @@ export function SignupForm(props) {
           />
           {formik.errors.repeatPassword && formik.touched.repeatPassword && (
             <HelperText>{formik.errors.repeatPassword}</HelperText>
-          )}
+          )} */}
 
           <div className="flex justify-between">
             <UserTypeCheckBox text={"manager"} setValue={setRole} />
