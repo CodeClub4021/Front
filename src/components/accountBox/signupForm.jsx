@@ -25,7 +25,7 @@ export function SignupForm(props) {
   //   const [password, setPassword] = useState("");
   //   const [repeatPassword, setRepeatPassword] = useState("");
   //   const [email, setEmail] = useState("");
-  const [userType, setUserType] = useState("");
+  const [role, setRole] = useState("");
   const [toast, setToast] = useState({
     isVisible: false,
     text: "",
@@ -59,15 +59,16 @@ export function SignupForm(props) {
   });
 
   const handleSignup = (values) => {
+    console.log(role);
     setLoading(true);
     const formData = new FormData();
     formData.append("username", formik.values.username);
     formData.append("email", formik.values.email);
     formData.append("password", formik.values.password);
-    formData.append("user_type", "manager");
+    formData.append("role", role);
 
     axios
-      .post(`${url}/signup/`, formData)
+      .post(`${url}/register/`, formData)
       .then((res) => {
         setLoading(false);
         res.status >= 200 && res.status < 300
@@ -141,9 +142,9 @@ export function SignupForm(props) {
           )}
 
           <div className="flex justify-between">
-            <UserTypeCheckBox text={"manager"} setValue={setUserType} />
-            <UserTypeCheckBox text={"coach"} setValue={setUserType} />
-            <UserTypeCheckBox text={"user"} setValue={setUserType} />
+            <UserTypeCheckBox text={"manager"} setValue={setRole} />
+            <UserTypeCheckBox text={"coach"} setValue={setRole} />
+            <UserTypeCheckBox text={"user"} setValue={setRole} />
           </div>
 
           <Marginer direction="vertical" margin={10} />

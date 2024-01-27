@@ -1,7 +1,9 @@
 import axios from "axios";
 import toast from "react-hot-toast";
 
-export const url = "https://codeclub-api.liara.run";
+// export const url = "https://codeclub-api.liara.run";
+export const url = "https://gymlist.liara.run";
+// export const url = "https://gymlist.liara.run/swagger";
 
 const useHttp = (checkAuth) => {
   const navigate = useRouter();
