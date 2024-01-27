@@ -12,9 +12,11 @@ import CoachPanel from "./pages/panel/coach/coachPanel.jsx";
 import CommentSection from "./pages/Comment/CommentSection.jsx";
 
 import React from "react";
+import { Toaster } from "react-hot-toast";
 
 function App() {
-  return ( <>
+  return (
+    <>
       <Routes>
         <Route path="/" element={<Land />} />
         <Route path="/home" element={<Home />} />
@@ -35,7 +37,7 @@ function App() {
       {/* <CoachRegister/> */}
       {/* <AboutUs /> */}
       {/* <CommentSection/> */}
-      </>
+    </>
   );
 }
 

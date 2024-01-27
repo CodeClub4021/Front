@@ -93,6 +93,7 @@ const gyms = [
 
 export default function Home() {
   const [sliderIndex, setSliderIndex] = useState(0);
+
   useEffect(() => {
     const interval = setInterval(
       () => setSliderIndex((sliderIndex + 1) % 3),
@@ -101,6 +102,7 @@ export default function Home() {
     return () => {
       clearInterval(interval);
     };
+    
   });
   return (
     <>
