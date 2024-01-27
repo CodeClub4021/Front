@@ -37,7 +37,7 @@ const Tables = () => {
     return (
         <div>
             {!tableColumnsCoachs.length ?
-                    <AddGym username={localStorage.getItem("username")}/>
+                    <AddGym username={"admin"}/>
                 :
                 <div>
                     {

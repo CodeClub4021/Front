@@ -15,11 +15,17 @@ const AddGym = ({username}) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        console.log({
+            ...formData,
+            manager: username
+        });
         try {
             setIsFetching(true);
             const res = await axios.post(import.meta.env.VITE_BASE_URL + "gyms", {
                 ...formData,
                 manager: username
+            }, {
+                
             });
             setIsFetching(false);
             console.log(res.data);
@@ -78,13 +84,16 @@ const AddGym = ({username}) => {
                                             <form className="my-0 flex flex-col gap-5">
                                                 <ModalInput value={formData.name} setValue={setFormData}
                                                             placeHolder="name"
-                                                            reauired={true}/>
+                                                            reauired={true}
+                                                            validate={(val) => true}/>
                                                 <ModalInput value={formData.address} setValue={setFormData}
                                                             placeHolder="address"
-                                                            reauired={true}/>
+                                                            reauired={true}
+                                                            validate={(val) => true}/>
                                                 <ModalInput value={formData.city} setValue={setFormData}
                                                             placeHolder="city"
-                                                            reauired={false}/>
+                                                            reauired={false}
+                                                            validate={(val) => true}/>
                                             </form>
                                         </div>
                                     </div>
