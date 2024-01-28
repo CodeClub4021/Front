@@ -18,8 +18,8 @@ function App() {
   return (
     <div className="main-routes-wrapper">
       <Routes>
-        <Route path="/" element={<Land />} />
-        <Route path="/home" element={<Home />} />
+        {/* <Route path="/" element={<Land />} /> */}
+        <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/user*" element={<UserPanel />} />
         <Route path="/admin*" element={<AdminPanel />} />
@@ -32,7 +32,7 @@ function App() {
       {/* <ManagePanel /> */}
       {/* <CoachPanel /> */}
       {/* <UserPanel /> */}
-      <Gym />
+      {/* <Gym /> */}
       {/* <Login /> */}
       {/* <CoachRegister/> */}
       {/* <AboutUs /> */}

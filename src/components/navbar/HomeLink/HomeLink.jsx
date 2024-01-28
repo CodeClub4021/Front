@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const HomeLink = () => {
   return (
-    <Link to="/home" className="flex">
+    <Link to="/" className="flex">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
