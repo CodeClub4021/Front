@@ -133,6 +133,14 @@ export function LoginForm(props) {
           >
             Signin
           </SubmitButton>
+          <MutedLink style={{ margin: "0 auto" }} href="/">
+            <BoldLink
+              style={{ textDecoration: "underline", color: "#0044CC" }}
+              href="/"
+            >
+              Return to Home
+            </BoldLink>
+          </MutedLink>
         </FormContainer>
 
         <Marginer direction="vertical" margin="1.6em" />

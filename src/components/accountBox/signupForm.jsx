@@ -79,7 +79,7 @@ export function SignupForm(props) {
             }),
             handleToastControll(),
             navigate("/login"),
-            window.location.reload())
+            switchToSignin())
           : null;
       })
       .catch((err) => {
@@ -161,6 +161,14 @@ export function SignupForm(props) {
           >
             Signup
           </SubmitButton>
+          <MutedLink style={{ margin: "0 auto" }} href="/">
+            <BoldLink
+              style={{ textDecoration: "underline", color: "#0044CC" }}
+              href="/"
+            >
+              Return to Home
+            </BoldLink>
+          </MutedLink>
 
           <Marginer direction="vertical" margin="1em" />
 
