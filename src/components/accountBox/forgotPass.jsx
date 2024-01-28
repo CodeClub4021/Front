@@ -10,28 +10,20 @@ import {
 } from "./common";
 import { Marginer } from "../marginer";
 import { AccountContext } from "./accountContext";
-import { Link } from "react-router-dom";
 import axios from "axios";
 import { url } from "../../axiosConfig/useHttp";
-import useHttp from "../../axiosConfig/useHttp";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { handleShowToast } from "../../functions";
 
-export function LoginForm(props) {
+const ForgotPass = () => {
   const { switchToSignup } = useContext(AccountContext);
-  const { switchToForgotpass } = useContext(AccountContext);
   const [loading, setLoading] = useState(false);
   const [toast, setToast] = useState({
     isVisible: false,
     text: "",
     type: "",
   });
-
-  const redirect = (path) => {
-    // Perform your redirection logic here
-    window.location.href = path;
-  };
 
   const handleToastControll = () => {
     setTimeout(() => setToast({ ...toast, isVisible: false }), 5000);
@@ -40,50 +32,45 @@ export function LoginForm(props) {
   //validations
   const validationSchema = Yup.object().shape({
     username: Yup.string().required("Please enter your username"),
-    password: Yup.string().required("Pease enter your password"),
+    email: Yup.string().required("Please enter your email"),
   });
   const formik = useFormik({
     initialValues: {
       username: "",
-      password: "",
+      email: "",
     },
 
     validationSchema,
 
     onSubmit: (values) => {
-      handleLogin(values);
+      henleLogin(values);
     },
   });
 
-  const handleLogin = async (values) => {
+  const henleLogin = (values) => {
     setLoading(true);
     const formData = new FormData();
     formData.append("username", values.username);
     formData.append("password", values.password);
 
-    await axios
+    axios
       .post(`${url}/login/`, formData)
       .then((res) => {
         setLoading(false);
-        if (res.status >= 200 && res.status < 300) {
-          setToast({
-            isVisible: true,
-            text: "Welcome!",
-            type: "success",
-          });
-          handleToastControll();
-
-          // Redirect should be placed here, not in a separate then block
-          return setTimeout(() => {
-            redirect("/home");
-          }, 500);
-        }
+        res.status >= 200 && res.status < 300
+          ? (setToast({
+              isVisible: true,
+              text: "Wellcom!",
+              type: "success",
+            }),
+            handleToastControll())
+          : null;
       })
       .catch((err) => {
         setLoading(false);
         setToast({
           isVisible: true,
-          text: err?.response.data.non_field_errors[0],
+          text: "We did not found your Authentication Info",
           type: "error",
         });
         handleToastControll();
@@ -105,27 +92,27 @@ export function LoginForm(props) {
             <HelperText>{formik.errors.username}</HelperText>
           )}
 
-          {/* password */}
+          {/* email */}
           <Input
-            placeholder="Password"
-            type="password"
-            name="password"
-            value={formik.values.password}
+            placeholder="Email"
+            type="email"
+            name="email"
+            value={formik.values.email}
             onChange={formik.handleChange}
           />
-          {formik.errors.password && formik.touched.password && (
-            <HelperText>{formik.errors.password}</HelperText>
+          {formik.errors.email && formik.touched.email && (
+            <HelperText>{formik.errors.email}</HelperText>
           )}
 
           <Marginer direction="vertical" margin={10} />
 
-          <MutedLink href="#">
+          {/* <MutedLink href="#">
             Forget your{" "}
             <span onClick={switchToForgotpass} className="text-amber-300">
               password
             </span>
             ?
-          </MutedLink>
+          </MutedLink> */}
 
           <Marginer direction="vertical" margin={10} />
 
@@ -133,7 +120,7 @@ export function LoginForm(props) {
             style={loading ? { opacity: 0.5 } : {}}
             type={loading ? "button" : "submit"}
           >
-            Signin
+            Recover
           </SubmitButton>
           <MutedLink style={{ margin: "0 auto" }} href="/home">
             <BoldLink
@@ -159,4 +146,6 @@ export function LoginForm(props) {
       {toast.isVisible && handleShowToast(toast.type, toast.text)}
     </>
   );
-}
+};
+
+export default ForgotPass;
