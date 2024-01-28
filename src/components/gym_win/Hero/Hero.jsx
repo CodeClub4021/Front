@@ -68,8 +68,8 @@ const Hero = () => {
 
         {/* hero buttons */}
         <div className="hero-buttons">
-          <button className={btn}>Get Started</button>
-          <button className={btn}>Learn More</button>
+          <button className={"btn"}>Get Started</button>
+          <button className={"btn"}>Learn More</button>
         </div>
       </div>
 
@@ -86,7 +86,7 @@ const Hero = () => {
           />
         </div>
         <div className=" custom-bg absolute left-0 top-0 z-10 z-20 h-full w-full">
-          <button className={btn}>
+          <button className={"btn absolute left-5 top-5"}>
             <Link to="join-us" smooth={true} spy={true}>
               Join Now
             </Link>
@@ -109,13 +109,13 @@ const Hero = () => {
 
           {/* calories */}
           <motion.div
-            initial={{ right: "32rem" }}
-            whileInView={{ right: "28rem" }}
+            initial={{ left: "-250px" }}
+            whileInView={{ left: "-150px" }}
             transition={transition}
             className="calories"
           >
-            <img src={Calories} alt="" />
-            <div>
+            <img className="basis/1/2" src={Calories} alt="" />
+            <div className="basis-1/2">
               <span>Calories burned</span>
               <span>220 kcal</span>
             </div>

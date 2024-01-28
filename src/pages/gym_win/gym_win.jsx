@@ -14,12 +14,22 @@ function Gym() {
       <Navbar />
       <div className="Gym mt-20">
         <Hero />
-        <Programs />
-        <Reasons />
+        <div className="px-8 py-10">
+          <Programs />
+        </div>
+        <div className="px-8 py-10">
+          <Reasons />
+        </div>
         <Plans />
-        <Testimonials />
-        <Join />
-        <CommentSection />
+        <div className="px-8 py-10">
+          <Testimonials />
+        </div>
+        <div className="px-8 py-10">
+          <Join />
+        </div>
+        <div className="py-10">
+          <CommentSection />
+        </div>
         <Footer />
       </div>
     </>

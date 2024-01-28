@@ -3,7 +3,6 @@ import "./Plans.css";
 import { plansData } from "../../../assets/gym-win/data/plansData";
 import whiteTick from "../../../assets/gym-win/whiteTick.png";
 const Plans = () => {
-  const btn = `bg-white p-2 font-bold border-4 border-transparent transition-all duration-300 hover:cursor-pointer`;
   return (
     <div className="plans-container">
       <div className="plans-blur-1 blur"></div>
@@ -30,7 +29,7 @@ const Plans = () => {
             <div>
               <span>See more benefits </span>
             </div>
-            <button className={btn}>Join now</button>
+            <button className={"btn"}>Join now</button>
           </div>
         ))}
       </div>

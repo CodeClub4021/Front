@@ -150,13 +150,15 @@
 .calories {
   display: flex;
   background-color: var(--caloryCard);
-  width: fit-content;
-  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
   border-radius: 5px;
   padding: 1rem;
   position: absolute;
-  top: 32rem;
-  right: 28rem;
+  bottom: 20%;
+  left: -250px;
+  z-index: 90;
 }
 .calories > img {
   width: 3rem;
