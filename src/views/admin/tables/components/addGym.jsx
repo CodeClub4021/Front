@@ -3,7 +3,6 @@ import ModalInput from "./modalInput.jsx";
 import axios from "axios";
 import Loading from "../../../../components/loading/loading.jsx";
 import LoadingWhole from "../../../../components/loading/loadingWhole.jsx";
-import {useNavigate} from "react-router-dom";
 
 const AddGym = ({username}) => {
     const [formData, setFormData] = useState({
@@ -11,25 +10,24 @@ const AddGym = ({username}) => {
     });
     const [open, setOpen] = useState(false);
     const [isFetching, setIsFetching] = useState(false);
-    const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         console.log({
-            ...formData,
-            manager: username
+            ...formData
         });
         try {
             setIsFetching(true);
-            const res = await axios.post(import.meta.env.VITE_BASE_URL + "gyms", {
-                ...formData,
-                manager: username
+            const res = await axios.post(import.meta.env.VITE_BASE_URL + "gyms/", {
+                ...formData
             }, {
-                
+                headers: {
+                    Authorization: `Token 8d5cc6ea7df059f6e56eddb472b05e100a034741`
+                }
             });
             setIsFetching(false);
             console.log(res.data);
-            navigate("admin/my-gym");
+            window.location.reload();
         } catch (err) {
             console.error(err);
             setIsFetching(false);

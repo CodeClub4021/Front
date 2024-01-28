@@ -33,7 +33,7 @@ function AddCoachCard(props) {
           <button
             onClick={() => setOpen(!open)}
             open={open}
-            className={`flex items-center bg-gray-900 text-xl text-amber-300 hover:cursor-pointer ${
+            className={`flex items-center bg-gray-900 text-xl text-amber-300 z-50 hover:cursor-pointer ${
               transparent
                 ? "bg-none text-white hover:bg-none active:bg-none"
                 : "bg-lightPrimary text-brand-500 dark:bg-navy-700 p-2 hover:bg-gray-100 dark:text-white dark:hover:bg-white/20 dark:active:bg-white/10"

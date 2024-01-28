@@ -5,26 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2673c54f-d602-4401-a8f4-27c67076f6fb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/views/admin/tables/components/deleteMember.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/admin/tables/components/deleteModal.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ManagerPanel/card/AddCoachCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ManagerPanel/card/AddCoachCard.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ManagerPanel/card/CardMenu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ManagerPanel/card/CardMenu.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/loading/loadingWhole.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/loading/loadingWhole.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contexts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/contexts.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/admin/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/admin/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/admin/tables/components/Coachs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/admin/tables/components/Coachs.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/admin/tables/components/ColumnsTable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/admin/tables/components/ColumnsTable.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/admin/tables/components/editGymInfo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/admin/tables/components/editGymInfo.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/admin/tables/components/radioInput.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/admin/tables/components/radioInput.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/admin/tables/components/addGym.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/admin/tables/components/addGym.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/admin/tables/components/deleteModal.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/admin/tables/components/deleteModal.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/admin/tables/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/admin/tables/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/admin/tables/variables/columnsData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/admin/tables/variables/columnsData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/admin/tables/variables/tableColumnsCoachs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/admin/tables/variables/tableColumnsCoachs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/admin/tables/variables/tableDataCoachs.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/admin/tables/variables/tableDataCoachs.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/admin/tables/variables/tableDataColumns.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/admin/tables/variables/tableDataColumns.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +99,7 @@
       <workItem from="1706355885703" duration="6916000" />
       <workItem from="1706362936296" duration="5654000" />
       <workItem from="1706434639723" duration="5637000" />
-      <workItem from="1706450775843" duration="3539000" />
+      <workItem from="1706450775843" duration="7950000" />
     </task>
     <servers />
   </component>

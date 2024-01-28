@@ -22,7 +22,7 @@ const DeleteModal = ({text, url, internalRoute, refresh, show, setShow, setRende
             setShow(false);
             toast.success("done!", {
                 position: "top-center",
-                autoClose: 5000,
+                autoClose: 3000,
                 hideProgressBar: false,
                 closeOnClick: true,
                 pauseOnHover: true,
@@ -40,7 +40,7 @@ const DeleteModal = ({text, url, internalRoute, refresh, show, setShow, setRende
             modal.current.close();
             toast.error("oops!!", {
                 position: "top-center",
-                autoClose: 5000,
+                autoClose: 3000,
                 hideProgressBar: false,
                 closeOnClick: true,
                 pauseOnHover: true,
