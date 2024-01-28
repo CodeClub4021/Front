@@ -122,10 +122,10 @@ const ForgotPass = () => {
           >
             Recover
           </SubmitButton>
-          <MutedLink style={{ margin: "0 auto" }} href="/">
+          <MutedLink style={{ margin: "0 auto" }} href="/home">
             <BoldLink
               style={{ textDecoration: "underline", color: "#0044CC" }}
-              href="/"
+              href="/home"
             >
               Return to Home
             </BoldLink>

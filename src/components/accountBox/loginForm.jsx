@@ -74,7 +74,9 @@ export function LoginForm(props) {
           handleToastControll();
 
           // Redirect should be placed here, not in a separate then block
-          return redirect("/");
+          return setTimeout(() => {
+            redirect("/home");
+          }, 500);
         }
       })
       .catch((err) => {
@@ -133,10 +135,10 @@ export function LoginForm(props) {
           >
             Signin
           </SubmitButton>
-          <MutedLink style={{ margin: "0 auto" }} href="/">
+          <MutedLink style={{ margin: "0 auto" }} href="/home">
             <BoldLink
               style={{ textDecoration: "underline", color: "#0044CC" }}
-              href="/"
+              href="/home"
             >
               Return to Home
             </BoldLink>

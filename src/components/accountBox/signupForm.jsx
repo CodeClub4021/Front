@@ -164,7 +164,7 @@ export function SignupForm(props) {
           <MutedLink style={{ margin: "0 auto" }} href="/">
             <BoldLink
               style={{ textDecoration: "underline", color: "#0044CC" }}
-              href="/"
+              href="/home"
             >
               Return to Home
             </BoldLink>
