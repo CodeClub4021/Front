@@ -2,6 +2,7 @@ import React from "react";
 import "./Plans.css";
 import { plansData } from "../../../assets/gym-win/data/plansData";
 import whiteTick from "../../../assets/gym-win/whiteTick.png";
+
 const Plans = () => {
   return (
     <div className="plans-container">
