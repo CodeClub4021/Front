@@ -11,19 +11,15 @@ import {
 import { Marginer } from "../marginer";
 import { AccountContext } from "./accountContext";
 import axios from "axios";
-import UserTypeCheckBox from "./userTypeCheckbox";
-import { useEffect } from "react";
+import { url } from "../../axiosConfig/useHttp";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { url } from "../../axiosConfig/useHttp";
 import { handleShowToast } from "../../functions";
-import { Link, redirect, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-export function SignupForm(props) {
-  const { switchToSignin } = useContext(AccountContext);
-  const navigate = useNavigate();
+const ForgotPass = () => {
+  const { switchToSignup } = useContext(AccountContext);
   const [loading, setLoading] = useState(false);
-  const [role, setRole] = useState("");
   const [toast, setToast] = useState({
     isVisible: false,
     text: "",
@@ -36,39 +32,30 @@ export function SignupForm(props) {
 
   //validations
   const validationSchema = Yup.object().shape({
-    username: Yup.string().required("Please enter this field"),
-    password: Yup.string().required("Please enter this field"),
-    // repeatPassword: Yup.string().required("Please enter this field"),
-    email: Yup.string().required("Please enter this field"),
-    role: Yup.string(),
+    username: Yup.string().required("Please enter your username"),
+    email: Yup.string().required("Please enter your email"),
   });
   const formik = useFormik({
     initialValues: {
       username: "",
-      password: "",
-      // repeatPassword: "",
       email: "",
-      role: role,
     },
 
     validationSchema,
 
     onSubmit: (values) => {
-      role.length !== 0 ? handleSignup(values) : null;
+      henleLogin(values);
     },
   });
 
-  const handleSignup = async (values) => {
-    console.log(role);
+  const henleLogin = (values) => {
     setLoading(true);
     const formData = new FormData();
     formData.append("username", values.username);
-    formData.append("email", values.email);
     formData.append("password", values.password);
-    formData.append("role", role);
 
-    await axios
-      .post(`${url}/register/`, formData)
+    axios
+      .post(`${url}/login/`, formData)
       .then((res) => {
         setLoading(false);
         res.status >= 200 && res.status < 300
@@ -77,17 +64,14 @@ export function SignupForm(props) {
               text: "Wellcom!",
               type: "success",
             }),
-            handleToastControll(),
-            navigate("/login"),
-            switchToSignin())
+            handleToastControll())
           : null;
       })
       .catch((err) => {
-        console.log(err?.response.data);
         setLoading(false);
         setToast({
           isVisible: true,
-          text: err?.response.data.email || err?.response.data.username,
+          text: "We did not found your Authentication Info",
           type: "error",
         });
         handleToastControll();
@@ -96,7 +80,7 @@ export function SignupForm(props) {
 
   return (
     <>
-      <BoxContainer className="pb-3">
+      <BoxContainer>
         <FormContainer onSubmit={formik.handleSubmit}>
           {/* username */}
           <Input
@@ -111,8 +95,8 @@ export function SignupForm(props) {
 
           {/* email */}
           <Input
-            type="email"
             placeholder="Email"
+            type="email"
             name="email"
             value={formik.values.email}
             onChange={formik.handleChange}
@@ -121,37 +105,15 @@ export function SignupForm(props) {
             <HelperText>{formik.errors.email}</HelperText>
           )}
 
-          {/* password */}
-          <Input
-            type="password"
-            placeholder="Password"
-            name="password"
-            value={formik.values.password}
-            onChange={formik.handleChange}
-          />
-          {formik.errors.password && formik.touched.password && (
-            <HelperText>{formik.errors.password}</HelperText>
-          )}
-          {/* repeat pass */}
-          {/* <Input
-            type="password"
-            placeholder="Confirm Password"
-            name="repeatPassword"
-            value={formik.values.repeatPassword}
-            onChange={formik.handleChange}
-          />
-          {formik.errors.repeatPassword && formik.touched.repeatPassword && (
-            <HelperText>{formik.errors.repeatPassword}</HelperText>
-          )} */}
+          <Marginer direction="vertical" margin={10} />
 
-          <div className="flex justify-between">
-            <UserTypeCheckBox text={"manager"} setValue={setRole} />
-            <UserTypeCheckBox text={"coach"} setValue={setRole} />
-            <UserTypeCheckBox text={"customer"} setValue={setRole} />
-          </div>
-          {role.length == 0 && formik.touched.password && (
-            <HelperText>{"Please select role"}</HelperText>
-          )}
+          {/* <MutedLink href="#">
+            Forget your{" "}
+            <span onClick={switchToForgotpass} className="text-amber-300">
+              password
+            </span>
+            ?
+          </MutedLink> */}
 
           <Marginer direction="vertical" margin={10} />
 
@@ -159,7 +121,7 @@ export function SignupForm(props) {
             style={loading ? { opacity: 0.5 } : {}}
             type={loading ? "button" : "submit"}
           >
-            Signup
+            Recover
           </SubmitButton>
           <MutedLink style={{ margin: "0 auto" }}>
             <Link
@@ -169,19 +131,22 @@ export function SignupForm(props) {
               Return to Home
             </Link>
           </MutedLink>
-
-          <Marginer direction="vertical" margin="1em" />
-
-          <MutedLink style={{ margin: "0 auto" }} href="#">
-            Already have an account?
-            <BoldLink href="#" onClick={switchToSignin}>
-              Signin
-            </BoldLink>
-          </MutedLink>
         </FormContainer>
+
+        <Marginer direction="vertical" margin="1.6em" />
+
+        <Marginer direction="vertical" margin="1em" />
+        <MutedLink href="#">
+          Don't have an accoun?{" "}
+          <BoldLink href="#" onClick={switchToSignup}>
+            Signup
+          </BoldLink>
+        </MutedLink>
       </BoxContainer>
 
       {toast.isVisible && handleShowToast(toast.type, toast.text)}
     </>
   );
-}
+};
+
+export default ForgotPass;
