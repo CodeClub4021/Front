@@ -17,7 +17,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import { url } from "../../axiosConfig/useHttp";
 import { handleShowToast } from "../../functions";
-import { redirect, useNavigate } from "react-router-dom";
+import { Link, redirect, useNavigate } from "react-router-dom";
 
 export function SignupForm(props) {
   const { switchToSignin } = useContext(AccountContext);
@@ -161,13 +161,13 @@ export function SignupForm(props) {
           >
             Signup
           </SubmitButton>
-          <MutedLink style={{ margin: "0 auto" }} href="/">
-            <BoldLink
+          <MutedLink style={{ margin: "0 auto" }}>
+            <Link
               style={{ textDecoration: "underline", color: "#0044CC" }}
-              href="/home"
+              to="/"
             >
               Return to Home
-            </BoldLink>
+            </Link>
           </MutedLink>
 
           <Marginer direction="vertical" margin="1em" />

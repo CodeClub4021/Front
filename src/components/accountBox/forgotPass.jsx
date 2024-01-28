@@ -15,6 +15,7 @@ import { url } from "../../axiosConfig/useHttp";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { handleShowToast } from "../../functions";
+import { Link } from "react-router-dom";
 
 const ForgotPass = () => {
   const { switchToSignup } = useContext(AccountContext);
@@ -122,13 +123,13 @@ const ForgotPass = () => {
           >
             Recover
           </SubmitButton>
-          <MutedLink style={{ margin: "0 auto" }} href="/home">
-            <BoldLink
+          <MutedLink style={{ margin: "0 auto" }}>
+            <Link
               style={{ textDecoration: "underline", color: "#0044CC" }}
-              href="/home"
+              to="/"
             >
               Return to Home
-            </BoldLink>
+            </Link>
           </MutedLink>
         </FormContainer>
 

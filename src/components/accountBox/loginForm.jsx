@@ -75,7 +75,7 @@ export function LoginForm(props) {
 
           // Redirect should be placed here, not in a separate then block
           return setTimeout(() => {
-            redirect("/home");
+            redirect("/");
           }, 500);
         }
       })
@@ -135,13 +135,13 @@ export function LoginForm(props) {
           >
             Signin
           </SubmitButton>
-          <MutedLink style={{ margin: "0 auto" }} href="/home">
-            <BoldLink
+          <MutedLink style={{ margin: "0 auto" }}>
+            <Link
               style={{ textDecoration: "underline", color: "#0044CC" }}
-              href="/home"
+              to="/"
             >
               Return to Home
-            </BoldLink>
+            </Link>
           </MutedLink>
         </FormContainer>
 
