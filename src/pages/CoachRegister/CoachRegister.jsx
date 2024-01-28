@@ -3,14 +3,14 @@ import React, { useState } from "react";
 function CoachRegister() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [formData, setFormData] = useState({
-    birthYear: "",
-    birthMonth: "",
-    birthDay: "",
+    // birthYear: "",
+    // birthMonth: "",
+    // birthDay: "",
+    // gender: "",
+    // phoneNumber: "",
+    // emailAddress: "",
+    // description: "",
     name: "",
-    gender: "",
-    phoneNumber: "",
-    emailAddress: "",
-    description: "",
     availability: [],
   });
 
@@ -30,11 +30,9 @@ function CoachRegister() {
     }));
   };
 
-  // New function to handle changes in availability
   const handleAvailabilityChange = (e) => {
     const { value } = e.target;
 
-    // Toggle the selected day in the availability array
     setFormData((prevData) => {
       const newAvailability = prevData.availability.includes(value)
         ? prevData.availability.filter((day) => day !== value)
@@ -48,10 +46,6 @@ function CoachRegister() {
   };
 
   const handleSubmit = () => {
-    // Implement your form submission logic here
-    // You can use formData to access the form values
-    // For example: console.log(formData);
-    // Close the modal after submission
     closeModal();
   };
 
@@ -94,7 +88,7 @@ function CoachRegister() {
                   className="text-3xl font-medium leading-6 text-gray-900"
                   id="modal-headline"
                 >
-                  {/*Coach Registration*/} Requirement
+                  Requirement
                 </h3>
               </div>
 
@@ -125,8 +119,37 @@ function CoachRegister() {
                     placeholder="ID name"
                   />
                 </div>
+                {/* // */}
+              </div>
 
-                {/* Gender Section */}
+              <div className="justify-center bg-amber-400 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
+                <button
+                  onClick={closeModal}
+                  type="button"
+                  className="ml-2 inline-flex w-full justify-center rounded-md border border-transparent bg-gray-900 px-4 py-2 text-xl font-medium text-amber-400  hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                >
+                  Close Form
+                </button>
+                <button
+                  onClick={handleSubmit}
+                  type="submit"
+                  className="ml-2 inline-flex w-full justify-center rounded-md border border-transparent bg-gray-900 px-4 py-2 text-xl font-medium text-amber-400  hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                >
+                  Send Request
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+export default CoachRegister;
+
+
+{/* Gender Section */}
                 {/* <div className="mt-4">
                   <label className="block text-lg font-medium text-amber-400">
                     Gender
@@ -242,30 +265,3 @@ function CoachRegister() {
                     placeholder="Skills Information"
                   />
                     </div>*/}
-              </div>
-
-              <div className="justify-center bg-amber-400 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
-                <button
-                  onClick={closeModal}
-                  type="button"
-                  className="ml-2 inline-flex w-full justify-center rounded-md border border-transparent bg-gray-900 px-4 py-2 text-xl font-medium text-amber-400  hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-                >
-                  Close Form
-                </button>
-                <button
-                  onClick={handleSubmit}
-                  type="submit"
-                  className="ml-2 inline-flex w-full justify-center rounded-md border border-transparent bg-gray-900 px-4 py-2 text-xl font-medium text-amber-400  hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-                >
-                  Send Request
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-    </div>
-  );
-}
-
-export default CoachRegister;
