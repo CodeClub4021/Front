@@ -1,3 +1,5 @@
+
+
 export const columnsDataDevelopment = [
   {
     Header: "NAME",
@@ -50,6 +52,14 @@ export const columnsDataColumns = [
     Header: "DATE OF SIGN UP",
     accessor: "date",
   },
+  {
+    Header: "DELETE",
+    accessor: "delete"
+  },
+  {
+    Header: "ID",
+    accessor: "id"
+  }
 ];
 
 export const columnsDataComplex = [

@@ -4,9 +4,7 @@ const RadioInput = ({label, values, name, value, setValue}) => {
         setValue(prevData => ({
             ...prevData, [name]: e.target.getAttribute("data-item")
         }));
-        console.log(value);
     }
-    console.log(value);
     return(
         <label className="text-lg font-medium text-amber-400 capitalize">
             {label}

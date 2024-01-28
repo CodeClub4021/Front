@@ -38,7 +38,7 @@ const EditGymInfo = ({open, setOpen}) => {
     const close = () => {
         setOpen(false);
         setFormData({
-            name: "", address: "", city: "", phoneNumber: "", tuition: ""
+            name: "", address: "", city: "", phoneNumber: "", tuition: "", establishedYear: 1800, workTime: [0, 24], gender: ""
         });
     }
 

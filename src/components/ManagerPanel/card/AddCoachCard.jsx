@@ -8,22 +8,22 @@ import AddCoach from "../../modal/AddCoachModal";
 import axios from "axios";
 
 function AddCoachCard(props) {
-  const { transparent } = props;
+  const { transparent, url } = props;
   const [open, setOpen] = React.useState(false);
   const [showAddCoach, setShowAddCoach] = useState(false);
-  const handleEditClick = () => {
+  const handleEditClick = async () => {
     // Open the ProductModal when Edit Info is clicked
     setShowAddCoach(true);
     setOpen(false); // Close the dropdown
-
-    // axios.post("http://127.0.0.1:8000/gyms/123/add-coach/", 
-    // {
-    //   "coach_username": "test"
-    // })
-    axios.post("http://127.0.0.1:8000/gyms/321/add-coach/",
-    {
-      "coach_username": "test2"
-    })
+    try {
+      const res = await axios.post(url,
+          {
+            "coach_username": "test2"
+          });
+      console.log(res.data);
+    } catch (err){
+      console.error(err);
+    }
   };
 
   return (

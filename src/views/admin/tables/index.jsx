@@ -19,13 +19,13 @@ import axios from "axios";
 import Loading from "../../../components/loading/loading.jsx";
 
 const Tables = () => {
-    const {gymId} = useContext(UserContext);
+    const {gymIds} = useContext(UserContext);
     const [isFetching, setIsFetching] = useState(false);
 
     useEffect(() => {
         (async function () {
             try {
-                const data = await axios.get(import.meta.env.VITE_BASE_URL + `/gyms/${gymId}/`);
+                const data = await axios.get(import.meta.env.VITE_BASE_URL + `/gyms/${gymIds[0]}/`);
                 setIsFetching(false);
                 console.log(data.data);
             } catch (err) {
@@ -52,24 +52,11 @@ const Tables = () => {
                         <GymInfo/>
                     </div>
 
-                    {/* <div className="mt-5 grid h-full grid-cols-1 gap-5 md:grid-cols-2">
-              <DevelopmentTable
-                columnsData={columnsDataDevelopment}
-                tableData={tableDataDevelopment}
-              />
-              <CheckTable columnsData={columnsDataCheck} tableData={tableDataCheck} />
-            </div> */}
-
                     <div className="mt-5 grid h-full grid-cols-1 gap-5 md:grid-cols-2">
                         <ColumnsTable
                             columnsData={columnsDataColumns}
                             tableData={tableDataColumns}
                         />
-
-                        {/* <ComplexTable
-                columnsData={columnsDataComplex}
-                tableData={tableDataComplex}
-              /> */}
                         <Coachs
                             extra="mb-5"
                             tableData={tableDataCoachs}

@@ -58,7 +58,6 @@ export default function Admin(props) {
     });
   };
 
-  document.documentElement.dir = "ltr";
   return (
     <div className="flex h-auto w-full">
       
@@ -80,7 +79,7 @@ export default function Admin(props) {
               {...rest}
             />
             <div className="pt-5s mx-auto mb-auto h-full min-h-[84vh] p-2 md:pr-2">
-              <UserContext.Provider value={{gymId: 1}}>
+              <UserContext.Provider value={{gymIds: [1]}}>
                 <Routes>
                   {getRoutes(routes)}
 
