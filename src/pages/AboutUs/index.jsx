@@ -1,7 +1,15 @@
 import React from "react";
 import NavbarJavad from "../../components/navbar/navbar.jsx";
 import Footer from "../../components/footer/footer.jsx";
-import Banner from "./components/AboutBanner.jsx";
+import Armin from "./components/Armin.jsx";
+import AB from "./components/AB.jsx";
+import Arash from "./components/Arash.jsx";
+import Javad from "./components/Javad.jsx";
+import Parnian from "./components/Parnian.jsx";
+import AA from "./components/AA.jsx";
+import Aylin from "./components/Aylin.jsx";
+import Bahareh from "./components/Bahareh.jsx";
+import Sayin from "./components/sayin.jsx";
 import {checkLogin} from "../../functions/checkLogin.js";
 
 export default function AboutUs() {
@@ -24,25 +32,34 @@ export default function AboutUs() {
                     <div className="flex w-full flex-col gap-5">
                         <div className="w-ful mt-5 flex h-fit flex-col gap-5 lg:grid lg:grid-cols-12">
                             <div className="col-span-3 m-4 lg:!mb-0">
-                                <Banner/>
+                                <Armin/>
                             </div>
                             <div className="col-span-3 m-4 lg:!mb-0">
-                                <Banner/>
+                                <AB/>
                             </div>
                             <div className="col-span-3 m-4 lg:!mb-0">
-                                <Banner/>
+                                <Arash/>
                             </div>
                             <div className="col-span-3 m-4 lg:!mb-0">
-                                <Banner/>
+                                <Javad/>
                             </div>
                             <div className="col-span-3 m-4 lg:!mb-0">
-                                <Banner/>
+                                <Parnian/>
                             </div>
                             <div className="col-span-3 m-4 lg:!mb-0">
-                                <Banner/>
+                                <AA/>
                             </div>
                             <div className="col-span-3 m-4 lg:!mb-0">
-                                <Banner/>
+                                <Sayin/>
+                            </div>
+                            
+                        </div>
+                        <div className="w-ful mt-10 flex h-fit flex-col gap-5 lg:grid lg:grid-cols-12">
+                        <div className="col-span-6 m-4 lg:!mb-0">
+                                <Aylin/>
+                            </div>
+                            <div className="col-span-6 m-4 lg:!mb-0">
+                                <Bahareh/>
                             </div>
                         </div>
                     </div>
