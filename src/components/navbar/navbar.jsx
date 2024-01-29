@@ -12,7 +12,7 @@ const NavbarComponent = ({isLogin, isInPanel}) => {
     const profile = isInPanel ? <Logout/> : <Profile/>;
     return (
         <nav
-            className="text-gray min-w-full max-w-[100vh] text-[3vh]! fixed top-0 z-[49] h-fit bg-gradient-to-br from-gray-900 from-40% via-gray-600 via-85% to-gray-300 py-2 text-lg"
+            className="text-gray absolute text-[3vh]! top-0 right-0 left-0 z-[49] h-fit bg-gradient-to-br from-gray-900 from-40% via-gray-600 via-85% to-gray-300 py-2 text-lg"
         >
             <ul className="md:text-md flex place-items-center justify-start">
                 <li className="min-w-[150px]">
