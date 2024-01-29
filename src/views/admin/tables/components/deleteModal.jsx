@@ -1,10 +1,8 @@
-import {faTrash} from "@fortawesome/free-solid-svg-icons";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import axios from "axios";
 import {useEffect, useRef, useState} from "react";
 import LoadingWhole from "../../../../components/loading/loadingWhole.jsx";
 import {useNavigate} from "react-router-dom";
-import {Bounce, toast, ToastContainer} from "react-toastify";
+import {Bounce, toast} from "react-toastify";
 
 const DeleteModal = ({text, url, internalRoute, refresh, show, setShow, setRender}) => {
     const [isFetching, setIsFetching] = useState(false);
@@ -64,15 +62,15 @@ const DeleteModal = ({text, url, internalRoute, refresh, show, setShow, setRende
     });
     return (
         <div>
-            <dialog ref={modal} className="modal modal-bottom sm:modal-middle">
-                <div className="modal-box bg-gray-900 flex flex-col place-items-center">
+            <dialog ref={modal} className="daisymodal daisymodal-bottom sm:daisymodal-middle">
+                <div className="daisymodal-box bg-gray-900 flex flex-col place-items-center">
                     <h1 className="py-4 text-white font-light text-2xl">
                         {text}
                     </h1>
-                    <div className="modal-action">
+                    <div className="daisymodal-action">
                         <form method="dialog" className="flex justify-between gap-5">
-                            <button className="btn px-8 btn-error capitalize" onClick={() => setShow(false)}>no</button>
-                            <button className="btn px-8 btn-accent capitalize" onClick={clickHandler}>yes</button>
+                            <button className="daisybtn px-8 daisybtn-error capitalize" onClick={() => setShow(false)}>no</button>
+                            <button className="daisybtn px-8 daisybtn-accent capitalize" onClick={clickHandler}>yes</button>
                         </form>
                     </div>
                 </div>

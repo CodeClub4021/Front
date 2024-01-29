@@ -39,7 +39,7 @@ function CardMenu(props) {
                 animation={"origin-top-right transition-all duration-300 ease-in-out"}
                 classNames={`${transparent ? "top-8" : "top-11"} right-0 w-max`}
                 children={
-                    <div className="join join-vertical place-items-center">
+                    <div className="daisyjoin daisyjoin-vertical place-items-center">
                         <button
                             className="z-40 w-full rounded-xl border-[1px] border-gray-600 rounded-b-none bg-gray-900 py-3 px-4 text-sm shadow-xl shadow-shadow-500 dark:!bg-navy-700 dark:shadow-none"
                             onClick={() => setOpenModal(true)}

@@ -1,4 +1,3 @@
-import CardMenu from "../../../../components/ManagerPanel/card/CardMenu";
 import Card from "../../../../components/ManagerPanel/card/index";
 import React, {useEffect, useMemo, useState} from "react";
 import {
@@ -7,10 +6,7 @@ import {
     useSortBy,
     useTable,
 } from "react-table";
-import {faX} from "@fortawesome/free-solid-svg-icons";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import DeleteMember from "./deleteMember.jsx";
-import login from "../../../../pages/login/login.jsx";
 
 const ColumnsTable = (props) => {
     const {columnsData, tableData} = props;

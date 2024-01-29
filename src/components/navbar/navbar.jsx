@@ -24,6 +24,7 @@ const NavbarComponent = ({ isLogin }) => {
         </li>
         {}
         {/* Navigation Links */}
+
         <li className="col-span-4">
           <ul className="flex h-full place-items-center justify-around gap-1 px-3">
             <li className="w-15 flex h-full place-items-center justify-center border-b-white  text-gray-100 hover:border-b-2">

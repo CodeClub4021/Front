@@ -1,10 +1,9 @@
 import React, {useState} from "react";
 import ModalInput from "./modalInput.jsx";
 import axios from "axios";
-import Loading from "../../../../components/loading/loading.jsx";
 import LoadingWhole from "../../../../components/loading/loadingWhole.jsx";
 
-const AddGym = ({username}) => {
+const AddGym = () => {
     const [formData, setFormData] = useState({
         name: "", address: "", city: "",
     });
@@ -46,7 +45,7 @@ const AddGym = ({username}) => {
         <div>
             <div className="w-full flex justify-center py-6 px-5">
                 <button
-                    className="capitalize btn btn-accent border-none bg-yellow-500 text-gray-900 text-xl font-extralight transition duration-300 hover:bg-yellow-500 hover:scale-105 "
+                    className="capitalize daisybtn daisybtn-accent border-none bg-yellow-500 text-gray-900 text-xl font-extralight transition duration-300 hover:bg-yellow-500 hover:scale-105 "
                     onClick={() => setOpen(true)}
                 >
                     add Gym

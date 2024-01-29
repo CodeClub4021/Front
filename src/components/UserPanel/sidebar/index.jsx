@@ -20,11 +20,11 @@ const Sidebar = ({ open, onClose }) => {
       </span>
 
       <div className={`mx-[70px] mt-[35px] flex items-center`}>
-        <div className="ml-1 mt-1 h-2.5 font-poppins text-[26px] font-bold uppercase text-white dark:text-white">
+        <div className="font-poppins ml-1 mt-1 h-2.5 text-[26px] font-bold uppercase text-white dark:text-white">
           User panel
         </div>
       </div>
-      <div class="mb-7 mt-[58px] h-px bg-gray-300 dark:bg-white/30" />
+      <div className="mb-7 mt-[58px] h-px bg-gray-300 dark:bg-white/30" />
       {/* Nav item */}
 
       <ul className="pt-1 text-xl">

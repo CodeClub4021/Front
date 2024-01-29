@@ -34,7 +34,7 @@ const Tables = () => {
                 setGymInfo(res.data)
             } catch (err) {
                 console.error(err);
-                toast.error("oops!", {
+                toast.error("nothing found!", {
                     position: "top-center",
                     autoClose: 3000,
                     hideProgressBar: false,
@@ -57,7 +57,7 @@ const Tables = () => {
                 <Loading />
             }
             {!Object.keys(gymInfo).length ?
-                    <AddGym username={"admin"}/>
+                    <AddGym/>
                 :
                 <div>
 

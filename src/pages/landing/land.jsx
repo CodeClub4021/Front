@@ -14,6 +14,7 @@ function Land() {
           className="h-full w-full object-cover"
         />
       </div>
+
       <div className="content absolute top-0 flex h-full w-full flex-col items-center justify-center text-white">
         <div>
           <div className="flex flex-col place-items-start justify-start gap-2 ">

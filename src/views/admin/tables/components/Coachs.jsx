@@ -44,9 +44,6 @@ function Coachs(props) {
                     Coachs
                 </h4>
                 <AddCoachCard url={""}/>
-                {/* <button className="linear rounded-[20px] bg-lightPrimary px-4 py-2 text-base font-medium text-brand-500 transition duration-200 hover:bg-gray-100 active:bg-gray-200 dark:bg-white/5 dark:text-white dark:hover:bg-white/10 dark:active:bg-white/20">
-          See all
-        </button> */}
             </div>
 
             {/* Top Creator Heading */}
@@ -59,7 +56,7 @@ function Coachs(props) {
                     {headerGroups.map((headerGroup, index) => (
                         <tr {...headerGroup.getHeaderGroupProps()} key={index}>
                             {headerGroup.headers.map((column, index) => {
-                                if (column.Header !== "Id"){
+                                if (column.Header !== "Id") {
                                     return (<th
                                         {...column.getHeaderProps(column.getSortByToggleProps())}
                                         key={index}
@@ -105,9 +102,9 @@ function Coachs(props) {
                                                 <ShowStars StarsNumbers="3"/>
                                             </div>
                                         );
-                                    } else if (cell.column.Header === "Delete"){
+                                    } else if (cell.column.Header === "Delete") {
                                         data = (
-                                            <DeleteMember setRender={setRender} url={""} userId={cell.row.original.id} />
+                                            <DeleteMember setRender={setRender} url={""} userId={cell.row.original.id}/>
                                         )
                                     }
                                     return (
