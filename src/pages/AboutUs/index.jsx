@@ -9,7 +9,7 @@ export default function AboutUs() {
     return (
         <div className="flex min-h-screen w-full">
             {/* Navbar & Main Content */}
-            <NavbarJavad isLogin={isLogin}/>
+            <NavbarJavad isLogin={isLogin} isInPanel={false}/>
             <div className="h-full w-full bg-gray-800 dark:!bg-navy-900">
                 {/* Main Content */}
                 <main className={`mx-[12px] h-full flex-none transition-all mt-20 mb-10 md:pr-2 xl:ml-[30px]`}>
