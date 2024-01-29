@@ -29,7 +29,7 @@ const useHttp = (checkAuth) => {
       // console.log("HttpService error", error);
       // console.log("HttpService response", JSON.stringify(response, null, 2));
       if (response?.status === 401 && checkAuth) {
-        // myToast.error("اطلاعات ثبت نام شما یافت نشد");
+        // toast.error("اطلاعات ثبت نام شما یافت نشد");
         removeLocal("token");
         setLocal("token", "unAuth");
         navigate.replace("/login");

@@ -10,8 +10,10 @@ import {
 } from "./common";
 import { Marginer } from "../marginer";
 import { AccountContext } from "./accountContext";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import { url } from "../../axiosConfig/useHttp";
+import useHttp from "../../axiosConfig/useHttp";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { handleShowToast } from "../../functions";
@@ -70,7 +72,7 @@ export function LoginForm(props) {
             type: "success",
           });
           handleToastControll();
-          localStorage.setItem("token", res.data.token);
+
           // Redirect should be placed here, not in a separate then block
           return setTimeout(() => {
             redirect("/");

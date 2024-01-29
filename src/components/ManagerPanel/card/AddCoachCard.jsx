@@ -3,26 +3,27 @@ import { useState } from "react";
 import Dropdown from "../dropdown";
 import { BsThreeDots } from "react-icons/bs";
 import { FaUserEdit } from "react-icons/fa";
+import { IoKey } from "react-icons/io5";
 import AddCoach from "../../modal/AddCoachModal";
 import axios from "axios";
 
 function AddCoachCard(props) {
-  const { transparent, url } = props;
+  const { transparent } = props;
   const [open, setOpen] = React.useState(false);
   const [showAddCoach, setShowAddCoach] = useState(false);
-  const handleEditClick = async () => {
+  const handleEditClick = () => {
     // Open the ProductModal when Edit Info is clicked
     setShowAddCoach(true);
     setOpen(false); // Close the dropdown
-    try {
-      const res = await axios.post(url,
-          {
-            "coach_username": "test2"
-          });
-      console.log(res.data);
-    } catch (err){
-      console.error(err);
-    }
+
+    // axios.post("http://127.0.0.1:8000/gyms/123/add-coach/", 
+    // {
+    //   "coach_username": "test"
+    // })
+    axios.post("http://127.0.0.1:8000/gyms/321/add-coach/",
+    {
+      "coach_username": "test2"
+    })
   };
 
   return (
@@ -32,7 +33,7 @@ function AddCoachCard(props) {
           <button
             onClick={() => setOpen(!open)}
             open={open}
-            className={`flex items-center bg-gray-900 text-xl text-amber-300 z-50 hover:cursor-pointer ${
+            className={`flex items-center bg-gray-900 text-xl text-amber-300 hover:cursor-pointer ${
               transparent
                 ? "bg-none text-white hover:bg-none active:bg-none"
                 : "bg-lightPrimary text-brand-500 dark:bg-navy-700 p-2 hover:bg-gray-100 dark:text-white dark:hover:bg-white/20 dark:active:bg-white/10"

@@ -12,7 +12,7 @@ import logo from "../../assets/images/Logo.png";
 const NavbarComponent = ({ isLogin }) => {
   return (
     <nav
-      className="text-gray fixed top-0 z-40 h-fit w-full bg-gray-900 py-2 text-lg"
+      className="text-gray fixed top-0 z-50 h-fit w-full bg-gray-900 py-2 text-lg"
       id="navbar"
     >
       <ul className="md:text-md grid grid-cols-12">
