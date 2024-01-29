@@ -5,7 +5,6 @@ import AddGym from "./components/addGym.jsx";
 import {useContext, useEffect, useState} from "react";
 import {UserContext} from "../../../contexts.jsx";
 import axios from "axios";
-import Loading from "../../../components/loading/loading.jsx";
 
 import {
     columnsDataDevelopment,
@@ -13,11 +12,11 @@ import {
     columnsDataColumns,
     columnsDataComplex,
 } from "./variables/columnsData";
-import tableDataColumns from "./variables/tableDataColumns.json";
 import ColumnsTable from "./components/ColumnsTable";
 import tableDataCoachs from "./variables/tableDataCoachs.json"
-import {tableColumnsCoachs} from "./variables/tableColumnsCoachs"
 import {Bounce, toast} from "react-toastify";
+import createToken from "../../../axiosConfig/createToken.js";
+import LoadingWhole from "../../../components/loading/loadingWhole.jsx";
 
 
 const Tables = () => {
@@ -27,8 +26,13 @@ const Tables = () => {
 
     useEffect(() => {
         (async function () {
+            // if (gymIds.length === 0) return
             try {
-                const res = await axios.get(import.meta.env.VITE_BASE_URL + `/gyms/${gymIds[0]}/`);
+                const res = await axios.get(import.meta.env.VITE_BASE_URL + `gyms/${5}/`, {
+                    headers: {
+                        Authorization: createToken()
+                    }
+                });
                 setIsFetching(false);
                 console.log(res.data);
                 setGymInfo(res.data)
@@ -54,7 +58,7 @@ const Tables = () => {
         <div className="pt-5">
             {
                 isFetching &&
-                <Loading />
+                <LoadingWhole />
             }
             {!Object.keys(gymInfo).length ?
                     <AddGym/>
@@ -62,27 +66,26 @@ const Tables = () => {
                 <div>
 
                     <div className="mt-8 col-span-5 lg:col-span-6 lg:mb-0 3xl:col-span-4">
-                        <GymGallery/>
+                        <GymGallery imageAddresses={[""]}/>
                     </div>
 
                     <div className="mt-5 col-span-5 lg:col-span-12 lg:mb-0 3xl:col-span-2">
-                        <GymInfo/>
+                        <GymInfo info={gymInfo}/>
                     </div>
 
                     <div className="mt-5 grid h-full grid-cols-1 gap-5 md:grid-cols-2">
                         <ColumnsTable
                             columnsData={columnsDataColumns}
-                            tableData={tableDataColumns}
+                            tableData={[]}
                         />
                         <Coachs
                             extra="mb-5"
                             tableData={tableDataCoachs}
-                            columnsData={tableColumnsCoachs}
+                            columnsData={[]}
                         />
                     </div>
                 </div>
             }
-
         </div>
     );
 };

@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import ModalInput from "./modalInput.jsx";
 import axios from "axios";
 import LoadingWhole from "../../../../components/loading/loadingWhole.jsx";
+import createToken from "../../../../axiosConfig/createToken.js";
 
 const AddGym = () => {
     const [formData, setFormData] = useState({
@@ -21,7 +22,7 @@ const AddGym = () => {
                 ...formData
             }, {
                 headers: {
-                    Authorization: `Token 8d5cc6ea7df059f6e56eddb472b05e100a034741`
+                    Authorization: createToken()
                 }
             });
             setIsFetching(false);

@@ -58,7 +58,7 @@ function CardMenu(props) {
                             delete gym
                         </button>
                         <DeleteModal text={"Are you sure?"}
-                                     url={import.meta.env.VITE_BASE_URL + `gyms/${state.gymIds[0]}/`} internalRoute={""}
+                                     url={import.meta.env.VITE_BASE_URL + `gyms/${5}/`} internalRoute={""}
                                      refresh={true} show={openDeleteModal} setShow={setOpenDeleteModal}/>
                     </div>
                 }

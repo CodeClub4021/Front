@@ -6,13 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="2673c54f-d602-4401-a8f4-27c67076f6fb" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/accountBox/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/accountBox/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/accountBox/loginForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/accountBox/loginForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/login/login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/login/login.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/admin/tables/components/Coachs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/admin/tables/components/Coachs.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/axiosConfig/useHttp.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/axiosConfig/useHttp.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ManagerPanel/card/CardMenu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ManagerPanel/card/CardMenu.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/footer/footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer/footer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/functions/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/functions/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/panel/manager/managePanel.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/panel/manager/managePanel.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/admin/tables/components/GymGallery.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/admin/tables/components/GymGallery.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/admin/tables/components/GymInfo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/admin/tables/components/GymInfo.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/admin/tables/components/addGym.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/admin/tables/components/addGym.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/admin/tables/components/deleteModal.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/admin/tables/components/deleteModal.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/admin/tables/components/editGymInfo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/admin/tables/components/editGymInfo.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/admin/tables/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/admin/tables/index.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +28,7 @@
       <list>
         <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JSX File" />
       </list>
     </option>
   </component>

@@ -1,52 +1,42 @@
 import axios from "axios";
-import {useEffect, useRef, useState} from "react";
+import {useContext, useEffect, useRef, useState} from "react";
 import LoadingWhole from "../../../../components/loading/loadingWhole.jsx";
 import {useNavigate} from "react-router-dom";
-import {Bounce, toast} from "react-toastify";
+import {errorToast} from "../../../../functions/myToast.js";
+import createToken from "../../../../axiosConfig/createToken.js";
+import {UserContext} from "../../../../contexts.jsx";
 
 const DeleteModal = ({text, url, internalRoute, refresh, show, setShow, setRender}) => {
     const [isFetching, setIsFetching] = useState(false);
     const navigate = useNavigate();
     const modal = useRef(null);
+    const [gymIds] = useContext(UserContext);
+
     const clickHandler = async e => {
         e.preventDefault();
         try {
             setIsFetching(true);
-            const res = await axios.delete(url);
+            const res = await axios.delete(url, {
+                headers: {
+                    Authorization: createToken()
+                }
+            });
             setIsFetching(false);
             console.log(res.data);
             if (refresh)
                 window.location.reload();
             setShow(false);
-            toast.success("done!", {
-                position: "top-center",
-                autoClose: 3000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "dark",
-                transition: Bounce
-            });
-            if (internalRoute === "")
+            if (internalRoute === "" && !refresh)
                 setRender(true);
+            if (refresh){
+            //     delete gymId from context
+            }
             navigate(internalRoute);
         } catch (err) {
             setIsFetching(false);
             console.error(err);
+            errorToast("oops!!");
             modal.current.close();
-            toast.error("oops!!", {
-                position: "top-center",
-                autoClose: 3000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "dark",
-                transition: Bounce,
-            });
         }
     }
     useEffect(() => {

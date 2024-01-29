@@ -1,15 +1,19 @@
 import ModalInput from "./modalInput.jsx";
-import React, {useState} from "react";
+import React, {useContext, useState} from "react";
 import SelectNumber from "./selectNumber.jsx";
 import MultiRangeSlider from "./multiRange.jsx";
 import TextArea from "./textArea.jsx";
 import RadioInput from "./radioInput.jsx";
 import axios from "axios";
+import {UserContext} from "../../../../contexts.jsx";
+import createToken from "../../../../axiosConfig/createToken.js";
+import {errorToast} from "../../../../functions/myToast.js";
 
 const EditGymInfo = ({open, setOpen}) => {
     const [formData, setFormData] = useState({
         name: "", address: "", city: "", phoneNumber: "", tuition: "", establishedYear: 1800, workTime: [0, 24], gender: ""
     });
+    const {gymIds} = useContext(UserContext);
 
     const createData = (formData) => {
         let result = {};
@@ -27,10 +31,14 @@ const EditGymInfo = ({open, setOpen}) => {
         const data = createData(formData);
         console.log(data);
         try {
-            const res = await axios.patch(import.meta.env.VITE_BASE_URL + `gyms/${1}`, data);
-            console.log(res);
-            // navigate
+            await axios.patch(import.meta.env.VITE_BASE_URL + `gyms/${5}/`, data, {
+                headers: {
+                    Authorization: createToken()
+                }
+            });
+            window.location.reload();
         } catch (err){
+            errorToast("something wrong!!");
             console.error(err.message);
         }
     }
