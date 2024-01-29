@@ -24,10 +24,10 @@ const Sidebar = ({ open, onClose }) => {
           Manager panel
         </div>
       </div>
-      <div className="mb-7 mt-[58px] h-px bg-gray-300 dark:bg-white/30" />
+      {/*<div className="mb-7 mt-[58px] h-px bg-gray-300 dark:bg-white/30" />*/}
       {/* Nav item */}
 
-      <ul className="pt-1 text-xl">
+      <ul className="pt-16 text-xl">
         <Links routes={routes} />
       </ul>
 

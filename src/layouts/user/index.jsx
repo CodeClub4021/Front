@@ -4,7 +4,6 @@ import Navbar from "../../components/UserPanel/navbar/index.jsx";
 import Sidebar from "../../components/UserPanel/sidebar";
 import routes from "../../components/UserPanel/sidebar/routes.jsx";
 import NavbarJavad from "../../components/navbar/navbar.jsx";
-import Footer from "../../components/footer/footer.jsx";
 
 export default function User(props) {
   const { ...rest } = props;
@@ -68,8 +67,8 @@ export default function User(props) {
           className={`mx-[12px] h-full flex-none transition-all md:pr-2 xl:ml-[313px]`}
         >
           {/* Routes */}
-          <div className="h-full">
-            <NavbarJavad className="  w-full" />
+          <div className="h-full relative">
+            <NavbarJavad />
             <Navbar
               onOpenSidenav={() => setOpen(true)}
               logoText={"Horizon UI Tailwind React"}
@@ -89,7 +88,6 @@ export default function User(props) {
             </div>
           </div>
         </main>
-        {/*<Footer />*/}
       </div>
     </div>
   );
