@@ -8,11 +8,19 @@ class General extends Component {
     manager: []
   };
   async componentDidMount(){
-    //const response  = (await axios.get('https://reqres.in/api/users/2'));
-    const response  = (await axios.get('http://127.0.0.1:8000/gyms/'));
-    console.log(response.data);
-    this.setState({manager: response.data[0]})
-    //  console.log("response");
+    try{
+      const response  = (await axios.get('https://gymlist.liara.run/user/'),
+      {
+        headers: {
+          Authorization: 'Token ec470222a5b9aea43fcb96e3d0849b4a74f83613' //+ localStorage.getItem('token')
+        }
+      });
+      console.log(response);
+      this.setState({manager: response.data[0]})
+    }
+    catch(err){
+      console.error(err);
+    }
 
   }
   render() { 
