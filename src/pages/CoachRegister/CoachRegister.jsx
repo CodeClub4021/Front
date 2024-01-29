@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 
 function CoachRegister() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -45,8 +46,30 @@ function CoachRegister() {
     });
   };
 
-  const handleSubmit = () => {
-    closeModal();
+  const handleSubmit = async (gymId) => {
+    try {
+      const response = await axios.post(
+        "https://gymlist.liara.run/coach/join-gym/",
+        {
+          gym_id: gymId,
+        },
+        {
+          headers: {
+            accept: "application/json",
+            "Content-Type": "application/json",
+            "X-CSRFToken":
+              "L8aeJ93uO7OaBSXgJhBinxkNbJ4o53Mq2Xv6JG1X80M2GVdHdwL5kDlYfFBnlPwu",
+          },
+        }
+      );
+
+      // Handle the response as needed
+      console.log("Response:", response.data);
+
+      closeModal();
+    } catch (error) {
+      console.error("Error:", error); // Handle errors
+    }
   };
 
   return (
@@ -115,7 +138,7 @@ function CoachRegister() {
                     id="name"
                     value={formData.name}
                     onChange={handleInputChange}
-                    className="mt-1 w-full rounded-md p-2 placeholder-gray-500 shadow-sm text-black"
+                    className="mt-1 w-full rounded-md p-2 text-black placeholder-gray-500 shadow-sm"
                     placeholder="ID name"
                   />
                 </div>
@@ -131,7 +154,7 @@ function CoachRegister() {
                   Close Form
                 </button>
                 <button
-                  onClick={handleSubmit}
+                  onClick={() => handleSubmit(/* dynamic gym_id */)}
                   type="submit"
                   className="ml-2 inline-flex w-full justify-center rounded-md border border-transparent bg-gray-900 px-4 py-2 text-xl font-medium text-amber-400  hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                 >
@@ -148,9 +171,11 @@ function CoachRegister() {
 
 export default CoachRegister;
 
-
-{/* Gender Section */}
-                {/* <div className="mt-4">
+{
+  /* Gender Section */
+}
+{
+  /* <div className="mt-4">
                   <label className="block text-lg font-medium text-amber-400">
                     Gender
                   </label>
@@ -178,10 +203,14 @@ export default CoachRegister;
                       <span className="ml-2 text-amber-400">Female</span>
                     </label>
                   </div>
-                </div> */}
+                </div> */
+}
 
-                {/* Phone Number Section */}
-                {/* <div className="mt-4">
+{
+  /* Phone Number Section */
+}
+{
+  /* <div className="mt-4">
                   <label className="block text-lg font-medium text-amber-400">
                     Phone Number
                   </label>
@@ -194,10 +223,14 @@ export default CoachRegister;
                     className="mt-1 w-full rounded-md p-2 placeholder-gray-500 shadow-sm"
                     placeholder="Phone Number"
                   />
-                </div> */}
+                </div> */
+}
 
-                {/* Email Address Section */}
-                {/* <div className="mt-4">
+{
+  /* Email Address Section */
+}
+{
+  /* <div className="mt-4">
                   <label className="block text-lg font-medium text-amber-400">
                     Email Address
                   </label>
@@ -210,16 +243,22 @@ export default CoachRegister;
                     className="mt-1 w-full rounded-md p-2 placeholder-gray-500 shadow-sm"
                     placeholder="Email Address"
                   />
-                </div> */}
+                </div> */
+}
 
-                {/* Availability Section */}
-                {/*<div className="mt-4">
+{
+  /* Availability Section */
+}
+{
+  /*<div className="mt-4">
                   <label className="block text-lg font-medium text-amber-400">
                     Week Availability
                   </label>
                   <div className="mt-1">
-                    {/* Adjust the options as needed */}
-                    {/* {[
+                    {/* Adjust the options as needed */
+}
+{
+  /* {[
                       "Monday",
                       "Tuesday",
                       "Wednesday",
@@ -244,10 +283,14 @@ export default CoachRegister;
                       </label>
                     ))}
                   </div>
-                </div> */}
+                </div> */
+}
 
-                {/* Description Section */}
-                {/*<div className="mt-4">
+{
+  /* Description Section */
+}
+{
+  /*<div className="mt-4">
                   <label
                     htmlFor="description"
                     className="block text-lg font-medium text-amber-400"
@@ -264,4 +307,5 @@ export default CoachRegister;
                           shadow-sm"
                     placeholder="Skills Information"
                   />
-                    </div>*/}
+                    </div>*/
+}
