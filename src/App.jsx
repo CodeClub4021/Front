@@ -11,21 +11,21 @@ import {ToastContainer} from "react-toastify";
 import Land from "./pages/landing/land.jsx";
 
 function App() {
-  return (
-    <div className="h-full w-full">
-      <Routes>
-         <Route path="/" element={<Land />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/user*" element={<UserPanel />} />
-        <Route path="/admin*" element={<AdminPanel />} />
-        <Route path="/coach*" element={<CoachPanel />} />
-        <Route path="/gympanel" element={<Gym />} />
-        <Route path="/about" element={<AboutUs />} />
-      </Routes>
-        <ToastContainer/>
-    </div>
-  );
+    return (
+        <div className="h-full w-full">
+            <Routes>
+                <Route path="/" element={<Land/>}/>
+                <Route path="/home" element={<Home/>}/>
+                <Route path="/login" element={<Login/>}/>
+                <Route path="/user*" element={<UserPanel/>}/>
+                <Route path="/admin*" element={<AdminPanel/>}/>
+                <Route path="/coach*" element={<CoachPanel/>}/>
+                <Route path="/gympanel" element={<Gym/>}/>
+                <Route path="/about" element={<AboutUs/>}/>
+            </Routes>
+            <ToastContainer/>
+        </div>
+    );
 }
 
 export default App;
