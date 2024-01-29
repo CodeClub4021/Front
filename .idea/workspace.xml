@@ -7,10 +7,17 @@
     <list default="true" id="2673c54f-d602-4401-a8f4-27c67076f6fb" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
 <<<<<<< HEAD
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/accountBox/userTypeCheckbox.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/accountBox/userTypeCheckbox.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
 =======
+=======
+<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/accountBox/userTypeCheckbox.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/accountBox/userTypeCheckbox.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+>>>>>>> bdb738f50bc15ef9bb69c959dae69ce70b8a838c
       <change beforePath="$PROJECT_DIR$/src/components/footer/footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer/footer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/navbar/AboutUsLink/AboutUsLink.jsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/navbar/CoachesLink/CoachesLink.jsx" beforeDir="false" />
@@ -19,10 +26,19 @@
       <change beforePath="$PROJECT_DIR$/src/components/navbar/HomeLink/HomeLink.jsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/navbar/SearchBar/SearchBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar/SearchBar/SearchBar.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/navbar/login&amp;signup/login.jsx" beforeDir="false" />
+=======
+>>>>>>> Navbar
+=======
+      <change beforePath="$PROJECT_DIR$/src/components/UserPanel/sidebar/components/Links.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserPanel/sidebar/components/Links.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UserPanel/sidebar/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserPanel/sidebar/index.jsx" afterDir="false" />
+>>>>>>> Navbar
       <change beforePath="$PROJECT_DIR$/src/components/navbar/navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar/navbar.jsx" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/src/components/navbar/profile/profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar/profile/profile.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/AboutUs/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AboutUs/index.jsx" afterDir="false" />
 >>>>>>> 80af81fd6d04c1d264191ab14827891d2881ebcd
+=======
+>>>>>>> bdb738f50bc15ef9bb69c959dae69ce70b8a838c
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,12 +49,19 @@
     <option name="RECENT_TEMPLATES">
       <list>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <option value="JavaScript File" />
 =======
         <option value="CSS File" />
         <option value="JavaScript File" />
         <option value="JSX File" />
 >>>>>>> 80af81fd6d04c1d264191ab14827891d2881ebcd
+=======
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+        <option value="JSX File" />
+>>>>>>> bdb738f50bc15ef9bb69c959dae69ce70b8a838c
       </list>
     </option>
   </component>
@@ -71,17 +94,26 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> bdb738f50bc15ef9bb69c959dae69ce70b8a838c
     &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
     &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;18.13.0&quot;,
     &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;18.13.0&quot;,
     &quot;last_opened_file_path&quot;: &quot;/home/moosavi/Arrash/tahlil/myProject/front&quot;,
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> bdb738f50bc15ef9bb69c959dae69ce70b8a838c
     &quot;git-widget-placeholder&quot;: &quot;Navbar&quot;,
     &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;18.13.0&quot;,
     &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;18.13.0&quot;,
     &quot;last_opened_file_path&quot;: &quot;/home/moosavi/Arrash/tahlil/myProject/front&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+<<<<<<< HEAD
 >>>>>>> 80af81fd6d04c1d264191ab14827891d2881ebcd
+=======
+>>>>>>> bdb738f50bc15ef9bb69c959dae69ce70b8a838c
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -115,7 +147,10 @@
       <workItem from="1704634986645" duration="1223000" />
       <workItem from="1704642741466" duration="2895000" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> bdb738f50bc15ef9bb69c959dae69ce70b8a838c
       <workItem from="1706252663802" duration="2961000" />
       <workItem from="1706267016574" duration="5744000" />
       <workItem from="1706273590679" duration="947000" />
@@ -126,7 +161,10 @@
       <workItem from="1706450775843" duration="7950000" />
       <workItem from="1706506363470" duration="725000" />
       <workItem from="1706527188577" duration="6607000" />
+<<<<<<< HEAD
 >>>>>>> 80af81fd6d04c1d264191ab14827891d2881ebcd
+=======
+>>>>>>> bdb738f50bc15ef9bb69c959dae69ce70b8a838c
     </task>
     <servers />
   </component>
