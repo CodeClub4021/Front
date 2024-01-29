@@ -46,29 +46,23 @@ function CoachRegister() {
     });
   };
 
-  const handleSubmit = async (gymId) => {
+  const handleSubmit = async () => {
+    const gymobject = {
+      gym_id: formData.name,
+    };
     try {
-      const response = await axios.post(
-        "https://gymlist.liara.run/coach/join-gym/",
-        {
-          gym_id: gymId,
-        },
+      const response = await axios.post( "https://gymlist.liara.run/coach/join-gym/", gymobject,
         {
           headers: {
-            accept: "application/json",
-            "Content-Type": "application/json",
-            "X-CSRFToken":
-              "L8aeJ93uO7OaBSXgJhBinxkNbJ4o53Mq2Xv6JG1X80M2GVdHdwL5kDlYfFBnlPwu",
+            Authorization: 'Token ' + localStorage.getItem('token')
           },
         }
       );
-
-      // Handle the response as needed
-      console.log("Response:", response.data);
+      console.log("the registration is complete", response.data);
 
       closeModal();
     } catch (error) {
-      console.error("Error:", error); // Handle errors
+      console.error("the informations are not correct", error);
     }
   };
 
@@ -139,7 +133,7 @@ function CoachRegister() {
                     value={formData.name}
                     onChange={handleInputChange}
                     className="mt-1 w-full rounded-md p-2 text-black placeholder-gray-500 shadow-sm"
-                    placeholder="ID name"
+                    placeholder="Gym ID"
                   />
                 </div>
                 {/* // */}
@@ -154,7 +148,7 @@ function CoachRegister() {
                   Close Form
                 </button>
                 <button
-                  onClick={() => handleSubmit(/* dynamic gym_id */)}
+                  onClick={() => handleSubmit()}
                   type="submit"
                   className="ml-2 inline-flex w-full justify-center rounded-md border border-transparent bg-gray-900 px-4 py-2 text-xl font-medium text-amber-400  hover:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                 >
