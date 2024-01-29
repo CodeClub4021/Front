@@ -1,131 +1,69 @@
-import React, {useState} from "react";
+import React from "react";
 import Profile from "./profile/profile.jsx";
-import Login from "./login&signup/login.jsx";
+import SearchBar from "./SearchBar/SearchBar.jsx";
 import logo from "../../assets/images/Logo.png";
-import {MdKeyboardArrowDown} from "react-icons/md";
-import {IoIosArrowUp} from "react-icons/io";
-import Filter from "./filter.jsx";
-import {useNavigate} from "react-router-dom";
+import {Link} from "react-router-dom";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faAddressCard, faHome, faPhone} from "@fortawesome/free-solid-svg-icons";
+import Logout from "./logout.jsx";
 
-const NavbarComponent = ({isLogin, searchValue}) => {
-    const [isFilterShow, setIsShowFilter] = useState(false);
-    const [state, setState] = useState("");
-    const [city, setCity] = useState("");
-    const [rate, setRate] = useState("");
-    const [gymName, setGymName] = useState(searchValue);
-    const navigate = useNavigate();
 
-    const showFilters = (e) => {
-        setIsShowFilter(!isFilterShow);
-    }
-    const search = (e) => {
-        e.preventDefault();
-        if (gymName || city || state || rate)
-            navigate("/search", {
-                state: {
-                    state,
-                    city,
-                    rate,
-                    gymName
-                }
-            });
-    }
+const NavbarComponent = ({isLogin, isInPanel}) => {
+    const profile = isInPanel ? <Logout/> : <Profile/>;
     return (
         <nav
-            className="bg-gray-900 text-gray text-lg py-2 sticky top-0 w-full h-fit z-50"
-            id="navbar"
+            className="text-gray min-w-full max-w-[100vh] text-[3vh]! fixed top-0 z-[49] h-fit bg-gradient-to-br from-gray-900 from-40% via-gray-600 via-85% to-gray-300 py-2 text-lg"
         >
-            <ul className="grid grid-cols-12 md:text-md">
-                <li className="col-start-1 col-span-1">
-                    <div className="">
-                        {/*shouls stay in a router after defining routers*/}
-                        <img src={logo} alt="Logo" className="w-full h-16"/>
-                    </div>
+            <ul className="md:text-md flex place-items-center justify-start">
+                <li className="min-w-[150px]">
+                    <Link to={"/home"}>
+                        <img src={logo} alt="Logo" className="h-16 w-full"/>
+                    </Link>
                 </li>
                 {}
                 {/* Navigation Links */}
-                <li className="col-span-4">
-                    <ul className="flex justify-around place-items-center h-full px-3 gap-1">
-                        <li className="w-15 h-full flex justify-center place-items-center text-gray-100  hover:border-b-2 border-b-white">
-                            <a href="#" className="flex">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    strokeWidth={1.5}
-                                    stroke="currentColor"
-                                    className="w-6 h-6 inline-block space-x-2 justify-center"
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
-                                    />
-                                </svg>
-                                Home
-                            </a>
+                <li className="whitespace-nowrap">
+                    <ul className="flex h-full place-items-center justify-around lg:gap-4 px-3">
+                        <li className="w-15 flex h-full place-items-center justify-center border-b-white ease-in-out duration-300 text-gray-100 hover:scale-110">
+                            <div className="hidden lg:inline-block">
+                                <Link to="/home" className="flex place-items-center gap-2 capitalize">
+                                    <FontAwesomeIcon icon={faHome}/>
+                                    <span>Home</span>
+                                </Link>
+                            </div>
                         </li>
-                        <li className="w-15 h-full flex justify-center place-items-center text-gray-100  hover:border-b-2 border-b-white">
-                            <a href="#" className="">
-                                Gyms
-                            </a>
+                        <li className="w-15 flex h-full place-items-center justify-center border-b-white ease-in-out duration-300 text-gray-100 hover:scale-110">
+                            <div className="hidden lg:inline-block">
+                                <Link to="" className="flex place-items-center gap-2 capitalize">
+                                    <FontAwesomeIcon icon={faPhone}/>
+                                    <span>Contact Us</span>
+                                </Link>
+                            </div>
                         </li>
-
-                        <li className="w-15 h-full flex justify-center place-items-center text-gray-100  hover:border-b-2 border-b-white">
-                            <a href="#" className="">
-                                Coaches
-                            </a>
-                        </li>
-                        <li className="w-15 h-full flex justify-center place-items-center text-gray-100  hover:border-b-2 border-b-white">
-                            <a href="#" className="">
-                                Contact us
-                            </a>
-                        </li>
-                        <li className="w-15  h-full flex justify-center place-items-center text-gray-100  hover:border-b-2 border-b-white">
-                            <a href="#" className="">
-                                About us
-                            </a>
+                        <li className="w-15 flex h-full place-items-center justify-center border-b-white ease-in-out duration-300 text-gray-100 hover:scale-110">
+                            <div className="hidden lg:inline-block">
+                                <Link to="/about" className="flex place-items-center gap-2 capitalize">
+                                    <FontAwesomeIcon icon={faAddressCard}/>
+                                    <span>About Us</span>
+                                </Link>
+                            </div>
                         </li>
                     </ul>
                 </li>
-                <li className="col-start-8 col-span-3 flex justify-center place-items-center ">
-                    {/* Search Bar */}
-                    <form className="search-bar" onSubmit={search}>
-                        <div className="flex justify-between gap-3 place-items-center">
-                            {isFilterShow ?
-                                <IoIosArrowUp size={25}
-                                              className="hover:scale-125 transition-all duration-300 cursor-pointer"
-                                              onClick={showFilters}/>
-                                :
-                                <MdKeyboardArrowDown size={25}
-                                                     className="hover:scale-125 transition-all duration-300 cursor-pointer"
-                                                     onClick={showFilters}/>
-                            }
-                            <div className="relative">
-                                <input
-                                    type="text"
-                                    placeholder="Search..."
-                                    className="bg-gray-900 text-gray-200 border border-gray-500 p-2 pl-11 pr-4 rounded-full placeholder-right placeholder:text-zinc-200 text-left hover:border focus:border-gray-200"
-                                    required={true}
-                                    value={gymName}
-                                    onChange={e => setGymName(e.target.value)}
-                                />
-                                <button className="absolute inset-y-0 left-3 flex items-center w-7 text-white"
-                                        onClick={search}>
-                                    <i className="fas fa-search text-white-400"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </li>
-                <li className="col-start-11 col-span-2 flex justify-start">
-                    {isLogin ? <Profile/> : <Login/>}
+                <li className="basis-full flex place-items-center justify-end gap-24 ">
+                    <SearchBar onSubmit={() => console.log("Search submitted")}/>
+                    {isLogin ?
+                        profile
+                        :
+                        <Link
+                            to="/login"
+                            className="flex place-items-center items-center whitespace-nowrap rounded-full bg-amber-400 p-5 px-10 py-3 text-black shadow-lg hover:bg-amber-300 hover:shadow-inner"
+                        >
+                            Login
+                        </Link>
+                    }
                 </li>
             </ul>
-            {isFilterShow
-                &&
-                <Filter props={{state, setState, city, setCity, rate, setRate}}/>
-            }
         </nav>
     );
 };

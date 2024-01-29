@@ -1,16 +1,18 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
+import React from "react";
+import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
+import {BrowserRouter} from "react-router-dom";
 import './index.css'
-import { IconContext } from "react-icons";
-import { BrowserRouter } from 'react-router-dom';
+import "react-toastify/dist/ReactToastify.css";
+
+
+if (!import.meta.env.VITE_BASE_URL)
+    throw new Error("URL need to set...");
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-    <React.StrictMode>
-        <BrowserRouter>
-            <IconContext.Provider value={{ color: "#fcd34d", className: "global-class-name" }}>
-                <App />
-            </IconContext.Provider>
-        </BrowserRouter>
-    </React.StrictMode>
+    <BrowserRouter>
+        <IconContext.Provider value={{color: "#fcd34d", className: "global-class-name"}}>
+            <App/>
+        </IconContext.Provider>
+    </BrowserRouter>
 )

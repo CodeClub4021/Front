@@ -12,7 +12,7 @@ const Slider = () => {
     });
     return (
         <div>
-            <ImageShower imgAddress={SLIDERS[sliderIndex]} />
+            <ImageShower imgAddress={SLIDERS[sliderIndex]}/>
             <div
                 className="absolute bottom-1/4 z-20 w-full h-3/4 text-white text-opacity-70 capitalize flex flex-col justify-start py-28 gap-3 px-8">
                 <h1 className="text-6xl">

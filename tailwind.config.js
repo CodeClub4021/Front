@@ -1,4 +1,4 @@
-import daisyui from "daisyui";   // when someone need this add to plugins
+import daisyui from "daisyui";
 
 /** @type {import('tailwindcss').Config} */
 
@@ -6,18 +6,21 @@ export default {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
-    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
-    './node_modules/@nextui-org/theme/dist/components/(navbar|snippet|code|input).js'
-
   ],
   theme: {
     extend: {
-      height: {
-        700: "50rem"
+      fontFamily: {
+        custom: ["Inter", "Helvetica", "Arial", "sans-serif"],
       },
-
-    }
+      colors: {
+        custom: "#edf415",
+      },
     },
+  },
+  daisyui: {
+    themes: false,
+    prefix: "daisy"
+  },
   darkMode: "class",
   plugins: [daisyui]
-}
+};

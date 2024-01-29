@@ -7,7 +7,6 @@ import Footer from "../../components/footer/footer.jsx";
 import Slider from "../../components/slider/slider.jsx";
 import {Link} from "react-router-dom";
 
-
 export default function Home() {
     return (
         <div>
@@ -51,5 +50,5 @@ export default function Home() {
             <Footer/>
         </div>
 
-    )
+    );
 }
