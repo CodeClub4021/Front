@@ -14,6 +14,8 @@ const EyeIcon = ({ onClick, isShown }) => {
 };
 
 const ChangePassword = ({ onClose }) => {
+  const [showErrorBoxModal, setShowErrorBoxModal] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
   const [showPassword, setShowPassword] = useState({
     current: false,
     new: false,
@@ -31,7 +33,9 @@ const ChangePassword = ({ onClose }) => {
       [field]: !prevState[field],
     }));
   };
-
+  const hasStandardPassword = (password) => {
+    return password.length >= 8 && /\d/.test(password);
+  };
 
   const handleSubmit = async(e) => {
     e.preventDefault();
@@ -77,7 +81,7 @@ const ChangePassword = ({ onClose }) => {
     }));
   };
 
-  return (
+  return (<>
     <div className="fixed inset-0 z-50 overflow-y-auto">
       <div className="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
         <div className="fixed inset-0 transition-opacity" aria-hidden="true">
@@ -190,6 +194,8 @@ const ChangePassword = ({ onClose }) => {
         </div>
       </div>
     </div>
+    {showErrorBoxModal && <ErrorBoxModal onClose={() => setShowErrorBoxModal(false)} message={errorMessage} />}
+  </>
   );
 };
 
