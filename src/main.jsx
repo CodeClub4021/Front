@@ -11,8 +11,6 @@ if (!import.meta.env.VITE_BASE_URL)
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <BrowserRouter>
-        <IconContext.Provider value={{color: "#fcd34d", className: "global-class-name"}}>
-            <App/>
-        </IconContext.Provider>
+        <App/>
     </BrowserRouter>
 )
