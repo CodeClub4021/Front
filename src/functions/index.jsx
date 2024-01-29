@@ -3,10 +3,10 @@ export const handleCopy = (value, toastText) => {
     .writeText(value)
     .then(() => {
       toastText.length !== 0
-        ? toast.success(toastText)
-        : toast.success("متن با موفقیت کپی شد");
+        ? myToast.success(toastText)
+        : myToast.success("متن با موفقیت کپی شد");
     })
-    .catch((error) => toast.success("مشکلی در کپی متن بوجود امد"));
+    .catch((error) => myToast.success("مشکلی در کپی متن بوجود امد"));
 };
 
 export const setLocal = (key, value) => {

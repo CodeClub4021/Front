@@ -7,4 +7,8 @@ export const tableColumnsCoachs = [
       Header: "Rating",
       accessor: "rating",
     },
+    {
+        Header: "Delete",
+        accessor: "delete",
+    }
   ];
