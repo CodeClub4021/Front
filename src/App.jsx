@@ -12,7 +12,7 @@ import Land from "./pages/landing/land.jsx";
 
 function App() {
   return (
-    <div className="main-routes-wrapper">
+    <div className="h-full w-full">
       <Routes>
          <Route path="/" element={<Land />} />
         <Route path="/home" element={<Home />} />

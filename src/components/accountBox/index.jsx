@@ -12,6 +12,8 @@ const BoxContainer = styled.div`
   min-height: 550px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  gap: 60px;
   border-radius: 19px;
   background-color: #1d1d1e;
   box-shadow: 0 0 2px rgba(15, 15, 15, 0.28);
@@ -50,6 +52,7 @@ const BackDrop = styled(motion.div)`
 const HeaderContainer = styled.div`
   width: 100%;
   display: flex;
+  padding-top: 20px;
   flex-direction: column;
 `;
 
@@ -151,7 +154,7 @@ export function AccountBox(props) {
             </HeaderContainer>
           )}
         </TopContainer>
-        <InnerContainer>
+        <InnerContainer className="h-full">
           {active === "signin" && <LoginForm />}
           {active === "signup" && <SignupForm />}
         </InnerContainer>

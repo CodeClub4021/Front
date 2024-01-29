@@ -5,66 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2673c54f-d602-4401-a8f4-27c67076f6fb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/axiosConfig/useHttp.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/functions/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/css/MiniCalendar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/MiniCalendar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CoachPanel/sidebar/components/Links.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CoachPanel/sidebar/components/Links.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CoachPanel/sidebar/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CoachPanel/sidebar/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ManagerPanel/ShowStars/ShowStars.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ManagerPanel/ShowStars/ShowStars.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ManagerPanel/card/AddCoachCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ManagerPanel/card/AddCoachCard.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ManagerPanel/card/CardMenu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ManagerPanel/card/CardMenu.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ManagerPanel/icons/DarkmodeIcon.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ManagerPanel/icons/DarkmodeIcon.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ManagerPanel/icons/NotificationIcon.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ManagerPanel/icons/NotificationIcon.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ManagerPanel/icons/SearchIcon.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ManagerPanel/icons/SearchIcon.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ManagerPanel/icons/ThemsIcon.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ManagerPanel/icons/ThemsIcon.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ManagerPanel/sidebar/components/Links.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ManagerPanel/sidebar/components/Links.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ManagerPanel/sidebar/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ManagerPanel/sidebar/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UserPanel/AdminPanel.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserPanel/AdminPanel.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UserPanel/icons/DarkmodeIcon.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserPanel/icons/DarkmodeIcon.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UserPanel/icons/NotificationIcon.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserPanel/icons/NotificationIcon.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UserPanel/icons/SearchIcon.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserPanel/icons/SearchIcon.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UserPanel/icons/ThemsIcon.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserPanel/icons/ThemsIcon.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UserPanel/sidebar/components/Links.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserPanel/sidebar/components/Links.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UserPanel/sidebar/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserPanel/sidebar/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/accountBox/common.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/accountBox/common.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/accountBox/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/accountBox/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/accountBox/loginForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/accountBox/loginForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/accountBox/signupForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/accountBox/signupForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/accountBox/userTypeCheckbox.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/accountBox/userTypeCheckbox.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/footer/footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer/footer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/gym_win/Hero/Hero.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/gym_win/Hero/Hero.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/gym_win/Hero/Hero.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/gym_win/Hero/Hero.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/gym_win/Plans/Plans.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/gym_win/Plans/Plans.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/gym_win/Programs/Programs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/gym_win/Programs/Programs.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/loading/loading.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/loading/loading.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/loading/loadingWhole.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/loading/loadingWhole.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navbar/HomeLink/HomeLink.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar/HomeLink/HomeLink.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navbar/navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar/navbar.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/CoachRegister/CoachRegister.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/CoachRegister/CoachRegister.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Comment/Comment.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Comment/Comment.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Comment/CommentSection.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Comment/CommentSection.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Home/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home/Home.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/gym_win/gym_win.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/gym_win/gym_win.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/gym_win/gym_win.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/landing/land.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/landing/land.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/login/login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/login/login.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/admin/tables/components/Coachs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/admin/tables/components/Coachs.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/admin/tables/components/ColumnsTable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/admin/tables/components/ColumnsTable.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/admin/tables/components/GymGallery.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/admin/tables/components/GymGallery.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/admin/tables/components/addGym.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/admin/tables/components/addGym.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/admin/tables/components/deleteModal.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/admin/tables/components/deleteModal.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/admin/tables/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/admin/tables/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/user/coaches/components/Coachs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/user/coaches/components/Coachs.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/user/coaches/components/ComplexTable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/user/coaches/components/ComplexTable.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/user/coaches/components/DevelopmentTable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/user/coaches/components/DevelopmentTable.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/user/tables/components/Coachs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/user/tables/components/Coachs.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/user/tables/components/ComplexTable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/user/tables/components/ComplexTable.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/user/tables/components/DevelopmentTable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/user/tables/components/DevelopmentTable.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,26 +52,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Node.js.App.jsx.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Merging crud&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;18.13.0&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;18.13.0&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/moosavi/Arrash/tahlil/myProject/front&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/home/fanaa/jetbrain/JetBrains.WebStorm.2023.3.1/WebStorm-233.11799.293/plugins/javascript-impl/jsLanguageServicesImpl/external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Node.js.App.jsx.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "crud",
+    "javascript.nodejs.core.library.configured.version": "18.13.0",
+    "javascript.nodejs.core.library.typings.version": "18.13.0",
+    "last_opened_file_path": "/home/moosavi/Arrash/tahlil/myProject/front",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "/home/fanaa/jetbrain/JetBrains.WebStorm.2023.3.1/WebStorm-233.11799.293/plugins/javascript-impl/jsLanguageServicesImpl/external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/assets/images" />

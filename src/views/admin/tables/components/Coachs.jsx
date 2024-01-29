@@ -79,7 +79,6 @@ function Coachs(props) {
                             <tr {...row.getRowProps()} key={index}>
                                 {row.cells.map((cell, index) => {
                                     let data = "";
-                                    console.log(cell.column.Header)
                                     if (cell.column.Header === "Name") {
                                         data = (
                                             <div className="flex items-center gap-2">
