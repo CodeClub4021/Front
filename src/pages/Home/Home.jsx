@@ -28,16 +28,10 @@ export default function Home() {
                             <h1 className="text-6xl absolute left-20 top-1/3">
                                 {"Didn't you sign-up?"}
                             </h1>
-                            <span className="text-4xl absolute left-24 top-1/3 mt-20">
+                            <span className="text-4xl absolute left-24 top-1/2 md:top-1/3 mt-20">
                     {"hurry up..."}
                         </span>
                             <div className="flex justify-end place-items-center absolute mt-20 top-1/3 left-1/3">
-                                <Link
-                                    to="/"
-                                    className="flex items-center p-5 capitalize bg-amber-400 text-3xl shadow-lg place-items-center font-bold text-black text-opacity-70 px-10 py-5 rounded-full hover:bg-amber-300 hover:shadow-inner transition-all duration-500 hover:scale-110"
-                                >
-                                    Sign-Up
-                                </Link>
                             </div>
                         </div>
 
