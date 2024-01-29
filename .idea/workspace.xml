@@ -6,10 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="2673c54f-d602-4401-a8f4-27c67076f6fb" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UserPanel/sidebar/components/Links.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserPanel/sidebar/components/Links.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UserPanel/sidebar/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserPanel/sidebar/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/navbar/navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar/navbar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/admin/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/admin/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/coach/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/coach/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/user/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/user/index.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
