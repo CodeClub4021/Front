@@ -47,14 +47,15 @@ function CoachRegister() {
   };
 
   const handleSubmit = async () => {
+    console.log(formData.name)
     const gymobject = {
-      gym_id: formData.name,
+      gym_id: formData.name, 
     };
     try {
       const response = await axios.post( "https://gymlist.liara.run/coach/join-gym/", gymobject,
         {
           headers: {
-            Authorization: 'Token ' + localStorage.getItem('token')
+            Authorization: 'Token ' + "f69ee3def52b438478ebcabb869c9ccc42223a93" //localStorage.getItem('token')
           },
         }
       );
