@@ -93,28 +93,11 @@ const AddCoach = ({ onClose, manager_id }) => {
                 </form>
 
                 {/* Display error message if present */}
-                {errorMessage && <p className="text-white">{errorMessage}</p>}
+                {errorMessage && <p className="text-red-600">{errorMessage}</p>}
                 
               </div>
             </div>
           </div>
-
-          {/* <span>
-                      <label className="block text-lg font-medium text-amber-400">
-                        Gym
-                      </label>
-
-                      <input
-                        type="text" //slectoption
-                        name="Location"
-                        id="Location"
-                        value={formData.Location}
-                        onChange={handleInputChange}
-                        className="mt-1 w-full rounded-md p-2 placeholder-gray-500 shadow-sm"
-                        placeholder="Location"
-                      />
-                    </span> */}
-
           <div className="bg-amber-400 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
             <button
               onClick={onClose}
@@ -138,3 +121,20 @@ const AddCoach = ({ onClose, manager_id }) => {
 };
 
 export default AddCoach;
+
+
+          {/* <span>
+                      <label className="block text-lg font-medium text-amber-400">
+                        Gym
+                      </label>
+
+                      <input
+                        type="text" //slectoption
+                        name="Location"
+                        id="Location"
+                        value={formData.Location}
+                        onChange={handleInputChange}
+                        className="mt-1 w-full rounded-md p-2 placeholder-gray-500 shadow-sm"
+                        placeholder="Location"
+                      />
+                    </span> */}
