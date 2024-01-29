@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
 import axios from 'axios';
+import React, { useState } from 'react';
 
 const EditProfile = ({ onClose }) => {
   const [formData, setFormData] = useState({
@@ -10,32 +10,34 @@ const EditProfile = ({ onClose }) => {
     birthDay: '11',
   });
 
-  const handleSubmit = async(e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    console.log("khaaaaaaaaaaaaaaaaaaaaaaaaat from coach");
+    console.log("khaaaaaaaaaaaaaaaaaaaaaaaaat from user");
     const UpdatedUser = {
       full_name: formData.name,
       sex: formData.Gender,
       birthday: `${formData.birthYear}-${formData.birthMonth}-${formData.birthDay}`,
       location: formData.Location,
-      work_experience: formData.experience,
+      phone_number: formData.phonenum,
       education: formData.Education,
       language: formData.Languages,
       more_description: formData.description,
+      weight: formData.weight,
+      height: formData.height,
     };
     console.log(UpdatedUser);
-    try{
-      const res = await axios.patch("https://gymlist.liara.run/coach/update/", UpdatedUser, 
-      {
-        headers: {
-          Authorization: 'Token ' + localStorage.getItem('token')
-        }
-      });
-      console.log(res);
-    } catch(err){
-      console.error(err);
-    }
+      try{
+        const res = await axios.patch("https://gymlist.liara.run/customer/update/", UpdatedUser, 
+        {
+          headers: {
+            Authorization: 'Token ' + localStorage.getItem('token')
+          }
+        });
+        console.log(res);
+      } catch(err){
+        console.error(err);
+      }
     onClose();
   };
 
@@ -204,15 +206,47 @@ const EditProfile = ({ onClose }) => {
                     </span>
                       
                     <span>
-                      <label htmlFor="experience" className="block text-lg font-medium text-amber-400">
-                        Experience (years)
+                      <label htmlFor="phonenum" className="block text-lg font-medium text-amber-400">
+                        phone number
+                      </label>
+                        <input
+                        type="text"
+                        name="phonenum"
+                        id="phonenum"
+                        value={formData.phonenum}
+                        onChange={handleInputChange}
+                        className="mt-1 p-2 w-full border rounded-md shadow-sm"
+                      />
+                    </span>   
+                  </div>
+
+                  <div className="my-5 flex gap-10">
+                    <span>
+                    <label htmlFor="height" className="block text-lg font-medium text-amber-400">
+                        Height (cm)
                       </label>
                         <input
                         type="number"
-                        name="experience"
-                        id="experience"
+                        name="height"
+                        id="height"
                         min="0"
-                        value={formData.experience}
+                        value={formData.height}
+                        onChange={handleInputChange}
+                        className="mt-1 p-2 w-full border rounded-md shadow-sm"
+                        placeholder="0"
+                      />
+                    </span>
+                      
+                    <span>
+                    <label htmlFor="weight" className="block text-lg font-medium text-amber-400">
+                        Weight (kg)
+                      </label>
+                        <input
+                        type="number"
+                        name="weight"
+                        id="weight"
+                        min="0"
+                        value={formData.weight}
                         onChange={handleInputChange}
                         className="mt-1 p-2 w-full border rounded-md shadow-sm"
                         placeholder="0"

@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { IoEye , IoEyeOff } from "react-icons/io5";
+import ErrorBoxModal from './ErrorBoxModal';
+import axios from 'axios';
+
 
 const EyeIcon = ({ onClick, isShown }) => {
   const iconName = isShown ? <IoEyeOff className="h-5 w-5 text-amber-400"/> : <IoEye className="h-5 w-5 text-amber-400"/>;
@@ -30,18 +33,40 @@ const ChangePassword = ({ onClose }) => {
   };
 
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
-    
-    console.log("khaaaaaaaaaaaaaaaaaaaaaaaaat from coach pass");
-    const UpdatedPass = {
-      currentPassword: formData.currentPassword,
-      newPassword: formData.newPassword,
-      confirmPassword: formData.confirmPassword,
-    };
-    console.log(UpdatedPass);
-   
-    onClose();
+    if (formData.newPassword !== formData.confirmPassword) {
+      setErrorMessage('The new passwords do not match.'); 
+      setShowErrorBoxModal(true);
+    } 
+    else if (!hasStandardPassword(formData.newPassword)) {
+      setErrorMessage('The new password must be at least 8 characters long and include a number.'); 
+      setShowErrorBoxModal(true);
+    } 
+    else {
+      let currentPasswordErr = false;
+      const UpdatedPass = {
+        old_password: formData.currentPassword,
+        new_password: formData.newPassword,
+        confirm_password: formData.confirmPassword
+      };
+      try{
+          const res = await axios.put("https://gymlist.liara.run/change-password/", UpdatedPass,
+          {
+            headers: {
+              Authorization: 'Token ' + localStorage.getItem('token')
+            }
+          });
+          console.log(res);
+      } 
+      catch(err){
+          currentPasswordErr = true;
+          console.error(err);
+          setErrorMessage('The current password is not correct.'); 
+          setShowErrorBoxModal(true);
+      }
+      if(!currentPasswordErr){onClose();}   
+  }
   };
 
   const handleInputChange = (e) => {
