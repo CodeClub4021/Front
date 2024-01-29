@@ -6,17 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="2673c54f-d602-4401-a8f4-27c67076f6fb" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/axiosConfig/useHttp.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/axiosConfig/useHttp.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ManagerPanel/card/CardMenu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ManagerPanel/card/CardMenu.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/footer/footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer/footer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/functions/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/functions/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/panel/manager/managePanel.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/panel/manager/managePanel.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/admin/tables/components/GymGallery.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/admin/tables/components/GymGallery.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/admin/tables/components/GymInfo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/admin/tables/components/GymInfo.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/admin/tables/components/addGym.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/admin/tables/components/addGym.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/admin/tables/components/deleteModal.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/admin/tables/components/deleteModal.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/admin/tables/components/editGymInfo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/admin/tables/components/editGymInfo.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/admin/tables/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/admin/tables/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navbar/AboutUsLink/AboutUsLink.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navbar/CoachesLink/CoachesLink.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navbar/ContactUsLink/ContactUsLink.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navbar/GymsLink/GymsLink.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navbar/HomeLink/HomeLink.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navbar/SearchBar/SearchBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar/SearchBar/SearchBar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navbar/login&amp;signup/login.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navbar/navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar/navbar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navbar/profile/profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar/profile/profile.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/AboutUs/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AboutUs/index.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +26,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
         <option value="JSX File" />
       </list>
     </option>
@@ -57,26 +57,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Node.js.App.jsx.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "crud",
-    "javascript.nodejs.core.library.configured.version": "18.13.0",
-    "javascript.nodejs.core.library.typings.version": "18.13.0",
-    "last_opened_file_path": "/home/moosavi/Arrash/tahlil/myProject/front",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "/home/fanaa/jetbrain/JetBrains.WebStorm.2023.3.1/WebStorm-233.11799.293/plugins/javascript-impl/jsLanguageServicesImpl/external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Node.js.App.jsx.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Navbar&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;18.13.0&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;18.13.0&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/moosavi/Arrash/tahlil/myProject/front&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/home/fanaa/jetbrain/JetBrains.WebStorm.2023.3.1/WebStorm-233.11799.293/plugins/javascript-impl/jsLanguageServicesImpl/external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/assets/images" />
@@ -109,6 +109,7 @@
       <workItem from="1706434639723" duration="5637000" />
       <workItem from="1706450775843" duration="7950000" />
       <workItem from="1706506363470" duration="725000" />
+      <workItem from="1706527188577" duration="6607000" />
     </task>
     <servers />
   </component>
