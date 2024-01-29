@@ -30,7 +30,7 @@ const ChangePassword = ({ onClose }) => {
   };
 
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
     if (formData.newPassword !== formData.confirmPassword) {
       setErrorMessage('The new passwords do not match.'); 
