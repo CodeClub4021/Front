@@ -9,6 +9,17 @@
       <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/accountBox/userTypeCheckbox.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/accountBox/userTypeCheckbox.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/footer/footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer/footer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navbar/AboutUsLink/AboutUsLink.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navbar/CoachesLink/CoachesLink.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navbar/ContactUsLink/ContactUsLink.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navbar/GymsLink/GymsLink.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navbar/HomeLink/HomeLink.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navbar/SearchBar/SearchBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar/SearchBar/SearchBar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navbar/login&amp;signup/login.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navbar/navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar/navbar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navbar/profile/profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar/profile/profile.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/AboutUs/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AboutUs/index.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +30,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+        <option value="JSX File" />
       </list>
     </option>
   </component>
@@ -54,6 +68,11 @@
     &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;18.13.0&quot;,
     &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;18.13.0&quot;,
     &quot;last_opened_file_path&quot;: &quot;/home/moosavi/Arrash/tahlil/myProject/front&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Navbar&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;18.13.0&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;18.13.0&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/moosavi/Arrash/tahlil/myProject/front&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -86,6 +105,16 @@
       <workItem from="1704020585429" duration="95000" />
       <workItem from="1704634986645" duration="1223000" />
       <workItem from="1704642741466" duration="2895000" />
+      <workItem from="1706252663802" duration="2961000" />
+      <workItem from="1706267016574" duration="5744000" />
+      <workItem from="1706273590679" duration="947000" />
+      <workItem from="1706345410087" duration="3815000" />
+      <workItem from="1706355885703" duration="6916000" />
+      <workItem from="1706362936296" duration="5654000" />
+      <workItem from="1706434639723" duration="5637000" />
+      <workItem from="1706450775843" duration="7950000" />
+      <workItem from="1706506363470" duration="725000" />
+      <workItem from="1706527188577" duration="6607000" />
     </task>
     <servers />
   </component>

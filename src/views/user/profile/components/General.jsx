@@ -1,10 +1,14 @@
 import Card from "../../../../components/UserPanel/card/";
-import CardMenu from "../../../../components/UserPanel/card/CardMenu";
+import EditProfileCard from "../../../../components/UserPanel/card/EditProfileCard";
 import React from "react";
 
 const General = () => {
   return (
     <Card extra={"w-full h-full p-3"}>
+      {/* Edit Profile */}
+      <div className="ml-auto">
+        <EditProfileCard />
+      </div>
       {/* Header */}
       <div className="mb-5 mt-2 w-full">
         <h4 className="px-2 text-2xl font-bold text-gray-800 dark:text-white">
@@ -47,9 +51,9 @@ const General = () => {
         </div>
 
         <div className="shadow-3xl shadow-shadow-500 dark:!bg-navy-700 flex flex-col justify-center rounded-2xl bg-gray-800 bg-clip-border px-3 py-4 dark:shadow-none">
-          <p className="text-base text-gray-600">Age</p>
+          <p className="text-base text-gray-600">Phone number</p>
           <p className="text-lg font-medium text-white dark:text-white">
-            10 years old
+            09123456789
           </p>
         </div>
       </div>
