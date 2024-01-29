@@ -22,7 +22,6 @@ const ChangePassword = ({ onClose }) => {
     confirm: false,
   });
   const [formData, setFormData] = useState({
-    userName:'',
     currentPassword: '',
     newPassword: '',
     confirmPassword: '',
@@ -41,26 +40,37 @@ const ChangePassword = ({ onClose }) => {
 
   const handleSubmit = async(e) => {
     e.preventDefault();
-     if (formData.newPassword !== formData.confirmPassword) {
+    if (formData.newPassword !== formData.confirmPassword) {
       setErrorMessage('The new passwords do not match.'); 
       setShowErrorBoxModal(true);
-    } else if (!hasStandardPassword(formData.newPassword)) {
+    } 
+    else if (!hasStandardPassword(formData.newPassword)) {
       setErrorMessage('The new password must be at least 8 characters long and include a number.'); 
       setShowErrorBoxModal(true);
-    } else {
+    } 
+    else {
+        let currentPasswordErr = false;
         const UpdatedPass = {
           old_password: formData.currentPassword,
           new_password: formData.newPassword,
-          username: formData.userName,
+          confirm_password: formData.confirmPassword
         };
         try{
-          const res = await axios.put("https://codeclub-api.liara.run/changepassword", UpdatedPass);
-          console.log(res);
-        } catch(err){
-         // console.error(err);
+            const res = await axios.put("https://gymlist.liara.run/change-password/", UpdatedPass,
+            {
+              headers: {
+                Authorization: 'Token ' + localStorage.getItem('token')
+              }
+            });
+            console.log(res);
+        } 
+        catch(err){
+            currentPasswordErr = true;
+            console.error(err);
+            setErrorMessage('The current password is not correct.'); 
+            setShowErrorBoxModal(true);
         }
-        onClose();
-      // Proceed with password change logic...
+        if(!currentPasswordErr){onClose();}   
     }
 
   };
@@ -104,7 +114,7 @@ const ChangePassword = ({ onClose }) => {
                 {/* Form */}
                 <form onSubmit={handleSubmit} className="bg-gray-900 px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
                   {/* Current Password */}
-                  <div className="mb-4 relative">
+                  {/*<div className="mb-4 relative">
                     <label htmlFor="userName" className="block text-lg font-medium text-amber-400">Username</label>
                     <input
                       type="text"
@@ -115,7 +125,7 @@ const ChangePassword = ({ onClose }) => {
                       className="mt-1 p-2 w-full border rounded-md shadow-sm"
                       required
                     />
-                  </div>
+                   </div>*/}
                   {/* Current Password */}
                   <div className="mb-4 relative">
                     <label htmlFor="currentPassword" className="block text-lg font-medium text-amber-400">Current Password</label>

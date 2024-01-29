@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { IoEye , IoEyeOff } from "react-icons/io5";
 import ErrorBoxModal from './ErrorBoxModal';
+import axios from 'axios';
 
 
 const EyeIcon = ({ onClick, isShown }) => {
@@ -36,28 +37,40 @@ const ChangePassword = ({ onClose }) => {
     return password.length >= 8 && /\d/.test(password);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
-    if(formData.currentPassword!=="passback"){ //check with back
-      setErrorMessage('The current password is not correct.'); 
-      setShowErrorBoxModal(true);
-    }else if (formData.newPassword !== formData.confirmPassword) {
+    if (formData.newPassword !== formData.confirmPassword) {
       setErrorMessage('The new passwords do not match.'); 
       setShowErrorBoxModal(true);
-    } else if (!hasStandardPassword(formData.newPassword)) {
+    } 
+    else if (!hasStandardPassword(formData.newPassword)) {
       setErrorMessage('The new password must be at least 8 characters long and include a number.'); 
       setShowErrorBoxModal(true);
-    } else {
-        console.log("khaaaaaaaaaaaaaaaaaaaaaaaaat from coach pass");
-        const UpdatedPass = {
-          currentPassword: formData.currentPassword,
-          newPassword: formData.newPassword,
-          confirmPassword: formData.confirmPassword,
-        };
-        console.log(UpdatedPass);
-        onClose();
-      // Proceed with password change logic...
-    }
+    } 
+    else {
+      let currentPasswordErr = false;
+      const UpdatedPass = {
+        old_password: formData.currentPassword,
+        new_password: formData.newPassword,
+        confirm_password: formData.confirmPassword
+      };
+      try{
+          const res = await axios.put("https://gymlist.liara.run/change-password/", UpdatedPass,
+          {
+            headers: {
+              Authorization: 'Token ' + localStorage.getItem('token')
+            }
+          });
+          console.log(res);
+      } 
+      catch(err){
+          currentPasswordErr = true;
+          console.error(err);
+          setErrorMessage('The current password is not correct.'); 
+          setShowErrorBoxModal(true);
+      }
+      if(!currentPasswordErr){onClose();}   
+  }
   };
 
   const handleInputChange = (e) => {
