@@ -4,16 +4,10 @@ import axios from "axios";
 function CoachRegister() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [formData, setFormData] = useState({
-    // birthYear: "",
-    // birthMonth: "",
-    // birthDay: "",
-    // gender: "",
-    // phoneNumber: "",
-    // emailAddress: "",
-    // description: "",
     name: "",
     availability: [],
   });
+  const [registrationStatus, setRegistrationStatus] = useState(null);
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -47,23 +41,31 @@ function CoachRegister() {
   };
 
   const handleSubmit = async () => {
-    console.log(formData.name)
+    setRegistrationStatus(null);
+
     const gymobject = {
-      gym_id: formData.name, 
+      gym_id: formData.name,
     };
+
     try {
-      const response = await axios.post( "https://gymlist.liara.run/coach/join-gym/", gymobject,
+      const response = await axios.post(
+        "https://gymlist.liara.run/coach/join-gym/",
+        gymobject,
         {
           headers: {
-            Authorization: 'Token ' + "f69ee3def52b438478ebcabb869c9ccc42223a93" //localStorage.getItem('token')
+            Authorization: 'Token ' + "f69ee3def52b438478ebcabb869c9ccc42223a93",  //localStorage.getItem('token')
           },
         }
       );
+
       console.log("the registration is complete", response.data);
 
+      setRegistrationStatus("Registration is complete");
       closeModal();
     } catch (error) {
-      console.error("the informations are not correct", error);
+      console.error("the information is not correct", error);
+
+      setRegistrationStatus("The information is not correct");
     }
   };
 
@@ -96,7 +98,7 @@ function CoachRegister() {
             </span>
 
             <div
-              className="inline-block transform overflow-hidden rounded-2xl bg-white text-left align-bottom shadow-xl transition sm:my-8 sm:w-full sm:max-w-md sm:align-middle" // Adjusted max-w-3xl
+              className="inline-block transform overflow-hidden rounded-2xl bg-white text-left align-bottom shadow-xl transition sm:my-8 sm:w-full sm:max-w-md sm:align-middle"
               role="dialog"
               aria-modal="true"
               aria-labelledby="modal-headline"
@@ -110,7 +112,6 @@ function CoachRegister() {
                 </h3>
               </div>
 
-              {/* Updated sections */}
               <div className="bg-gray-900 px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
                 <h3
                   className="text-lg font-medium leading-6 text-white"
@@ -119,7 +120,6 @@ function CoachRegister() {
                   Please Fill Out The Section
                 </h3>
 
-                {/* Name Section */}
                 <div className="mt-4">
                   <label
                     htmlFor="name"
@@ -136,8 +136,12 @@ function CoachRegister() {
                     className="mt-1 w-full rounded-md p-2 text-black placeholder-gray-500 shadow-sm"
                     placeholder="Gym ID"
                   />
+                  {registrationStatus && (
+                    <p className={registrationStatus.includes("complete") ? "text-green-500" : "text-red-500"}>
+                      {registrationStatus}
+                    </p>
+                  )}
                 </div>
-                {/* // */}
               </div>
 
               <div className="justify-center bg-amber-400 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
@@ -165,6 +169,7 @@ function CoachRegister() {
 }
 
 export default CoachRegister;
+
 
 {
   /* Gender Section */
