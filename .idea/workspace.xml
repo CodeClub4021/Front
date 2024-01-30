@@ -11,6 +11,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/accountBox/userTypeCheckbox.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/accountBox/userTypeCheckbox.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
@@ -32,16 +33,25 @@
 =======
 >>>>>>> Navbar
 =======
+      <change beforePath="$PROJECT_DIR$/src/components/navbar/filter.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navbar/selectComponent.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.jsx" afterDir="false" />
+>>>>>>> mainPage
+=======
       <change beforePath="$PROJECT_DIR$/src/components/UserPanel/sidebar/components/Links.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserPanel/sidebar/components/Links.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/UserPanel/sidebar/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UserPanel/sidebar/index.jsx" afterDir="false" />
 >>>>>>> Navbar
       <change beforePath="$PROJECT_DIR$/src/components/navbar/navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar/navbar.jsx" afterDir="false" />
+<<<<<<< HEAD
 <<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/src/components/navbar/profile/profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar/profile/profile.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/AboutUs/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AboutUs/index.jsx" afterDir="false" />
 >>>>>>> 80af81fd6d04c1d264191ab14827891d2881ebcd
 =======
 >>>>>>> bdb738f50bc15ef9bb69c959dae69ce70b8a838c
+=======
+>>>>>>> Navbar
+>>>>>>> mainPage
     </list>
 >>>>>>> ff01482ab2af807fb2822cd4e2f4c68a4e6330a3
     <option name="SHOW_DIALOG" value="false" />
@@ -92,13 +102,20 @@
     <option name="showLibraryContents" value="true" />
   </component>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> mainPage
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Node.js.App.jsx.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+<<<<<<< HEAD
     "git-widget-placeholder": "dev",
+=======
+    "git-widget-placeholder": "mainPage",
+>>>>>>> mainPage
     "javascript.nodejs.core.library.configured.version": "18.13.0",
     "javascript.nodejs.core.library.typings.version": "18.13.0",
     "last_opened_file_path": "/home/moosavi/Arrash/tahlil/myProject/front",
@@ -110,6 +127,7 @@
     "nodejs_package_manager_path": "npm",
     "ts.external.directory.path": "/home/fanaa/jetbrain/JetBrains.WebStorm.2023.3.1/WebStorm-233.11799.293/plugins/javascript-impl/jsLanguageServicesImpl/external",
     "vue.rearranger.settings.migration": "true"
+<<<<<<< HEAD
 =======
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
@@ -146,8 +164,10 @@
     &quot;ts.external.directory.path&quot;: &quot;/home/fanaa/jetbrain/JetBrains.WebStorm.2023.3.1/WebStorm-233.11799.293/plugins/javascript-impl/jsLanguageServicesImpl/external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
 >>>>>>> ff01482ab2af807fb2822cd4e2f4c68a4e6330a3
+=======
+>>>>>>> mainPage
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/assets/images" />

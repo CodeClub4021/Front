@@ -5,7 +5,7 @@ import {useNavigate} from "react-router-dom";
 
 
 export default function Card ({data}){
-    const {imageAddress, name, rateNumber} = data;
+    const {imageAddress, name, rateNumber, state, city} = data;
     const navigate = useNavigate();
     const clickHandler = e => {
         e.preventDefault();
@@ -18,6 +18,14 @@ export default function Card ({data}){
                 <img src={imageAddress} className="rounded-xl" alt="picture" />
                 <span className="capitalize"> {name} </span>
             </div>
+            {location && <div className="w-full capitalize flex gap-3">
+                <span>
+                    location:
+                </span>
+                <span>
+                    {`${state}, ${city}`}
+                </span>
+            </div>}
             <div className="flex justify-between place-items-center gap-3">
                 <div>
                     <Rate rateNumbeer={rateNumber} />

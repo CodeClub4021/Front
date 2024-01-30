@@ -13,8 +13,8 @@ export default function Rate({rateNumbeer}) {
               role="img"
               aria-label={ariaLabel}
           >
-            {[1, 2, 3, 4, 5].map(value => {
-                    return value <= rateNumbeer ? <ShownStar/> : <HiddenStart/>
+            {[1, 2, 3, 4, 5].map((value, index) => {
+                    return value <= rateNumbeer ? <div key={index}><ShownStar/></div> : <div key={index}><HiddenStart/></div>
             })}
           </span>
           <span>{rateNumbeer} out 5</span>

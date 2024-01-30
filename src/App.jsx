@@ -14,6 +14,8 @@ import CommentSection from "./pages/Comment/CommentSection.jsx";
 import React from "react";
 import { Toaster } from "react-hot-toast";
 import {ToastContainer} from "react-toastify";
+import NotFound from "./pages/notFound/notFound.jsx";
+import Search from "./pages/search/search.jsx";
 
 function App() {
     return (
@@ -27,6 +29,10 @@ function App() {
                 <Route path="/coach*" element={<CoachPanel/>}/>
                 <Route path="/gympanel/:id" element={<Gym/>}/>
                 <Route path="/about" element={<AboutUs/>}/>
+                <Route path="/gympanel" element={<Gym/>}/>
+                <Route path="/about" element={<AboutUs/>}/>
+                <Route path="/search" element={<Search/>}/>
+                <Route path="/*" element={<NotFound/>}/>
             </Routes>
             <ToastContainer/>
         </div>
