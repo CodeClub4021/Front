@@ -71,6 +71,8 @@ export function LoginForm(props) {
             type: "success",
           });
           handleToastControll();
+          console.log(res.data.token);
+          localStorage.setItem("token", res.data.token);
 
           // Redirect should be placed here, not in a separate then block
           return redirect("/");

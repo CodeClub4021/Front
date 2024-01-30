@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Profile from "./profile/profile.jsx";
 import Login from "./login&signup/login.jsx";
 import HomeLink from "./HomeLink/HomeLink.jsx";
@@ -8,19 +8,39 @@ import ContactUsLink from "./ContactUsLink/ContactUsLink.jsx";
 import AboutUsLink from "./AboutUsLink/AboutUsLink.jsx";
 import SearchBar from "./SearchBar/SearchBar.jsx";
 import logo from "../../assets/images/Logo.png";
+import { Link } from "react-router-dom";
 
 const NavbarComponent = ({ isLogin }) => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      const isScrollingDown = scrollTop > 50;
+
+      setIsScrolled(isScrollingDown);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <nav
-      className="text-gray fixed top-0 z-50 h-fit w-full bg-gray-900 py-2 text-lg"
+      className={`text-gray fixed top-0 z-50 h-fit w-full bg-gray-900 py-2 text-lg ${
+        isScrolled ? "opacity-0" : ""
+      }`}
       id="navbar"
     >
       <ul className="md:text-md grid grid-cols-12">
         <li className="col-span-1 col-start-1">
-          <div className="">
+          <Link className="">
             {/*shouls stay in a router after defining routers*/}
             <img src={logo} alt="Logo" className="h-16 w-full" />
-          </div>
+          </Link>
         </li>
         {}
         {/* Navigation Links */}

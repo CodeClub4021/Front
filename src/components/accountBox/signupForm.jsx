@@ -17,14 +17,12 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import { url } from "../../axiosConfig/useHttp";
 import { handleShowToast } from "../../functions";
+import { Link, redirect, useNavigate } from "react-router-dom";
 
 export function SignupForm(props) {
   const { switchToSignin } = useContext(AccountContext);
+  const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
-  //   const [username, setUsername] = useState("");
-  //   const [password, setPassword] = useState("");
-  //   const [repeatPassword, setRepeatPassword] = useState("");
-  //   const [email, setEmail] = useState("");
   const [role, setRole] = useState("");
   const [toast, setToast] = useState({
     isVisible: false,
@@ -40,21 +38,23 @@ export function SignupForm(props) {
   const validationSchema = Yup.object().shape({
     username: Yup.string().required("Please enter this field"),
     password: Yup.string().required("Please enter this field"),
-    repeatPassword: Yup.string().required("Please enter this field"),
+    // repeatPassword: Yup.string().required("Please enter this field"),
     email: Yup.string().required("Please enter this field"),
+    role: Yup.string(),
   });
   const formik = useFormik({
     initialValues: {
       username: "",
       password: "",
-      repeatPassword: "",
+      // repeatPassword: "",
       email: "",
+      role: role,
     },
 
     validationSchema,
 
     onSubmit: (values) => {
-      handleSignup(values);
+      role.length !== 0 ? handleSignup(values) : null;
     },
   });
 
@@ -62,9 +62,9 @@ export function SignupForm(props) {
     console.log(role);
     setLoading(true);
     const formData = new FormData();
-    formData.append("username", formik.values.username);
-    formData.append("email", formik.values.email);
-    formData.append("password", formik.values.password);
+    formData.append("username", values.username);
+    formData.append("email", values.email);
+    formData.append("password", values.password);
     formData.append("role", role);
 
     await axios
@@ -77,14 +77,17 @@ export function SignupForm(props) {
               text: "Wellcom!",
               type: "success",
             }),
-            handleToastControll())
+            handleToastControll(),
+            navigate("/login"),
+            switchToSignin())
           : null;
       })
       .catch((err) => {
+        console.log(err?.response.data);
         setLoading(false);
         setToast({
           isVisible: true,
-          text: "We did not found your Authentication Info",
+          text: err?.response.data.email || err?.response.data.username,
           type: "error",
         });
         handleToastControll();
@@ -130,7 +133,7 @@ export function SignupForm(props) {
             <HelperText>{formik.errors.password}</HelperText>
           )}
           {/* repeat pass */}
-          <Input
+          {/* <Input
             type="password"
             placeholder="Confirm Password"
             name="repeatPassword"
@@ -139,13 +142,16 @@ export function SignupForm(props) {
           />
           {formik.errors.repeatPassword && formik.touched.repeatPassword && (
             <HelperText>{formik.errors.repeatPassword}</HelperText>
-          )}
+          )} */}
 
           <div className="flex justify-between">
             <UserTypeCheckBox text={"manager"} setValue={setRole} />
             <UserTypeCheckBox text={"coach"} setValue={setRole} />
             <UserTypeCheckBox text={"customer"} setValue={setRole} />
           </div>
+          {role.length == 0 && formik.touched.password && (
+            <HelperText>{"Please select role"}</HelperText>
+          )}
 
           <Marginer direction="vertical" margin={10} />
 
@@ -155,10 +161,18 @@ export function SignupForm(props) {
           >
             Signup
           </SubmitButton>
+          <MutedLink style={{ margin: "0 auto" }}>
+            <Link
+              style={{ textDecoration: "underline", color: "#0044CC" }}
+              to="/"
+            >
+              Return to Home
+            </Link>
+          </MutedLink>
 
           <Marginer direction="vertical" margin="1em" />
 
-          <MutedLink href="#">
+          <MutedLink style={{ margin: "0 auto" }} href="#">
             Already have an account?
             <BoldLink href="#" onClick={switchToSignin}>
               Signin
