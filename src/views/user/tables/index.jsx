@@ -95,14 +95,15 @@ const GymCard = () => {
       </div>
 
       {/* Modal */}
+
       <Modal isOpen={isModalOpen} onClose={closeModal}>
-        <ModalOverlay />
-        <ModalContent className="fixed inset-0 top-80 z-50 mx-80 h-fit overflow-y-auto rounded-md bg-amber-400">
+        {/* <ModalOverlay /> */}
+        <ModalContent className="fixed inset-0 top-20 z-50 mx-64 overflow-y-auto rounded-lg bg-amber-400">
           <ModalHeader>
             {" "}
             <div className="bg-amber-400 px-4 py-5 sm:flex sm:px-6 ">
               <h3
-                className="text-3xl font-medium leading-6 text-gray-900"
+                className="items-center text-3xl font-medium leading-6 text-gray-900"
                 id="modal-headline"
               >
                 Program
@@ -110,29 +111,33 @@ const GymCard = () => {
             </div>
           </ModalHeader>
           {/* <ModalCloseButton className="ml-96" /> */}
-          <ModalBody className="bg-gray-900">
+          <ModalBody className="h-full bg-gray-900">
             <ModalBody>
               <Table className="w-full" colorScheme="gray">
-                <Thead>
-                  <Tr className="text-white">
-                    <Th>Day</Th>
-                    <Th>Exercise</Th>
-                    <Th>Time</Th>
+                <Thead className="">
+                  <Tr className="my-10 text-white">
+                    <Th className="justify-center border-b-2 py-3">Day</Th>
+                    <Th className="border-b-2 py-3">Exercise</Th>
+                    <Th className="border-b-2 py-3 pr-24">Time</Th>
                   </Tr>
                 </Thead>
                 <Tbody>
                   {programData.map((item, index) => (
-                    <Tr className="text-white" key={index}>
-                      <Td>{item.day}</Td>
-                      <Td>{item.exercise}</Td>
-                      <Td>{item.time}</Td>
+                    <Tr className=" text-white" key={index}>
+                      <Td className="border-b-2 border-r-2 px-8 py-5">
+                        {item.day}
+                      </Td>
+                      <Td className="border-b-2 border-r-2 px-8 py-5">
+                        {item.exercise}
+                      </Td>
+                      <Td className="border-b-2 px-8 py-5 pr-0">{item.time}</Td>
                     </Tr>
                   ))}
                 </Tbody>
               </Table>
             </ModalBody>
           </ModalBody>
-          <ModalFooter className="bg-gray-900">
+          <ModalFooter className="bg-gray-900 py-2">
             <button
               onClick={closeModal}
               type="button"

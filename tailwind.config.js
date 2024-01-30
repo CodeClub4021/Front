@@ -24,7 +24,7 @@ export default {
         custom: ["Inter", "Helvetica", "Arial", "sans-serif"],
       },
       colors: {
-        custom: "#6e80b3d9",
+        custom: "#edf415",
       },
     },
   },
@@ -32,5 +32,5 @@ export default {
     themes: false,
   },
   darkMode: "class",
-  plugins: [daisyui],
+  plugins: [daisyui]
 };

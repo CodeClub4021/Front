@@ -4,7 +4,6 @@ import Navbar from "../../components/CoachPanel/navbar/index.jsx";
 import Sidebar from "../../components/CoachPanel/sidebar";
 import routes from "../../components/CoachPanel/sidebar/routes.jsx";
 import NavbarJavad from "../../components/navbar/navbar.jsx";
-import Footer from "../../components/footer/footer.jsx";
 
 export default function coach(props) {
   const { ...rest } = props;
@@ -69,8 +68,8 @@ export default function coach(props) {
           className={`mx-[12px] h-full flex-none transition-all md:pr-2 xl:ml-[313px]`}
         >
           {/* Routes */}
-          <div className="h-full">
-            <NavbarJavad/>
+          <div className="h-full relative">
+            <NavbarJavad isInPanel={true} isLogin={true} />
             <Navbar
               onOpenSidenav={() => setOpen(true)}
               logoText={"Horizon UI Tailwind React"}
@@ -90,7 +89,6 @@ export default function coach(props) {
             </div>
           </div>
         </main>
-        {/*<Footer />*/}
       </div>
     </div>
   );

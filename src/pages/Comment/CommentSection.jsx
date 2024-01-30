@@ -1,3 +1,5 @@
+// CommentSection.jsx
+
 import React, { useState } from "react";
 import Comment from "./Comment";
 
@@ -30,7 +32,7 @@ const CommentSection = () => {
   };
 
   return (
-    <div className="mx-auto my-12 max-w-lg">
+    <div className="mx-auto my-12 max-w-lg border rounded-md p-4">
       <div className="my-4">
         <textarea
           className="mb-2 w-full border p-2"
@@ -51,6 +53,7 @@ const CommentSection = () => {
           comment={comment}
           onDelete={deleteComment}
           onEdit={editComment}
+          isSent={true}
         />
       ))}
     </div>
@@ -58,31 +61,6 @@ const CommentSection = () => {
 };
 
 export default CommentSection;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

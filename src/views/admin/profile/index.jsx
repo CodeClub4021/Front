@@ -1,8 +1,28 @@
 import Banner from "./components/Banner";
 import General from "./components/General";
 import Upload from "./components/Upload";
+import {useContext, useEffect} from "react";
+import axios from "axios";
+import createToken from "../../../axiosConfig/createToken.js";
+import {UserContext} from "../../../contexts.jsx";
 
 const ProfileOverview = () => {
+    const {gymIds} = useContext(UserContext);
+    useEffect(() => {
+        (async () => {
+            try {
+                const res = await axios.get(import.meta.env.VITE_BASE_URL + "user/", {
+                    headers: {
+                        Authorization: createToken()
+                    }
+                });
+                console.log(res);
+            //     set gym Ids
+            } catch (err){
+                console.error(err);
+            }
+        })();
+    }, []);
   return (
     <div className="flex w-full flex-col gap-5">
       <div className="w-ful mt-5 flex h-fit flex-col gap-5 lg:grid lg:grid-cols-12">

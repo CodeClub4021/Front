@@ -17,9 +17,11 @@ import useHttp from "../../axiosConfig/useHttp";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { handleShowToast } from "../../functions";
+import createToken from "../../axiosConfig/createToken.js";
 
 export function LoginForm(props) {
   const { switchToSignup } = useContext(AccountContext);
+  const { switchToForgotpass } = useContext(AccountContext);
   const [loading, setLoading] = useState(false);
   const [toast, setToast] = useState({
     isVisible: false,
@@ -72,19 +74,33 @@ export function LoginForm(props) {
             type: "success",
           });
           handleToastControll();
-          // console.log(res.data.token);
-          await localStorage.setItem("token", res.data.token);
+
+          console.log(res.data.token);
+          localStorage.setItem("token", res.data.token);
+          axios
+            .get(import.meta.env.VITE_BASE_URL + "user/", {
+              headers: {
+                Authorization: createToken(),
+              },
+            })
+            .then((res) => {
+              localStorage.setItem("role", res.data.user.role);
+              return setTimeout(() => {
+                redirect("/home");
+              }, 500);
+            })
+            .catch((err) => {
+              console.error(err);
+            });
+
           // Redirect should be placed here, not in a separate then block
-          return setTimeout(() => {
-            redirect("/");
-          }, 1000);
         }
       })
       .catch((err) => {
         setLoading(false);
         setToast({
           isVisible: true,
-          text: "We did not found your Authentication Info",
+          text: err?.response.data.non_field_errors[0],
           type: "error",
         });
         handleToastControll();
@@ -121,7 +137,11 @@ export function LoginForm(props) {
           <Marginer direction="vertical" margin={10} />
 
           <MutedLink href="#">
-            Forget your <span className="text-amber-300">password</span>?
+            Forget your{" "}
+            <span onClick={switchToForgotpass} className="text-amber-300">
+              password
+            </span>
+            ?
           </MutedLink>
 
           <Marginer direction="vertical" margin={10} />
@@ -132,6 +152,14 @@ export function LoginForm(props) {
           >
             Signin
           </SubmitButton>
+          <MutedLink style={{ margin: "0 auto" }}>
+            <Link
+              style={{ textDecoration: "underline", color: "#0044CC" }}
+              to="/"
+            >
+              Return to Home
+            </Link>
+          </MutedLink>
         </FormContainer>
 
         <Marginer direction="vertical" margin="1.6em" />

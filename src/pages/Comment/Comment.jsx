@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Comment = ({ comment, onDelete, onEdit }) => {
+const Comment = ({ comment, onDelete, onEdit, isSent }) => {
   const [isEditing, setIsEditing] = useState(false);
   const [editedComment, setEditedComment] = useState(comment.text);
 
@@ -18,13 +18,14 @@ const Comment = ({ comment, onDelete, onEdit }) => {
   };
 
   return (
-    <div className="border p-4 my-4">
+    <div className={`border p-4 my-4 ${isSent ? 'text-gray-100' : ''}`}>
       {isEditing ? (
         <div>
           <textarea
             className="border p-2 w-full mb-2"
             value={editedComment}
             onChange={(e) => setEditedComment(e.target.value)}
+            style={{ color: '#1a202c' }} 
           />
           <button
             className="bg-yellow-300 hover:bg-yellow-400 text-black p-2 mr-2 rounded-md"
@@ -51,28 +52,6 @@ const Comment = ({ comment, onDelete, onEdit }) => {
 };
 
 export default Comment;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

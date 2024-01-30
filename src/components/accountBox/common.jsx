@@ -57,6 +57,7 @@ export const Input = styled.input`
 export const HelperText = styled.span`
   width: 100%;
   margin: 0 auto;
+  text-align: center;
   margin-bottom: 7px;
   border-bottom: 1.4px solid transparent;
   transition: all 200ms ease-in-out;

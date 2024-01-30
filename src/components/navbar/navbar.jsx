@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from "react";
 import Profile from "./profile/profile.jsx";
-import Login from "./login&signup/login.jsx";
-import HomeLink from "./HomeLink/HomeLink.jsx";
-import GymsLink from "./GymsLink/GymsLink.jsx";
-import CoachesLink from "./CoachesLink/CoachesLink.jsx";
-import ContactUsLink from "./ContactUsLink/ContactUsLink.jsx";
-import AboutUsLink from "./AboutUsLink/AboutUsLink.jsx";
 import SearchBar from "./SearchBar/SearchBar.jsx";
 import logo from "../../assets/images/Logo.png";
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faAddressCard,
+  faHome,
+  faPhone,
+} from "@fortawesome/free-solid-svg-icons";
+import Logout from "./logout.jsx";
 
 const NavbarComponent = ({ isLogin }) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -36,38 +38,61 @@ const NavbarComponent = ({ isLogin }) => {
     >
       <ul className="md:text-md grid grid-cols-12">
         <li className="col-span-1 col-start-1">
-          <div className="">
+          <Link className="">
             {/*shouls stay in a router after defining routers*/}
             <img src={logo} alt="Logo" className="h-16 w-full" />
-          </div>
+          </Link>
         </li>
-        {}
         {/* Navigation Links */}
-
-        <li className="col-span-4">
-          <ul className="flex h-full place-items-center justify-around gap-1 px-3">
-            <li className="w-15 flex h-full place-items-center justify-center border-b-white  text-gray-100 hover:border-b-2">
-              <HomeLink />
+        <li className="whitespace-nowrap">
+          <ul className="flex h-full place-items-center justify-around px-3 lg:gap-4">
+            <li className="w-15 flex h-full place-items-center justify-center border-b-white text-gray-100 duration-300 ease-in-out hover:scale-110">
+              <div className="hidden lg:inline-block">
+                <Link
+                  to="/home"
+                  className="flex place-items-center gap-2 capitalize"
+                >
+                  <FontAwesomeIcon icon={faHome} />
+                  <span>Home</span>
+                </Link>
+              </div>
             </li>
-            <li className="w-15 flex h-full place-items-center justify-center border-b-white  text-gray-100 hover:border-b-2">
-              <GymsLink />
+            <li className="w-15 flex h-full place-items-center justify-center border-b-white text-gray-100 duration-300 ease-in-out hover:scale-110">
+              <div className="hidden lg:inline-block">
+                <Link
+                  to=""
+                  className="flex place-items-center gap-2 capitalize"
+                >
+                  <FontAwesomeIcon icon={faPhone} />
+                  <span>Contact Us</span>
+                </Link>
+              </div>
             </li>
-            <li className="w-15 flex h-full place-items-center justify-center border-b-white  text-gray-100 hover:border-b-2">
-              <CoachesLink />
-            </li>
-            <li className="w-15 flex h-full place-items-center justify-center border-b-white  text-gray-100 hover:border-b-2">
-              <ContactUsLink />
-            </li>
-            <li className="w-15 flex h-full place-items-center justify-center border-b-white  text-gray-100 hover:border-b-2">
-              <AboutUsLink />
+            <li className="w-15 flex h-full place-items-center justify-center border-b-white text-gray-100 duration-300 ease-in-out hover:scale-110">
+              <div className="hidden lg:inline-block">
+                <Link
+                  to="/about"
+                  className="flex place-items-center gap-2 capitalize"
+                >
+                  <FontAwesomeIcon icon={faAddressCard} />
+                  <span>About Us</span>
+                </Link>
+              </div>
             </li>
           </ul>
         </li>
-        <li className="col-span-3 col-start-8 flex place-items-center justify-center ">
+        <li className="flex basis-full place-items-center justify-end gap-24 ">
           <SearchBar onSubmit={() => console.log("Search submitted")} />
-        </li>
-        <li className="col-span-2 col-start-11 flex justify-start">
-          {isLogin ? <Profile /> : <Login />}
+          {isLogin ? (
+            profile
+          ) : (
+            <Link
+              to="/login"
+              className="flex place-items-center items-center whitespace-nowrap rounded-full bg-amber-400 p-5 px-10 py-3 text-black shadow-lg hover:bg-amber-300 hover:shadow-inner"
+            >
+              Login
+            </Link>
+          )}
         </li>
       </ul>
     </nav>
