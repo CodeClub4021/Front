@@ -14,7 +14,7 @@ import Logout from "./logout.jsx";
 const NavbarComponent = ({ isLogin, isInPanel }) => {
   const profile = isInPanel ? <Logout /> : <Profile />;
   return (
-    <nav className="text-gray text-[3vh]! fixed top-0 z-[49] h-fit min-w-full max-w-[100vh] bg-gradient-to-br from-gray-900 from-40% via-gray-600 via-85% to-gray-300 py-2 text-lg">
+    <nav className="text-gray text-[3vh]! fixed top-0 right-0 left-0 z-[49] h-fit min-w-full max-w-[100vh] bg-gradient-to-br from-gray-900 from-40% via-gray-600 via-85% to-gray-300 py-2 text-lg">
       <ul className="md:text-md flex place-items-center justify-start">
         <li className="min-w-[150px]">
           <Link to={"/home"}>
