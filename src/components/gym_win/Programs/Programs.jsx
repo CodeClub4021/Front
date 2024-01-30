@@ -5,6 +5,7 @@ import { programsData } from "../../../assets/gym-win/data/programsData";
 import RightArrow from "../../../assets/gym-win/rightArrow.png";
 import { motion } from "framer-motion";
 import { url } from "../../../axiosConfig/useHttp";
+
 const Programs = ({ data, gymId }) => {
   return (
     <div className="Programs px-8 py-10">
