@@ -11,7 +11,7 @@ const EditInfo = () => {
           <span>
             <FaUserEdit />
           </span>
-          Edit Info
+          Change photo
         </p>
       </div>
     </Card>

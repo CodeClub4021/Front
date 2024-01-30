@@ -2,15 +2,11 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import { BrowserRouter } from "react-router-dom";
-import './index.css'
-import "react-toastify/dist/ReactToastify.css";
+import "./index.css";
+import { Toaster } from "react-hot-toast";
 
-
-if (!import.meta.env.VITE_BASE_URL)
-    throw new Error("URL need to set...");
-
-ReactDOM.createRoot(document.getElementById('root')).render(
-    <BrowserRouter>
-        <App/>
-    </BrowserRouter>
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
 );

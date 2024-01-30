@@ -12,9 +12,6 @@ const AppContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(black, rgb(79, 72, 32)) !important;
-  background-blend-mode: overlay !important;
-  background-color: var(--appColor) !important;
 `;
 
 const Login = () => {

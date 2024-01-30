@@ -10,14 +10,17 @@ import {
 } from "./common";
 import { Marginer } from "../marginer";
 import { AccountContext } from "./accountContext";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import { url } from "../../axiosConfig/useHttp";
+import useHttp from "../../axiosConfig/useHttp";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { handleShowToast } from "../../functions";
 
 export function LoginForm(props) {
   const { switchToSignup } = useContext(AccountContext);
+  const { switchToForgotpass } = useContext(AccountContext);
   const [loading, setLoading] = useState(false);
   const [toast, setToast] = useState({
     isVisible: false,
@@ -69,16 +72,18 @@ export function LoginForm(props) {
             type: "success",
           });
           handleToastControll();
-          localStorage.setItem("token", res.data.token);
+
           // Redirect should be placed here, not in a separate then block
-          return redirect("/");
+          return setTimeout(() => {
+            redirect("/");
+          }, 500);
         }
       })
       .catch((err) => {
         setLoading(false);
         setToast({
           isVisible: true,
-          text: "We did not found your Authentication Info",
+          text: err?.response.data.non_field_errors[0],
           type: "error",
         });
         handleToastControll();
@@ -115,7 +120,11 @@ export function LoginForm(props) {
           <Marginer direction="vertical" margin={10} />
 
           <MutedLink href="#">
-            Forget your <span className="text-amber-300">password</span>?
+            Forget your{" "}
+            <span onClick={switchToForgotpass} className="text-amber-300">
+              password
+            </span>
+            ?
           </MutedLink>
 
           <Marginer direction="vertical" margin={10} />
@@ -126,6 +135,14 @@ export function LoginForm(props) {
           >
             Signin
           </SubmitButton>
+          <MutedLink style={{ margin: "0 auto" }}>
+            <Link
+              style={{ textDecoration: "underline", color: "#0044CC" }}
+              to="/"
+            >
+              Return to Home
+            </Link>
+          </MutedLink>
         </FormContainer>
 
         <Marginer direction="vertical" margin="1.6em" />

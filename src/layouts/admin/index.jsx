@@ -4,8 +4,6 @@ import Navbar from "../../components/ManagerPanel/navbar/index.jsx";
 import Sidebar from "../../components/ManagerPanel/sidebar";
 import routes from "../../components/ManagerPanel/sidebar/routes.jsx";
 import NavbarJavad from "../../components/navbar/navbar.jsx";
-import Footer from "../../components/footer/footer.jsx";
-import {UserContext} from "../../contexts.jsx";
 
 export default function Admin(props) {
   const { ...rest } = props;
@@ -58,6 +56,7 @@ export default function Admin(props) {
     });
   };
 
+  document.documentElement.dir = "ltr";
   return (
     <div className="flex h-auto w-full">
       
@@ -69,7 +68,7 @@ export default function Admin(props) {
           className={`mx-[12px] h-full flex-none transition-all md:pr-2 xl:ml-[313px]`}
         >
           {/* Routes */}
-          <div className="h-full">
+          <div className="h-full relative">
             <NavbarJavad/>
             <Navbar
               onOpenSidenav={() => setOpen(true)}
@@ -79,20 +78,17 @@ export default function Admin(props) {
               {...rest}
             />
             <div className="pt-5s mx-auto mb-auto h-full min-h-[84vh] p-2 md:pr-2">
-              <UserContext.Provider value={{gymIds: [1]}}>
-                <Routes>
-                  {getRoutes(routes)}
+              <Routes>
+                {getRoutes(routes)}
 
-                  <Route
-                      path="/"
-                      element={<Navigate to="/admin/profile" replace />}
-                  />
-                </Routes>
-              </UserContext.Provider>
+                <Route
+                  path="/"
+                  element={<Navigate to="/admin/profile" replace />}
+                />
+              </Routes>
             </div>
           </div>
         </main>
-        {/*<Footer />*/}
       </div>
     </div>
   );

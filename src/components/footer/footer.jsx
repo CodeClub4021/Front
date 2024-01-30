@@ -4,9 +4,6 @@ import { BiLogoPinterestAlt } from "react-icons/bi";
 import "./footer.css";
 
 import MyImage from "../../assets/images/Logo.png";
-{
-  /* <img src={MyImage} alt="logo" /> */
-}
 
 function Footer() {
   const iconsTab = [
@@ -17,7 +14,7 @@ function Footer() {
   ];
   return (
     <>
-      <footer className="w-full p-4 bg-gray-900 rounded-lg  border-t border-gray-200 shadow  md:items-center md:justify-between md:p-6 dark:bg-stone-950 dark:border-gray-600 z-30">
+      <footer className="z-30 w-full rounded-lg border-t  border-gray-200 bg-gray-950 p-4  shadow dark:border-gray-600 dark:bg-stone-950 md:items-center md:justify-between md:p-6">
         <div className="container mx-auto  py-[0rem]">
           {/* footer div all */}
           <div className="flex flex-col items-center justify-between  text-left md:flex-row  md:items-start md:gap-[5rem]">

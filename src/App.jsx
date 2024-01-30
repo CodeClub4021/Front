@@ -1,14 +1,19 @@
-import {Routes, Route} from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Login from "./pages/login/login";
+import Land from "./pages/landing/land.jsx";
 import Home from "./pages/Home/Home.jsx";
 import AboutUs from "./pages/AboutUs/index.jsx";
 import UserPanel from "./pages/panel/user/userpanel.jsx";
 import Gym from "./pages/gym_win/gym_win";
+import CoachRegister from "./pages/CoachRegister/CoachRegister.jsx";
+import Navbar from "./components/navbar/navbar.jsx";
 import AdminPanel from "./pages/panel/manager/managePanel.jsx";
 import CoachPanel from "./pages/panel/coach/coachPanel.jsx";
+import CommentSection from "./pages/Comment/CommentSection.jsx";
+
 import React from "react";
+import { Toaster } from "react-hot-toast";
 import {ToastContainer} from "react-toastify";
-import Land from "./pages/landing/land.jsx";
 
 function App() {
     return (

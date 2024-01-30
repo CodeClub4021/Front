@@ -12,7 +12,7 @@ const ErrorBoxModal = ({ onClose , message}) => {
             <span className="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">
               &#8203;
             </span>
-
+    
             <div
               className="inline-block align-bottom bg-white rounded-2xl text-left overflow-hidden shadow-xl transform transition sm:my-8 sm:align-middle sm:max-w-md sm:w-80"
               role="dialog"
@@ -28,31 +28,30 @@ const ErrorBoxModal = ({ onClose , message}) => {
                     Error
                   </h3>
                 </span>
-
+                  
               </div>
               <div className="bg-gray-900 px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
-
+                
                 <div className="sm:flex sm:items-start">
-
+                  
                   <div className="mt-3 mr-6 w-full text-center sm:mt-0 sm:ml-4 sm:text-left">
-
+                  
                     {/* Form */}
                     <form>
                       {/* Include your form input fields here */}
-
+    
                       <div className="my-0 flex gap-10">
-
+                        
                         <p className="text-2xl font-medium text-amber-400">{message}</p>
-
-                      </div>
-                      {/* Add more input fields as needed */}
-
+                        
+                      </div>                  
+                      {/* Add more input fields as needed */}                 
+                      
                     </form>
                     {/* End Form */}
                   </div>
                 </div>
               </div>
-
               <div className="bg-gray-900 px-4 pb-3 sm:px-6 sm:flex sm:flex-row-reverse">
                 <button
                   onClick={onClose}
