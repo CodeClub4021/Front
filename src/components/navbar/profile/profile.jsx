@@ -7,7 +7,10 @@ export default function Profile() {
     const navigate = useNavigate();
     const clickHandler = () => {
         // check role
-        navigate("/admin/profile");
+        let role = localStorage.getItem("role");
+        if (role === "customer")
+            role = "user";
+        navigate(`/${role}/profile/`);
     }
   return (
     <div className="h-fit pr-5 text-gray-200 hover:text-amber-500 ">
