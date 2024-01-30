@@ -27,13 +27,43 @@ const programData = [
   { day: "Saturday", exercise: "Bicep Curls", time: "3:00 PM" },
   { day: "Sunday", exercise: "Plank", time: "11:00 AM" },
 ];
+const gyms = [
+  {
+    name: "Fitness Fusion",
+
+    location: "New York, USA",
+    phone: "+1 (555) 123-4567",
+  },
+  {
+    name: "Powerhouse Gym",
+    location: "Sydney, Australia",
+    phone: "+44 20 1234 567",
+  },
+  {
+    name: "Iron Strong Fitness",
+    location: "Paris, France",
+    phone: "+61 2 1234 5678",
+  },
+
+  {
+    name: "Flex Fitness Center",
+    location: "Tokyo, Japan",
+    phone: "+33 1 23 45 67 89",
+  },
+  {
+    name: "Elite Athlete Gym",
+    location: "London, UK",
+    phone: "+81 3 1234 5678",
+  },
+];
+
 const MyGyms = () => {
   return (
     <div className="flex w-full flex-col gap-5">
       <div className="w-ful my-8 flex h-fit flex-col gap-8 lg:grid lg:grid-cols-12">
-        {[...Array(7)].map((_, index) => (
+        {gyms.map((gym, index) => (
           <div key={index} className="col-span-12">
-            <GymCard />
+            <GymCard gym={gym} />
           </div>
         ))}
       </div>
@@ -41,7 +71,8 @@ const MyGyms = () => {
   );
 };
 
-const GymCard = () => {
+const GymCard = ({ gym }) => {
+  const { name, location, phone } = gym;
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => {
@@ -65,12 +96,12 @@ const GymCard = () => {
               to="/gympanel"
               className="text-lg font-bold text-gray-800 hover:text-gray-600 dark:text-white"
             >
-              Gym Name
+              {gym.name}
             </Link>
           </Button>
           <div className="mb-2 text-sm text-gray-600">
-            <p className="mr-20 inline-block">Location: City, Country</p>
-            <p className="inline-block">Phone: +123 456 7890</p>
+            <p className="mr-20 inline-block">Location: {gym.location}</p>
+            <p className="inline-block">Phone: {gym.phone}</p>
           </div>
         </div>
 

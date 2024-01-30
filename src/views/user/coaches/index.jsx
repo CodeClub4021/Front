@@ -10,10 +10,20 @@ import { rating } from "@material-tailwind/react";
 
 const MyCoaches = () => {
   const coaches = [
-    { name: "Coach 1", phone: "+123 456 7890", rating: 4.5, image: coach1 },
-    { name: "Coach 2", phone: "+987 654 3210", rating: 4.2, image: coach2 },
-    { name: "Coach 3", phone: "+111 222 3333", rating: 4.8, image: coach3 },
-    { name: "Coach 4", phone: "+444 555 6666", rating: 4.0, image: coach4 },
+    {
+      name: "Tracy Anderson",
+      phone: "+123 456 7890",
+      rating: 4.5,
+      image: coach1,
+    },
+    {
+      name: "Jillian Michaels",
+      phone: "+987 654 3210",
+      rating: 4.2,
+      image: coach2,
+    },
+    { name: "Joe Wicks", phone: "+111 222 3333", rating: 4.8, image: coach3 },
+    { name: "Shaun T", phone: "+444 555 6666", rating: 4.0, image: coach4 },
   ];
 
   return (
