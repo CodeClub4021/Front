@@ -27,21 +27,21 @@ const Chat = (props) => {
                 </div>
                 <div className="flex flex-col-reverse ">
                     <Message isSneder={true} message={"sdgkjh"}/>
-                    {/*<Message isSneder={true} message={"sdgkjh"}/>*/}
-                    {/*<Message isSneder={true} message={"sdgkjh"}/>*/}
-                    {/*<Message isSneder={true} message={"sdgkjh"}/>*/}
-                    {/*<Message isSneder={true} message={"sdgkjh"}/>*/}
-                    {/*<Message isSneder={true} message={"sdgkjh"}/>*/}
-                    {/*<Message isSneder={true} message={"sdgkjh"}/>*/}
-                    {/*<Message isSneder={true} message={"sdgkjh"}/>*/}
-                    {/*<Message isSneder={true} message={"sdgkjh"}/>*/}
-                    {/*<Message isSneder={true} message={"sdgkjh"}/>*/}
-                    {/*<Message isSneder={true} message={"sdgkjh"}/>*/}
-                    {/*<Message isSneder={true} message={"sdgkjh"}/>*/}
-                    {/*<Message isSneder={true} message={"sdgkjh"}/>*/}
-                    {/*<Message isSneder={true} message={"sdgkjh"}/>*/}
-                    {/*<Message isSneder={true} message={"sdgkjh"}/>*/}
-                    {/*<Message isSneder={true} message={"sdgkjh"}/>*/}
+                    <Message isSneder={true} message={"sdgkjh"}/>
+                    <Message isSneder={true} message={"sdgkjh"}/>
+                    <Message isSneder={true} message={"sdgkjh"}/>
+                    <Message isSneder={false} message={"sdgkjh"}/>
+                    <Message isSneder={true} message={"sdgkjh"}/>
+                    <Message isSneder={false} message={"sdgkjh"}/>
+                    <Message isSneder={true} message={"sdgkjh"}/>
+                    <Message isSneder={true} message={"sdgkjh"}/>
+                    <Message isSneder={true} message={"sdgkjh"}/>
+                    <Message isSneder={true} message={"sdgkjh"}/>
+                    <Message isSneder={true} message={"sdgkjh"}/>
+                    <Message isSneder={true} message={"sdgkjh"}/>
+                    <Message isSneder={true} message={"sdgkjh"}/>
+                    <Message isSneder={true} message={"sdgkjh"}/>
+                    <Message isSneder={true} message={"sdgkjh"}/>
                     {/*<Message isSneder={true} message={"sdgkjh"}/>*/}
                     {/*<Message isSneder={true} message={"sdgkjh"}/>*/}
                     {/*<Message isSneder={false} message={"sdgkjh"}/>*/}

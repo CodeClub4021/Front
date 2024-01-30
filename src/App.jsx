@@ -21,7 +21,6 @@ function App() {
         <Route path="/gympanel" element={<Gym />} />
         <Route path="/about" element={<AboutUs />} />
       </Routes>
-      {/*// <Gym />*/}
       </>
   );
 }
