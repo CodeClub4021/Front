@@ -6,7 +6,7 @@ import { FaTelegramPlane, FaGithub, FaLinkedinIn } from "react-icons/fa"; // Imp
 const iconsTab = [
     { icon: <FaTelegramPlane />, url: "https://t.me/Javadyes1381" },
     { icon: <FaGithub />, url: "https://github.com/javadfaraji99" },
-    { icon: <FaLinkedinIn />, url: "https://linkedin.com/in/javadfaraji" },
+    { icon: <FaLinkedinIn />, url: "https://linkedin.com/in/javad-faraji-a02351220" },
 ];
 
 const Armin = () => {
