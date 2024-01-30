@@ -17,6 +17,7 @@ import useHttp from "../../axiosConfig/useHttp";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { handleShowToast } from "../../functions";
+import createToken from "../../axiosConfig/createToken.js";
 
 export function LoginForm(props) {
   const { switchToSignup } = useContext(AccountContext);
@@ -73,10 +74,23 @@ export function LoginForm(props) {
           });
           handleToastControll();
 
+          console.log(res.data.token)
+          localStorage.setItem("token", res.data.token);
+          axios.get(import.meta.env.VITE_BASE_URL + "user/", {
+            headers: {
+              Authorization: createToken()
+            }
+          }).then((res) => {
+            localStorage.setItem("role", res.data.user.role);
+            return setTimeout(() => {
+              redirect("/home");
+            }, 500);
+          }).catch(err => {
+            console.error(err);
+          })
+
           // Redirect should be placed here, not in a separate then block
-          return setTimeout(() => {
-            redirect("/");
-          }, 500);
+
         }
       })
       .catch((err) => {
