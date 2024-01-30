@@ -21,9 +21,9 @@ const Plans = ({ data }) => {
 
             <span>
               ${/* {plan.price} */}
-              {i === 0 && data[0] && data[0].tier1_tuition}
-              {i === 1 && data[0] && data[0].tier2_tuition}
-              {i === 2 && data[0] && data[0].tier3_tuition}
+              {i === 0 && data[0]?.tier1_tuition && data[0]?.tier1_tuition}
+              {i === 1 && data[0]?.tier2_tuition && data[0]?.tier2_tuition}
+              {i === 2 && data[0]?.tier3_tuition && data[0]?.tier3_tuition}
             </span>
             <div className="features">
               {plan.features.map((feature, i) => (

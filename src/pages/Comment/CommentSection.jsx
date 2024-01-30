@@ -32,7 +32,7 @@ const CommentSection = () => {
   };
 
   return (
-    <div className="mx-auto my-12 max-w-lg border rounded-md p-4">
+    <div className="mx-auto my-12 max-w-lg rounded-md border p-4">
       <div className="my-4">
         <textarea
           className="mb-2 w-full border p-2"
@@ -41,7 +41,7 @@ const CommentSection = () => {
           onChange={(e) => setNewCommentText(e.target.value)}
         />
         <button
-          className="bg-amber-500 hover:bg-amber-400 text-white p-2 rounded-md ml-4"
+          className="ml-4 rounded-md bg-amber-500 p-2 text-white hover:bg-amber-400"
           onClick={addComment}
         >
           Send
@@ -61,11 +61,6 @@ const CommentSection = () => {
 };
 
 export default CommentSection;
-
-
-
-
-
 
 // import React, { useState } from "react";
 // import Comment from "./Comment";

@@ -3,13 +3,10 @@ import Profile from "./profile/profile.jsx";
 import SearchBar from "./SearchBar/SearchBar.jsx";
 import logo from "../../assets/images/Logo.png";
 import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faAddressCard,
-  faHome,
-  faPhone,
-} from "@fortawesome/free-solid-svg-icons";
 import Logout from "./logout.jsx";
+import { FaHome } from "react-icons/fa";
+import { FaPhone } from "react-icons/fa";
+import { FaAddressCard } from "react-icons/fa";
 
 const NavbarComponent = ({ isLogin }) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -52,7 +49,7 @@ const NavbarComponent = ({ isLogin }) => {
                   to="/home"
                   className="flex place-items-center gap-2 capitalize"
                 >
-                  <FontAwesomeIcon icon={faHome} />
+                  <FaAddressCard />
                   <span>Home</span>
                 </Link>
               </div>
@@ -63,7 +60,7 @@ const NavbarComponent = ({ isLogin }) => {
                   to=""
                   className="flex place-items-center gap-2 capitalize"
                 >
-                  <FontAwesomeIcon icon={faPhone} />
+                  <FaPhone />
                   <span>Contact Us</span>
                 </Link>
               </div>
@@ -74,7 +71,7 @@ const NavbarComponent = ({ isLogin }) => {
                   to="/about"
                   className="flex place-items-center gap-2 capitalize"
                 >
-                  <FontAwesomeIcon icon={faAddressCard} />
+                  <FaAddressCard />
                   <span>About Us</span>
                 </Link>
               </div>

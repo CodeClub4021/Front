@@ -1,4 +1,5 @@
 import { Routes, Route, useParams, redirect } from "react-router-dom";
+
 import Login from "./pages/login/login";
 import Land from "./pages/landing/land.jsx";
 import Home from "./pages/Home/Home.jsx";
@@ -11,14 +12,11 @@ import AdminPanel from "./pages/panel/manager/managePanel.jsx";
 import CoachPanel from "./pages/panel/coach/coachPanel.jsx";
 import CommentSection from "./pages/Comment/CommentSection.jsx";
 
-import React from "react";
-import { Toaster } from "react-hot-toast";
-
 import NotFound from "./components/NotFound.jsx";
+import { Toaster } from "react-hot-toast";
 import { useGymContext } from "./context/GymProvider.jsx";
 
 import { ToastContainer } from "react-toastify";
-import NotFound from "./pages/notFound/notFound.jsx";
 import Search from "./pages/search/search.jsx";
 
 function App() {
@@ -33,9 +31,8 @@ function App() {
         <Route path="/coach*" element={<CoachPanel />} />
         <Route path="/gympanel/:id" element={<Gym />} />
         <Route path="/about" element={<AboutUs />} />
-        <Route path="/*" element={<NotFound />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
-      <ToastContainer />
     </div>
   );
 }

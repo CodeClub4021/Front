@@ -74,6 +74,8 @@ export function LoginForm(props) {
             type: "success",
           });
           handleToastControll();
+          console.log(res.data.token);
+          localStorage.setItem("token", res.data.token);
 
           console.log(res.data.token);
           localStorage.setItem("token", res.data.token);
