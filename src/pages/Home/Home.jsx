@@ -93,6 +93,7 @@ const gyms = [
 
 export default function Home() {
   const [sliderIndex, setSliderIndex] = useState(0);
+
   useEffect(() => {
     const interval = setInterval(
       () => setSliderIndex((sliderIndex + 1) % 3),
@@ -101,6 +102,7 @@ export default function Home() {
     return () => {
       clearInterval(interval);
     };
+    
   });
   return (
     <>
@@ -121,7 +123,10 @@ export default function Home() {
         </div>
       </header>
       <main className="grid w-screen grid-cols-12">
-        <div className="col-span-12 col-start-1 row-span-1 flex place-items-center justify-center">
+        <div
+          id="gyms-section"
+          className="col-span-12 col-start-1 row-span-1 flex place-items-center justify-center"
+        >
           <HomeCardsGroup data={gyms} subTitle={"Most popular Gyms"} />
         </div>
         <div className="relative col-start-1 col-end-13 row-span-2 h-screen">
@@ -149,7 +154,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="col-span-12 col-start-1 row-span-1 flex place-items-center justify-center">
+        <div
+          className="col-span-12 col-start-1 row-span-1 flex place-items-center justify-center"
+          id="coaches-section"
+        >
           <HomeCardsGroup data={coaches} subTitle={"Most popular Coaches"} />
         </div>
       </main>

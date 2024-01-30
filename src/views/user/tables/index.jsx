@@ -3,9 +3,30 @@ import Card from "../../../components/UserPanel/card";
 import ShowStar from "../../../components/rating/profile_rate.jsx";
 import ShowStars from "../../../components/UserPanel/ShowStars/ShowStars";
 import avatar from "../../../assets/img/profile/banner.png";
-import { Button } from "@chakra-ui/react";
+import {
+  Button,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
+  ModalCloseButton,
+} from "@chakra-ui/react";
 import GymSlideshow from "./components/GymSlideshow.jsx";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import { Table, Thead, Tbody, Tr, Th, Td } from "@chakra-ui/react";
+
+const programData = [
+  { day: "Monday", exercise: "Squat", time: "9:00 AM" },
+  { day: "Tuesday", exercise: "Bench Press", time: "4:00 PM" },
+  { day: "Wednesday", exercise: "Deadlift", time: "10:30 AM" },
+  { day: "Thursday", exercise: "Shoulder Press", time: "6:00 PM" },
+  { day: "Friday", exercise: "Pull-ups", time: "7:30 AM" },
+  { day: "Saturday", exercise: "Bicep Curls", time: "3:00 PM" },
+  { day: "Sunday", exercise: "Plank", time: "11:00 AM" },
+];
 const MyGyms = () => {
   return (
     <div className="flex w-full flex-col gap-5">
@@ -21,25 +42,24 @@ const MyGyms = () => {
 };
 
 const GymCard = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <Card extra={"w-full h-full p-3"}>
       {/* Gym Photos */}
-      {/* <div className="mb-3 h-72 overflow-hidden rounded-2xl">
-        <div
-          className="relative h-full w-full bg-cover bg-center"
-          style={{
-            backgroundImage: `url(${avatar})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-          }}
-        ></div>
-      </div> */}
       <GymSlideshow />
 
       {/* Gym Information */}
-      <div className="grid grid-cols-2 gap-4">
-        <div className="col-span-2  lg:col-span-1">
+      <div className="grid grid-cols-3 gap-2">
+        <div className="col-span-1 lg:col-span-1">
           <Button>
             <Link
               to="/gympanel"
@@ -49,23 +69,85 @@ const GymCard = () => {
             </Link>
           </Button>
           <div className="mb-2 text-sm text-gray-600">
-            <p className="mr-40 inline-block">Location: City, Country</p>
+            <p className="mr-20 inline-block">Location: City, Country</p>
             <p className="inline-block">Phone: +123 456 7890</p>
           </div>
         </div>
 
-        <div className="col-span-2 lg:col-span-1">
-          <h4 className="pl-4 text-lg font-bold text-gray-800 dark:text-white">
+        <div className="col-span-1 lg:col-span-1">
+          <h4 className="pl-48 text-lg font-bold text-gray-800 dark:text-white">
             Rating
           </h4>
-          <div className="flex items-center">
-            <div class="mx-2 flex font-bold">
+          <div className="ml-44 flex items-center">
+            <div className="flex font-bold">
               <ShowStars />
             </div>
-            <span className="ml-2 text-sm text-gray-600">123 reviews</span>
           </div>
         </div>
+        <div className="col-span-1">
+          <button
+            onClick={openModal}
+            className=" ml-36  rounded-full bg-custom px-6 py-4 font-medium tracking-wide text-black transition duration-700 ease-in-out hover:bg-amber-500 hover:text-white"
+          >
+            show program
+          </button>
+        </div>
       </div>
+
+      {/* Modal */}
+
+      <Modal isOpen={isModalOpen} onClose={closeModal}>
+        {/* <ModalOverlay /> */}
+        <ModalContent className="fixed inset-0 top-20 z-50 mx-64 overflow-y-auto rounded-lg bg-amber-400">
+          <ModalHeader>
+            {" "}
+            <div className="bg-amber-400 px-4 py-5 sm:flex sm:px-6 ">
+              <h3
+                className="items-center text-3xl font-medium leading-6 text-gray-900"
+                id="modal-headline"
+              >
+                Program
+              </h3>
+            </div>
+          </ModalHeader>
+          {/* <ModalCloseButton className="ml-96" /> */}
+          <ModalBody className="h-full bg-gray-900">
+            <ModalBody>
+              <Table className="w-full" colorScheme="gray">
+                <Thead className="">
+                  <Tr className="my-10 text-white">
+                    <Th className="justify-center border-b-2 py-3">Day</Th>
+                    <Th className="border-b-2 py-3">Exercise</Th>
+                    <Th className="border-b-2 py-3 pr-24">Time</Th>
+                  </Tr>
+                </Thead>
+                <Tbody>
+                  {programData.map((item, index) => (
+                    <Tr className=" text-white" key={index}>
+                      <Td className="border-b-2 border-r-2 px-8 py-5">
+                        {item.day}
+                      </Td>
+                      <Td className="border-b-2 border-r-2 px-8 py-5">
+                        {item.exercise}
+                      </Td>
+                      <Td className="border-b-2 px-8 py-5 pr-0">{item.time}</Td>
+                    </Tr>
+                  ))}
+                </Tbody>
+              </Table>
+            </ModalBody>
+          </ModalBody>
+          <ModalFooter className="bg-gray-900 py-2">
+            <button
+              onClick={closeModal}
+              type="button"
+              className="mb-2 mr-5 inline-flex w-20  justify-center rounded-md border border-transparent bg-amber-400 px-4 py-2 text-xl font-medium text-gray-900  hover:text-white "
+            >
+              Close
+            </button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
     </Card>
   );
 };

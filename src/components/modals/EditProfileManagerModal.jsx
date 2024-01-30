@@ -1,30 +1,41 @@
+import axios from 'axios';
 import React, { useState } from 'react';
 
 const EditProfile = ({ onClose }) => {
   const [formData, setFormData] = useState({
     // Initialize form data if needed
     // For example: name: '', price: '', category: '', description: ''
-    birthYear: '',
-    birthMonth: '',
-    birthDay: '',
+    birthYear: '2001',
+    birthMonth: '9',
+    birthDay: '11',
   });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     console.log("khaaaaaaaaaaaaaaaaaaaaaaaaat from manager");
     const UpdatedUser = {
-      name: formData.name,
-      gender: formData.Gender,
+      full_name: formData.name,
+      sex: formData.Gender,
       birthday: `${formData.birthYear}-${formData.birthMonth}-${formData.birthDay}`,
       location: formData.Location,
-      experience: formData.experience,
+      work_experience: formData.experience,
       education: formData.Education,
-      languages: formData.Languages,
-      description: formData.description,
+      language: formData.Languages,
+      more_description: formData.description,
     };
     console.log(UpdatedUser);
-   
+      try{
+        const res = await axios.patch("https://gymlist.liara.run/manager/update/", UpdatedUser, 
+        {
+          headers: {
+            Authorization: 'Token ' + localStorage.getItem('token')
+          }
+        });
+        console.log(res);
+      } catch(err){
+        console.error(err);
+      }
     onClose();
   };
 

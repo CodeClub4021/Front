@@ -54,6 +54,17 @@ export const Input = styled.input`
   }
 `;
 
+export const HelperText = styled.span`
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 7px;
+  border-bottom: 1.4px solid transparent;
+  transition: all 200ms ease-in-out;
+  font-size: 10px;
+  color: #ff3366;
+`;
+
 export const SubmitButton = styled.button`
   width: 100%;
   padding: 11px 40%;

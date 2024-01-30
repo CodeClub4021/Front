@@ -37,14 +37,14 @@ const ComplexTable = (props) => {
 
   return (
     <Card extra={"w-full h-full p-4 sm:overflow-x-auto"}>
-      <div class="relative flex items-center justify-between">
-        <div class="text-xl font-bold text-navy-700 dark:text-white">
+      <div className="relative flex items-center justify-between">
+        <div className="text-navy-700 text-xl font-bold dark:text-white">
           Complex Table
         </div>
         <CardMenu />
       </div>
 
-      <div class="mt-8 h-full overflow-x-scroll xl:overflow-hidden">
+      <div className="mt-8 h-full overflow-x-scroll xl:overflow-hidden">
         <table {...getTableProps()} className="w-full">
           <thead>
             {headerGroups.map((headerGroup, index) => (
@@ -53,7 +53,7 @@ const ComplexTable = (props) => {
                   <th
                     {...column.getHeaderProps(column.getSortByToggleProps())}
                     key={index}
-                    className="border-b border-gray-200 pr-28 pb-[10px] text-start dark:!border-navy-700"
+                    className="dark:!border-navy-700 border-b border-gray-200 pb-[10px] pr-28 text-start"
                   >
                     <p className="text-xs tracking-wide text-gray-600">
                       {column.render("Header")}
@@ -72,7 +72,7 @@ const ComplexTable = (props) => {
                     let data = "";
                     if (cell.column.Header === "NAME") {
                       data = (
-                        <p className="text-sm font-bold text-navy-700 dark:text-white">
+                        <p className="text-navy-700 text-sm font-bold dark:text-white">
                           {cell.value}
                         </p>
                       );
@@ -88,14 +88,14 @@ const ComplexTable = (props) => {
                               <MdOutlineError className="text-orange-500" />
                             ) : null}
                           </div>
-                          <p className="text-sm font-bold text-navy-700 dark:text-white">
+                          <p className="text-navy-700 text-sm font-bold dark:text-white">
                             {cell.value}
                           </p>
                         </div>
                       );
                     } else if (cell.column.Header === "DATE") {
                       data = (
-                        <p className="text-sm font-bold text-navy-700 dark:text-white">
+                        <p className="text-navy-700 text-sm font-bold dark:text-white">
                           {cell.value}
                         </p>
                       );
@@ -104,7 +104,7 @@ const ComplexTable = (props) => {
                     }
                     return (
                       <td
-                        className="pt-[14px] pb-[18px] sm:text-[14px]"
+                        className="pb-[18px] pt-[14px] sm:text-[14px]"
                         {...cell.getCellProps()}
                         key={index}
                       >

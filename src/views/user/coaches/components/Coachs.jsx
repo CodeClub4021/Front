@@ -2,7 +2,7 @@ import Card from "../../../../components/ManagerPanel/card";
 import Progress from "../../../../components/ManagerPanel/progress";
 import React, { useMemo } from "react";
 import CardMenu from "../../../../components/ManagerPanel/card/CardMenu";
-import ShowStars from "../../../../components/ManagerPanel/ShowStars/ShowStars" 
+import ShowStars from "../../../../components/ManagerPanel/ShowStars/ShowStars";
 import {
   useGlobalFilter,
   usePagination,
@@ -32,8 +32,8 @@ function Coachs(props) {
   return (
     <Card extra={"h-[300px] w-full"}>
       {/* Top Creator Header */}
-      <div className="flex h-fit w-full items-center justify-between rounded-t-2xl px-4 pt-4 pb-[20px]  dark:!bg-navy-700 dark:shadow-none">
-        <h4 className="text-2xl font-bold text-navy-700 dark:text-white">
+      <div className="dark:!bg-navy-700 flex h-fit w-full items-center justify-between rounded-t-2xl px-4 pb-[20px]  pt-4 dark:shadow-none">
+        <h4 className="text-navy-700 text-2xl font-bold dark:text-white">
           Coachs
         </h4>
         <CardMenu />
@@ -56,7 +56,7 @@ function Coachs(props) {
                     {...column.getHeaderProps(column.getSortByToggleProps())}
                     key={index}
                   >
-                    <div className="flex items-center justify-between pt-4 pb-2 text-start uppercase tracking-wide text-gray-800 text-lg">
+                    <div className="flex items-center justify-between pb-2 pt-4 text-start text-lg uppercase tracking-wide text-gray-800">
                       {column.render("Header")}
                     </div>
                   </th>
@@ -82,16 +82,15 @@ function Coachs(props) {
                               alt=""
                             />
                           </div>
-                          <p className="text-xl font-medium text-navy-800 dark:text-white">
+                          <p className="text-navy-800 text-xl font-medium dark:text-white">
                             {cell.value[0]}
                           </p>
                         </div>
                       );
-                
                     } else if (cell.column.Header === "Rating") {
                       data = (
-                        <div class="mx-2 flex font-bold">
-                          <ShowStars StarsNumbers="3"/>
+                        <div className="mx-2 flex font-bold">
+                          <ShowStars StarsNumbers="3" />
                         </div>
                       );
                     }

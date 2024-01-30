@@ -13,25 +13,23 @@ const Sidebar = ({ open, onClose }) => {
       }`}
     >
       <span
-        className="absolute top-4 right-4 block cursor-pointer xl:hidden"
+        className="absolute right-4 top-4 block cursor-pointer xl:hidden"
         onClick={onClose}
       >
         <HiX />
       </span>
 
       <div className={`mx-[35px] mt-[35px] flex items-center`}>
-        <div className="mt-1 ml-1 h-2.5 font-poppins text-[26px] font-bold uppercase text-white dark:text-white">
+        <div className="font-poppins ml-1 mt-1 h-2.5 text-[26px] font-bold uppercase text-white dark:text-white">
           Manager panel
         </div>
       </div>
-      <div class="mt-[58px] mb-7 h-px bg-gray-300 dark:bg-white/30" />
+      {/*<div className="mb-7 mt-[58px] h-px bg-gray-300 dark:bg-white/30" />*/}
       {/* Nav item */}
 
-      <ul className="pt-1 text-xl">
+      <ul className="pt-16 text-xl">
         <Links routes={routes} />
       </ul>
-
-      
 
       {/* Nav item end */}
     </div>

@@ -4,7 +4,6 @@ import Navbar from "../../components/CoachPanel/navbar/index.jsx";
 import Sidebar from "../../components/CoachPanel/sidebar";
 import routes from "../../components/CoachPanel/sidebar/routes.jsx";
 import NavbarJavad from "../../components/navbar/navbar.jsx";
-import Footer from "../../components/footer/footer.jsx";
 
 export default function coach(props) {
   const { ...rest } = props;
@@ -59,7 +58,7 @@ export default function coach(props) {
 
   document.documentElement.dir = "ltr";
   return (
-    <div className="flex h-full w-full">
+    <div className="flex h-auto w-full">
       
       <Sidebar open={open} onClose={() => setOpen(false)} />
       {/* Navbar & Main Content */}
@@ -69,7 +68,7 @@ export default function coach(props) {
           className={`mx-[12px] h-full flex-none transition-all md:pr-2 xl:ml-[313px]`}
         >
           {/* Routes */}
-          <div className="h-full">
+          <div className="h-full relative">
             <NavbarJavad/>
             <Navbar
               onOpenSidenav={() => setOpen(true)}
@@ -90,7 +89,6 @@ export default function coach(props) {
             </div>
           </div>
         </main>
-        {/*<Footer />*/}
       </div>
     </div>
   );

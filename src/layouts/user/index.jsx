@@ -4,7 +4,6 @@ import Navbar from "../../components/UserPanel/navbar/index.jsx";
 import Sidebar from "../../components/UserPanel/sidebar";
 import routes from "../../components/UserPanel/sidebar/routes.jsx";
 import NavbarJavad from "../../components/navbar/navbar.jsx";
-import Footer from "../../components/footer/footer.jsx";
 
 export default function User(props) {
   const { ...rest } = props;
@@ -47,7 +46,7 @@ export default function User(props) {
   };
   const getRoutes = (routes) => {
     return routes.map((prop, key) => {
-      if (prop.layout === "/admin") {
+      if (prop.layout === "/user") {
         return (
           <Route path={`/${prop.path}`} element={prop.component} key={key} />
         );
@@ -59,7 +58,7 @@ export default function User(props) {
 
   document.documentElement.dir = "ltr";
   return (
-    <div className="flex h-full w-full">
+    <div className="flex h-auto w-full">
       <Sidebar open={open} onClose={() => setOpen(false)} className="w-fit" />
       {/* Navbar & Main Content */}
       <div className="dark:!bg-navy-900 h-full w-full bg-gray-900">
@@ -68,8 +67,8 @@ export default function User(props) {
           className={`mx-[12px] h-full flex-none transition-all md:pr-2 xl:ml-[313px]`}
         >
           {/* Routes */}
-          <div className="h-full">
-            <NavbarJavad className="  w-full" />
+          <div className="h-full relative">
+            <NavbarJavad />
             <Navbar
               onOpenSidenav={() => setOpen(true)}
               logoText={"Horizon UI Tailwind React"}
@@ -83,13 +82,12 @@ export default function User(props) {
 
                 <Route
                   path="/"
-                  element={<Navigate to="/admin/profile" replace />}
+                  element={<Navigate to="/user/profile" replace />}
                 />
               </Routes>
             </div>
           </div>
         </main>
-        {/*<Footer />*/}
       </div>
     </div>
   );

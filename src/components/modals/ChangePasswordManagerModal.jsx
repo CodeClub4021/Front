@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { IoEye , IoEyeOff } from "react-icons/io5";
+import ErrorBoxModal from './ErrorBoxModal';
+import axios from 'axios';
+
 
 const EyeIcon = ({ onClick, isShown }) => {
   const iconName = isShown ? <IoEyeOff className="h-5 w-5 text-amber-400"/> : <IoEye className="h-5 w-5 text-amber-400"/>;
@@ -11,6 +14,8 @@ const EyeIcon = ({ onClick, isShown }) => {
 };
 
 const ChangePassword = ({ onClose }) => {
+  const [showErrorBoxModal, setShowErrorBoxModal] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
   const [showPassword, setShowPassword] = useState({
     current: false,
     new: false,
@@ -29,19 +34,45 @@ const ChangePassword = ({ onClose }) => {
     }));
   };
 
+  const hasStandardPassword = (password) => {
+    return password.length >= 8 && /\d/.test(password);
+  };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
-    
-    console.log("khaaaaaaaaaaaaaaaaaaaaaaaaat from Manager pass");
-    const UpdatedPass = {
-      currentPassword: formData.currentPassword,
-      newPassword: formData.newPassword,
-      confirmPassword: formData.confirmPassword,
-    };
-    console.log(UpdatedPass);
-   
-    onClose();
+    if (formData.newPassword !== formData.confirmPassword) {
+      setErrorMessage('The new passwords do not match.'); 
+      setShowErrorBoxModal(true);
+    } 
+    else if (!hasStandardPassword(formData.newPassword)) {
+      setErrorMessage('The new password must be at least 8 characters long and include a number.'); 
+      setShowErrorBoxModal(true);
+    } 
+    else {
+        let currentPasswordErr = false;
+        const UpdatedPass = {
+          old_password: formData.currentPassword,
+          new_password: formData.newPassword,
+          confirm_password: formData.confirmPassword
+        };
+        try{
+            const res = await axios.put("https://gymlist.liara.run/change-password/", UpdatedPass,
+            {
+              headers: {
+                Authorization: 'Token ' + localStorage.getItem('token')
+              }
+            });
+            console.log(res);
+        } 
+        catch(err){
+            currentPasswordErr = true;
+            console.error(err);
+            setErrorMessage('The current password is not correct.'); 
+            setShowErrorBoxModal(true);
+        }
+        if(!currentPasswordErr){onClose();}   
+    }
+
   };
 
   const handleInputChange = (e) => {
@@ -52,7 +83,7 @@ const ChangePassword = ({ onClose }) => {
     }));
   };
 
-  return (
+  return (<>
     <div className="fixed inset-0 z-50 overflow-y-auto">
       <div className="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
         <div className="fixed inset-0 transition-opacity" aria-hidden="true">
@@ -82,6 +113,19 @@ const ChangePassword = ({ onClose }) => {
               
                 {/* Form */}
                 <form onSubmit={handleSubmit} className="bg-gray-900 px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                  {/* Current Password */}
+                  {/*<div className="mb-4 relative">
+                    <label htmlFor="userName" className="block text-lg font-medium text-amber-400">Username</label>
+                    <input
+                      type="text"
+                      name="userName"
+                      id="userName"
+                      value={formData.userName}
+                      onChange={handleInputChange}
+                      className="mt-1 p-2 w-full border rounded-md shadow-sm"
+                      required
+                    />
+                   </div>*/}
                   {/* Current Password */}
                   <div className="mb-4 relative">
                     <label htmlFor="currentPassword" className="block text-lg font-medium text-amber-400">Current Password</label>
@@ -165,6 +209,8 @@ const ChangePassword = ({ onClose }) => {
         </div>
       </div>
     </div>
+{showErrorBoxModal && <ErrorBoxModal onClose={() => setShowErrorBoxModal(false)} message={errorMessage} />}
+  </>
   );
 };
 
