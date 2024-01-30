@@ -26,7 +26,7 @@ const EditProfile = ({ onClose }) => {
     };
     console.log(UpdatedUser);
       try{
-        const res = await axios.patch("http://127.0.0.1:8000/manager/edit/", UpdatedUser, 
+        const res = await axios.patch(import.meta.env.VITE_BASE_URL + "manager/edit/", UpdatedUser,
         {
           headers: {
             Authorization: localStorage.getItem("access_token")
