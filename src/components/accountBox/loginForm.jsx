@@ -10,7 +10,7 @@ import {
 } from "./common";
 import { Marginer } from "../marginer";
 import { AccountContext } from "./accountContext";
-import { Link } from "react-router-dom";
+import { Link, redirect } from "react-router-dom";
 import axios from "axios";
 import { url } from "../../axiosConfig/useHttp";
 import useHttp from "../../axiosConfig/useHttp";
@@ -27,9 +27,10 @@ export function LoginForm(props) {
     type: "",
   });
 
-  const redirect = (path) => {
+  const redirectTo = (path) => {
     // Perform your redirection logic here
     window.location.href = path;
+    return redirect(path);
   };
 
   const handleToastControll = () => {
@@ -62,7 +63,7 @@ export function LoginForm(props) {
 
     await axios
       .post(`${url}/login/`, formData)
-      .then((res) => {
+      .then(async (res) => {
         setLoading(false);
         if (res.status >= 200 && res.status < 300) {
           setToast({
@@ -71,9 +72,12 @@ export function LoginForm(props) {
             type: "success",
           });
           handleToastControll();
-
+          // console.log(res.data.token);
+          await localStorage.setItem("token", res.data.token);
           // Redirect should be placed here, not in a separate then block
-          return redirect("/");
+          return setTimeout(() => {
+            redirect("/");
+          }, 1000);
         }
       })
       .catch((err) => {

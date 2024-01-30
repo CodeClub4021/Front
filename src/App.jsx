@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useParams, redirect } from "react-router-dom";
 import Login from "./pages/login/login";
 import Land from "./pages/landing/land.jsx";
 import Home from "./pages/Home/Home.jsx";
@@ -13,6 +13,8 @@ import CommentSection from "./pages/Comment/CommentSection.jsx";
 
 import React from "react";
 import { Toaster } from "react-hot-toast";
+import NotFound from "./components/NotFound.jsx";
+import { useGymContext } from "./context/GymProvider.jsx";
 
 function App() {
   return (
@@ -24,8 +26,10 @@ function App() {
         <Route path="/user*" element={<UserPanel />} />
         <Route path="/admin*" element={<AdminPanel />} />
         <Route path="/coach*" element={<CoachPanel />} />
-        <Route path="/gympanel" element={<Gym />} />
+        {/* <Route path="/gympanel" element={<Gym />} /> */}
+        <Route path="/gympanel/:gymId" element={<Gym />} />
         <Route path="/about" element={<AboutUs />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       {/* <Land/> */}
       {/* <Home /> */}

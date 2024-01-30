@@ -10,7 +10,7 @@ const Testimonials = () => {
   const tLength = testimonialsData.length;
   const transition = { type: "spring", duration: 1 };
   return (
-    <div className="testimonials">
+    <div className="testimonials px-8 py-10">
       <div className="left-t">
         <span>Testimonials</span>
         <span className="stroke-text">What they</span>

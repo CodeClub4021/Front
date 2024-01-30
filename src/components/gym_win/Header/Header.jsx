@@ -9,9 +9,13 @@ const Header = () => {
   return (
     <div className="header" id="header">
       <img src={Logo} alt="" className="logo" />
-      {(menuOpened===false && mobile===true)? (
+      {menuOpened === false && mobile === true ? (
         <div
-          style={{ backgroundColor: "var(--appColor)", padding: "0.5rem", borderRadius: "5px" }}
+          style={{
+            backgroundColor: "var(--appColor)",
+            padding: "0.5rem",
+            borderRadius: "5px",
+          }}
           onClick={() => setMenuOpened(true)}
         >
           <img
