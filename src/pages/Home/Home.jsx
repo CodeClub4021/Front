@@ -7,9 +7,10 @@ import Footer from "../../components/footer/footer.jsx";
 import Slider from "../../components/slider/slider.jsx";
 
 export default function Home() {
+    const isLogin = Boolean(localStorage.getItem("token"));
     return (
         <div>
-            <Navbar isLogin={false} isInPanel={false}/>
+            <Navbar isLogin={isLogin} isInPanel={false}/>
             <div className="h-screen w-screen flex flex-col justify-startq">
                 <header className="h-full w-full">
                     <Slider/>

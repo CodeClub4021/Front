@@ -9,9 +9,10 @@ import Navbar from "../../components/navbar/navbar.jsx";
 import CommentSection from "../Comment/CommentSection.jsx";
 
 function Gym() {
+  const isLogin = Boolean(localStorage.getItem("token"));
   return (
     <>
-      <Navbar />
+      <Navbar isInPanel={false} isLogin={isLogin} />
       <div className="Gym mt-20">
         <Hero />
         <div className="px-8 py-10">

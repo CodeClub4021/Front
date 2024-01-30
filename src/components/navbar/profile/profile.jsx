@@ -10,6 +10,8 @@ export default function Profile() {
         let role = localStorage.getItem("role");
         if (role === "customer")
             role = "user";
+        else if (role === "manager")
+            role = "admin"
         navigate(`/${role}/profile/`);
     }
   return (

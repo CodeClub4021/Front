@@ -29,9 +29,6 @@ function App() {
                 <Route path="/coach*" element={<CoachPanel/>}/>
                 <Route path="/gympanel/:id" element={<Gym/>}/>
                 <Route path="/about" element={<AboutUs/>}/>
-                <Route path="/gympanel/:id" element={<Gym/>}/>
-                <Route path="/about" element={<AboutUs/>}/>
-                <Route path="/search" element={<Search/>}/>
                 <Route path="/*" element={<NotFound/>}/>
             </Routes>
             <ToastContainer/>

@@ -68,7 +68,7 @@ export default function User(props) {
         >
           {/* Routes */}
           <div className="h-full relative">
-            <NavbarJavad />
+            <NavbarJavad isInPanel={true} isLogin={true} />
             <Navbar
               onOpenSidenav={() => setOpen(true)}
               logoText={"Horizon UI Tailwind React"}
